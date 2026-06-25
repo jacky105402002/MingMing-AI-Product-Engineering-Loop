@@ -26,7 +26,7 @@
 ```
 
 **硬規則**：
-1. **一次只讀 1 個 skill detail**，不要把 11 個 skill 全讀。
+1. **一次只讀 1 個 skill detail**，不要把 12 個 skill 全讀。
 2. 每個 skill 的 `Required Inputs` 就是它的**讀入白名單**，不在白名單的 docs 不讀。
 3. **禁止**「為了保險」把整個 `docs/` 或整個 codebase 讀進來。
 4. 不確定要讀哪個檔 → 先用 Grep / Glob 定位，只讀命中片段，不整檔吞。
@@ -81,8 +81,8 @@
 
 | 工作性質 | 建議模型 | 對應 Skill |
 |---|---|---|
-| 需判斷力：架構、資料建模、審查 | Opus | system-architect、data-modeler、code-reviewer、product-planner |
-| 一般實作：CRUD、串接、測試案例 | Sonnet | frontend/backend-developer、qa-tester |
+| 需判斷力：架構、資料建模、審查、設計方向 | Opus | system-architect、data-modeler、code-reviewer、product-planner、ai-design-producer（方向收斂時） |
+| 一般實作：CRUD、串接、測試案例、設計重建 | Sonnet | frontend/backend-developer、qa-tester、ai-design-producer（Figma 重建 / visual QA 時） |
 | 機械性：文件回寫、changelog、格式整理 | Haiku | docs-maintainer、release notes 草稿 |
 
 > 機械性回寫用 Haiku，成本是 Opus 的零頭。判斷錯了會擴散的決策才用 Opus。

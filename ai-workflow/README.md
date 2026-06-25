@@ -7,7 +7,8 @@ AI agent 開始任何任務前，只讀這層，不讀完整文件庫。總控�
 1. **現在走到哪個階段？** → `loop-map.md`
 2. **這個任務該啟用哪個 Skill？** → `skill-map.md` / `prompt-router.md`
 3. **這個 Node 要怎麼切、怎麼算完成？** → `node-template.md` / `definition-of-ready.md` / `definition-of-done.md` / `review-checklist.md`
-4. **能用哪些工具與 source of truth？** → `tool-map.md` / `mcp-map.md`
+4. **設計要怎麼由 AI 產出與驗證？** → `ai-design-pipeline.md`
+5. **能用哪些工具與 source of truth？** → `tool-map.md` / `mcp-map.md`
 
 ---
 
@@ -16,7 +17,8 @@ AI agent 開始任何任務前，只讀這層，不讀完整文件庫。總控�
 | 檔案 | 角色 | 何時讀 |
 |---|---|---|
 | `loop-map.md` | 12 階段主流程與階段交接 | 判斷目前在哪個階段 |
-| `skill-map.md` | 11 個 Skill 的路由摘要 | 決定啟用哪個 Skill |
+| `skill-map.md` | 12 個 Skill 的路由摘要 | 決定啟用哪個 Skill |
+| `ai-design-pipeline.md` | AI 設計產線、artifact / Figma / visual QA 規則 | 需要 AI 產出設計或 Figma 重建時 |
 | `prompt-router.md` | 從任務描述判斷要啟用的 Skill 序列 | 收到新需求時 |
 | `node-template.md` | Development Node 的標準格式 | 切分任務時 |
 | `node-status.md` | 目前功能的所有 Node 狀態 | 每次開工 / 收工 |
@@ -62,13 +64,14 @@ tasks/         ← 任務層：當前 feature 的 spec、nodes、report
 
 ---
 
-## 本工作流的兩條設計主軸（v0.2 強化）
+## 本工作流的四條設計主軸（v0.3 強化）
 
-在原始規範之上，本套模板強化兩件事，避免淪為「漂亮但跑不動的流程儀式」：
+在原始規範之上，本套模板強化四件事，避免淪為「漂亮但跑不動的流程儀式」：
 
 1. **流程隨規模縮放**：`prompt-router.md` 先做變更分級，小改走 Fast-Track，不必每次跑完整 12 階段。
 2. **資料是第一公民**：資料形狀在 02 Planning 就起草（見 `loop-map.md` 核心原則 + product-planner 的 Data Shape Sketch），動資料模型一律走 Full-Loop。
 3. **最小上下文省 token**：`context-policy.md` 把「只讀必要、skill 當 subagent、Node 間切 session、模型分級」訂成執行規則 —— 這是工作流划不划算的關鍵。
+4. **設計也由 AI 產出但要被驗證**：`ai-design-pipeline.md` 定義 design brief、AI artifact、Figma reconstruction、visual QA 與 engineering handoff。
 
 > 偏離原始規範的決策都記在 `workflow-improvement-log.md`。
 

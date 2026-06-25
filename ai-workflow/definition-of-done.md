@@ -14,18 +14,19 @@
 4. [ ] API 文件已更新（`docs/api.md` 或 OpenAPI）。
 5. [ ] DB 文件與 migration 狀態已更新（`docs/database.md`，migration 可回滾）。
 6. [ ] UIUX 文件已更新（`docs/uiux.md` / `docs/design-system.md`）。
-7. [ ] Architecture Decision Record 已更新（`docs/architecture-decisions/`）。
-8. [ ] changelog 已更新（`docs/changelog.md`）。
-9. [ ] known issues 已更新（`docs/known-issues.md`）。
-10. [ ] code-reviewer 已完成審查（`review-report.md` 無 blocking 項）。
-11. [ ] 沒有未說明的架構偏移。
+7. [ ] AI design artifact、Figma frame URL、visual QA 結果已寫入 feature spec / docs。
+8. [ ] Architecture Decision Record 已更新（`docs/architecture-decisions/`）。
+9. [ ] changelog 已更新（`docs/changelog.md`）。
+10. [ ] known issues 已更新（`docs/known-issues.md`）。
+11. [ ] code-reviewer 已完成審查（`review-report.md` 無 blocking 項）。
+12. [ ] 沒有未說明的架構偏移。
 
 ---
 
 ## 使用方式
 
 - **由 release-manager 主導檢查**，逐項核對。
-- 文件類項目（4–9）由 docs-maintainer 在 Docs Update 階段完成。
+- 文件類項目（4–10）由 docs-maintainer 在 Docs Update 階段完成。
 - 全部通過 → 產出 release notes，歸檔 `tasks/current/` 至 `tasks/archive/feature-{name}/`。
 
 ---

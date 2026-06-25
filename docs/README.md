@@ -22,8 +22,8 @@
 | `modules.md` | 模組清單與職責邊界 | system-architect | 本檔 / code |
 | `database.md` | schema 現況、ERD、命名慣例、生命週期 | data-modeler | DB schema |
 | `api.md` | API contract 總覽 | backend-developer | OpenAPI / Postman |
-| `uiux.md` | 畫面結構、互動規範 | uiux-designer | Figma |
-| `design-system.md` | 元件、token、品牌 | uiux-designer | Figma |
+| `uiux.md` | 畫面結構、互動規範、AI artifact 對齊結果 | uiux-designer / ai-design-producer | Figma |
+| `design-system.md` | 元件、token、品牌、AI 設計輸出約束 | uiux-designer / ai-design-producer | Figma |
 | `testing.md` | 測試策略、覆蓋原則 | qa-tester | 本檔 |
 | `deployment.md` | 環境、部署流程、回滾 | release-manager | Deployment platform |
 
@@ -38,7 +38,8 @@
 ### C 類 — Per-feature 動態產物(跑 loop 時生成)
 | 路徑 | 裝什麼 | 產出 Skill |
 |---|---|---|
-| `specs/feature-{name}.md` | 單一功能的 flow / UI / schema 規格細節 | flow / uiux / data-modeler |
+| `specs/README.md` | per-feature spec 與 AI design handoff 範本 | — |
+| `specs/feature-{name}.md` | 單一功能的 flow / UI / schema / AI design artifact / Figma / visual QA 規格細節 | flow / uiux / ai-design-producer / data-modeler |
 | `architecture-decisions/adr-{name}.md` | 架構決策紀錄 | system-architect |
 | `architecture-decisions/adr-template.md` | ADR 範本(已建) | — |
 

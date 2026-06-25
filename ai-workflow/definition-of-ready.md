@@ -15,10 +15,12 @@
 4. [ ] 已確認會影響哪些模組（module impact 初判）。
 5. [ ] 已完成**資料形狀草圖**（主要實體、關鍵欄位、關聯、生命週期、對既有資料的影響）——「這個功能的資料長怎樣」答得出來。
 6. [ ] 已確認是否需要 API contract（要 / 不要，要的話有大致 request/response）。
-7. [ ] 已確認是否需要 UIUX 設計（要 / 不要，要的話有 wireframe / 參考）。
-8. [ ] 已拆成 Development Nodes（`tasks/current/nodes.md` 存在且依賴清楚）。
-9. [ ] 已定義每個 Node 的測試方式。
-10. [ ] 已確認不應修改的範圍（Forbidden Changes）。
+7. [ ] 已確認是否需要 UIUX / AI 設計產出（要 / 不要，要的話有 design brief、wireframe / AI artifact / Figma frame）。
+8. [ ] 若需要正式設計稿，已提供 Figma frame URL 或記錄本次不需要 Figma 的理由。
+9. [ ] 已完成必要的 visual QA（desktop / mobile、文字溢出、主要狀態）。
+10. [ ] 已拆成 Development Nodes（`tasks/current/nodes.md` 存在且依賴清楚）。
+11. [ ] 已定義每個 Node 的測試方式。
+12. [ ] 已確認不應修改的範圍（Forbidden Changes）。
 
 ---
 
@@ -36,3 +38,4 @@
 - Out of Scope 空白，導致開發中無限擴張。
 - Node 切太大（一個 Node 等於整個功能）。
 - 資料形狀草圖跳過，實作到一半才發現要改 schema 或遷移既有資料。
+- AI design artifact 沒有 Figma / component spec / visual QA，導致前端只能憑截圖猜。

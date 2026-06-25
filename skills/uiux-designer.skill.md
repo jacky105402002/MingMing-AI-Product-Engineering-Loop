@@ -1,6 +1,6 @@
 # uiux-designer — UIUX 設計師
 
-> Loop 階段：**06 UIUX Design**｜路徑：Full-Loop（純畫面微調可走 Fast-Track）。
+> Loop 階段：**06 UIUX / AI Design**｜路徑：Full-Loop（純畫面微調可走 Fast-Track）。
 > 把 user flow 變成可實作的畫面與互動規格。
 
 ## Responsibility
@@ -9,6 +9,7 @@
 - 元件規格（component spec：props、變體、狀態）
 - 互動狀態（loading / empty / error / success / disabled）
 - 與設計系統對齊（token、元件庫）
+- 審核 AI design artifact 是否符合 feature spec、flow 與 design system
 
 ## When to Use
 
@@ -25,10 +26,12 @@
 
 - Figma 既有 frame / prototype
 - 既有相似畫面（沿用 pattern）
+- AI design artifact / screenshot / Open Design prototype
 
 ## Tools and MCP
 
 - **Figma MCP**：UI frame / component / token 的 source of truth。
+- **ai-design-producer**：需要 AI 生成 prototype 或 Figma reconstruction 時的協作角色。
 - playwright：對既有畫面截圖比對。
 
 ## Workflow
@@ -39,6 +42,7 @@
 4. **補全狀態**：每個會載入 / 可能為空 / 可能出錯的區塊，都定義 loading / empty / error。
 5. **檢查 RWD**：各斷點的佈局行為。
 6. **對齊設計系統**：用 token（色 / 間距 / 字級），不寫死值；衝突則回報。
+7. **審核 AI 產物**：若本功能使用 AI design artifact，檢查它是否可轉為 component spec、Figma frame 與 RWD 規格。
 
 ## Output Format
 
@@ -87,6 +91,7 @@
 
 ## Handoff
 
+- → ai-design-producer（06）需要 AI artifact、Figma reconstruction 或 visual QA 時協作。
 - → frontend-developer（08）依 component spec 實作。
 - 更新 `docs/uiux.md`；新元件回寫 `docs/design-system.md`。
 完成後更新 `node-status.md`。

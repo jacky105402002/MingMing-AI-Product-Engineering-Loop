@@ -2,6 +2,7 @@
 
 > 讓 AI 從 **vibe coding** 升級為 **vibe engineering** 的長期產品開發作業系統。
 > 工作室:明明工作室 / MingMing Studio｜狀態:**結構完成,待真功能試跑驗證**
+> 分支定位:**AI design-driven loop** — 設計稿、prototype、Figma reconstruction 也納入 AI 閉環。
 
 一套針對 AI 輔助產品開發的閉環工作流。不是讓 AI 依 prompt 快速產生功能,而是把 AI coding 轉化成**可追蹤、可審查、可測試、可回寫文件、可持續迭代**的產品工程系統。
 
@@ -9,11 +10,12 @@
 
 ---
 
-## 三條設計主軸(在原始規範上強化)
+## 四條設計主軸(在原始規範上強化)
 
 1. **流程隨規模縮放** — 小改走 Fast-Track,不必每次跑完整 12 階段(`ai-workflow/prompt-router.md`)。
 2. **資料是第一公民** — 資料形狀在規劃階段就起草,動資料模型一律走 Full-Loop(`ai-workflow/loop-map.md`)。
 3. **最小上下文省 token** — skill 當索引、subagent 隔離、Node 間切 session、模型分級(`ai-workflow/context-policy.md`)。
+4. **設計也進入 AI 閉環** — 由 AI 產出 design brief / artifact / Figma frame / visual QA,再交付工程(`ai-workflow/ai-design-pipeline.md`)。
 
 ---
 
@@ -26,7 +28,8 @@
 ├── ai-workflow/          # 總控層:AI 的入口與政策(只讀這層判斷怎麼走)
 │   ├── README.md             # 總控層導覽 + 最小讀取路徑
 │   ├── loop-map.md           # 12 階段主流程 + 階段交接 + 資料第一公民
-│   ├── skill-map.md          # 11 個 Skill 路由摘要(入口)
+│   ├── skill-map.md          # 12 個 Skill 路由摘要(入口)
+│   ├── ai-design-pipeline.md # AI 設計產線:artifact → Figma → visual QA → handoff
 │   ├── prompt-router.md      # 任務 → 路徑(Fast-Track/Full-Loop)→ Skill 序列
 │   ├── node-template.md      # Development Node 格式 + 切分原則
 │   ├── node-status.md        # 當前功能 Node 狀態表
@@ -39,12 +42,13 @@
 │   ├── autonomy-policy.md    # 自治與檢查點政策(v0.1)
 │   └── workflow-improvement-log.md  # 偏離原規範的決策紀錄
 │
-├── skills/               # 執行層:11 個角色 Skill(每個只負責一種專業)
+├── skills/               # 執行層:12 個角色 Skill(每個只負責一種專業)
 │   ├── product-planner.skill.md     # 產品規劃(入口)
 │   ├── flow-designer.skill.md       # 流程設計
 │   ├── system-architect.skill.md    # 系統架構
 │   ├── data-modeler.skill.md        # 資料建模
 │   ├── uiux-designer.skill.md       # UIUX 設計
+│   ├── ai-design-producer.skill.md  # AI 設計產出 / Figma 重建 / visual QA
 │   ├── frontend-developer.skill.md  # 前端
 │   ├── backend-developer.skill.md   # 後端
 │   ├── qa-tester.skill.md           # 測試
@@ -81,11 +85,11 @@
 
 | 層 / 政策 | 狀態 |
 |---|---|
-| 總控層 `ai-workflow/` | ✅ 14 檔 |
-| 執行層 `skills/` | ✅ 11 個 Skill |
+| 總控層 `ai-workflow/` | ✅ 15 檔 |
+| 執行層 `skills/` | ✅ 12 個 Skill |
 | 任務層 `tasks/` | ✅ 模板完成 |
 | 知識層 `docs/` | ✅ 骨架(A 類待 intake 種) |
-| 三大政策(loop / context / autonomy) | ✅ |
+| 四大政策(loop / context / autonomy / AI design pipeline) | ✅ |
 | **真功能試跑驗證** | ⬜ 待進行 |
 
 ---

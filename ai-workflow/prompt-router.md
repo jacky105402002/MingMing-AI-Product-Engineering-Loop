@@ -44,6 +44,8 @@ AI 收到任務時，先用這份判斷**走哪條路徑、要啟用哪些 Skill
 | 「我想做一個新功能 / 新模組」 | 全新功能 | Full-Loop | product-planner → flow-designer → system-architect → data-modeler → uiux-designer → (task breakdown) → frontend/backend-developer → qa-tester → code-reviewer → docs-maintainer |
 | 「這個需求還很模糊 / 幫我釐清」 | 需求釐清 | Full-Loop | product-planner |
 | 「畫面 / 互動 / 元件怎麼設計」 | 純 UIUX | 視範圍 | uiux-designer → frontend-developer |
+| 「用 AI 做設計稿 / prototype / app mockup / web mockup」 | AI 設計產出 | 視範圍 | uiux-designer → ai-design-producer → frontend-developer |
+| 「輸出到 Figma / 用 Figma MCP 重建」 | Figma 設計重建 | 視範圍 | ai-design-producer → uiux-designer → frontend-developer |
 | 「加 / 改一張資料表 / 欄位」 | 資料變更 | **Full-Loop**（動資料模型必走） | data-modeler → backend-developer → qa-tester → docs-maintainer |
 | 「加 / 改一支 API」 | API 變更 | Full-Loop（動公共契約必走） | system-architect（影響評估）→ backend-developer → qa-tester → docs-maintainer |
 | 「修一個 bug」 | 修正 | Fast-Track（未動資料/契約時） | qa-tester（重現）→ frontend/backend-developer → code-reviewer → docs-maintainer（known-issues / changelog） |
@@ -61,6 +63,7 @@ AI 收到任務時，先用這份判斷**走哪條路徑、要啟用哪些 Skill
 2. **一次一個主責 Skill**：不要同一步驟同時扮演多角色（設計原則 2.3）。
 3. **scope 不足就停**：執行中發現需求 / 範圍不足，停下回報，回 product-planner 或 task breakdown。
 4. **衝突不猜測**：Figma / 文件 / 程式碼衝突時回報，依 `mcp-map.md` 的 source of truth 原則處理。
+5. **AI design artifact 不是最終真相**：Open Design / Claude Design 類工具產出的 artifact 必須經過 component spec、Figma reconstruction（若需要）與 visual QA 才能交給工程。
 
 ---
 

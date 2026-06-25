@@ -94,3 +94,13 @@
 - [ ] 試跑後修正 autonomy-policy 的檢查點粒度(見該檔 §9)。
 - [ ] 導入真專案時:填 `docs/intake.md` → 種出 A 類 9 份參考文件初版。
 - [ ] 把 Fast-Track 最小檢查做成 checklist 範本放進 `tasks/`。
+
+---
+
+## 2026-06-25 — AI design-driven loop 分支
+
+**Changed**:新增 `ai-workflow/ai-design-pipeline.md` 與 `skills/ai-design-producer.skill.md`，把設計產出納入正式工作流。第 06 階段由 `UIUX Design` 升級為 `UIUX / AI Design`，交付物擴充為 design brief、AI artifact、Figma frame、component spec、visual QA、engineering handoff。同步更新 router、skill-map、tool-map、mcp-map、DoR、DoD、docs/specs 範本。
+
+**Reason**:原版本把 Figma 視為 UI source of truth，但沒有定義「AI 如何產生設計稿、如何重建到 Figma、如何進工程前驗證」。本分支目標是和 main 區隔，形成設計也由 AI 驅動的產品工程 loop。
+
+**Impact**:`ai-workflow/`、`skills/`、`docs/specs/`、README。

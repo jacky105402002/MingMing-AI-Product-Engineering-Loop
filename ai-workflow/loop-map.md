@@ -37,7 +37,7 @@ AI 用這份地圖判斷**目前走到哪個階段**、**上一階段該交付�
    ↓
 05 Data Modeling           (data-modeler)
    ↓
-06 UIUX Design             (uiux-designer)
+06 UIUX / AI Design        (uiux-designer + ai-design-producer)
    ↓
 07 Task Breakdown          (product-planner + system-architect)
    ↓
@@ -70,7 +70,7 @@ AI 用這份地圖判斷**目前走到哪個階段**、**上一階段該交付�
 | 03 | Flow Design | feature spec | flow-designer | user flow、business flow、state / sequence notes |
 | 04 | System Architecture | feature spec + flow | system-architect | ADR、module impact report |
 | 05 | Data Modeling | 資料形狀草圖 + ADR + flow | data-modeler | DB change plan、ERD、migration 計畫（細化草圖，非從零） |
-| 06 | UIUX Design | feature spec + flow | uiux-designer | wireframe、component spec、互動狀態 |
+| 06 | UIUX / AI Design | feature spec + flow + design system | uiux-designer + ai-design-producer | design brief、AI artifact、Figma frame、component spec、互動狀態、visual QA |
 | 07 | Task Breakdown | 02–06 全部產出 | product-planner + system-architect | development nodes（`tasks/current/nodes.md` + `node-00X.md`） |
 | 08 | Implementation | node files | frontend / backend-developer | code、partial tests、partial docs |
 | 09 | Test & Review | code + nodes | qa-tester + code-reviewer | test-report.md、review-report.md |

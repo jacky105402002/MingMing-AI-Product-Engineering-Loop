@@ -11,6 +11,8 @@
 |---|---|---|
 | GitHub MCP | issue、PR、review、project board | product-planner、code-reviewer、release-manager |
 | Figma MCP | UI frame、component、design token、prototype | uiux-designer、frontend-developer |
+| Figma Console MCP | Figma node 建立、frame 重建、設計稿自動化產出 | ai-design-producer、uiux-designer |
+| Open Design / AI design tool | AI design artifact、HTML prototype、設計探索稿 | ai-design-producer |
 | draw.io / diagram source | system flow、architecture diagram、ERD | flow-designer、system-architect、data-modeler |
 | Notion / Docs | 產品筆記、商業規劃、需求來源 | product-planner、docs-maintainer |
 | OpenAPI / Postman | API contract | backend-developer、frontend-developer、qa-tester |
@@ -24,8 +26,9 @@
 1. MCP 不是越多越好，**要明確定義誰是 source of truth**。
 2. **同一類資訊只能有一個主要 source of truth**。
 3. 若 Figma、文件、程式碼衝突 → **回報衝突，不可自行猜測**。
-4. 每個 Skill 要明確定義它可使用哪些 MCP（見各 skill detail 的 Tools and MCP 段）。
-5. 新 MCP 先在小專案試跑，再加入正式工作流。
+4. AI design artifact 是探索與重建依據，不是正式 UI source of truth；需要正式設計稿時以 Figma frame 為準。
+5. 每個 Skill 要明確定義它可使用哪些 MCP（見各 skill detail 的 Tools and MCP 段）。
+6. 新 MCP 先在小專案試跑，再加入正式工作流。
 
 ---
 

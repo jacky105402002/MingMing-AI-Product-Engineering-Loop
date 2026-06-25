@@ -13,6 +13,8 @@
 | terminal | 執行測試、build、lint、migration | 開發、測試 |
 | rg (ripgrep) | 搜尋程式碼與文件 | 分析、開發、review |
 | playwright | UI 自動化測試與截圖檢查 | UIUX、前端、QA |
+| Open Design / Claude Design 類工具 | 產出 AI design artifact、HTML prototype、dashboard、deck | UIUX、AI design production |
+| Figma MCP / Figma Console MCP | 建立 / 更新 Figma frame、component、token、prototype | UIUX、AI design production、前端交付 |
 
 ## 前端（依專案）
 

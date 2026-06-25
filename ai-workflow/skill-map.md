@@ -53,6 +53,15 @@
 - **Do not**：定義後端 API、改資料表。
 - **Detail**：`skills/uiux-designer.skill.md`
 
+## ai-design-producer
+- **Purpose**：用 AI 產出 web / app / dashboard / deck prototype，並整理成可重建到 Figma 與可交付工程的設計成果。
+- **When to use**：需要 AI 生成設計稿、Open Design / Claude Design 類 artifact、Figma MCP 重建、視覺 QA。
+- **Read**：feature spec、flow、`docs/design-system.md`、`ai-workflow/ai-design-pipeline.md`。
+- **Output**：design brief、AI artifact、Figma frame URL、visual QA、engineering handoff。
+- **Tools / MCP**：Open Design、Figma MCP / Figma Console MCP、playwright。
+- **Do not**：把 AI artifact 當正式 source of truth、跳過 visual QA、定義 API / DB。
+- **Detail**：`skills/ai-design-producer.skill.md`
+
 ## frontend-developer
 - **Purpose**：UI 實作、狀態管理、API 串接、RWD、前端測試。
 - **When to use**：執行前端類 Implementation Node。
