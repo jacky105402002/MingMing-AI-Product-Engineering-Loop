@@ -1,7 +1,7 @@
 # MingMing AI Product Engineering Loop
 
 > 讓 AI 從 **vibe coding** 升級為 **vibe engineering** 的長期產品開發作業系統。
-> 工作室:明明工作室 / MingMing Studio｜狀態:**結構完成,待真功能試跑驗證**
+> 工作室:明明工作室 / MingMing Studio｜版本:**v1.1**｜狀態:**結構完成,待真功能試跑驗證**
 
 一套針對 AI 輔助產品開發的閉環工作流。不是讓 AI 依 prompt 快速產生功能,而是把 AI coding 轉化成**可追蹤、可審查、可測試、可回寫文件、可持續迭代**的產品工程系統。
 
