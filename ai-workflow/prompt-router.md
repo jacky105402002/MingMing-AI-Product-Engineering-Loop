@@ -37,6 +37,20 @@ AI 收到任務時，先用這份判斷**走哪條路徑、要啟用哪些 Skill
 
 ---
 
+## 第三步：執行 Model Checkpoint
+
+決定路徑與下一個 Skill 後、開始任何實作或工具操作前，依 `model-routing-policy.md`：
+
+1. 判斷風險、不確定性、影響範圍與規格成熟度。
+2. 輸出建議模型與推理強度，不得只寫「用較強模型」。
+3. 若無法可靠讀取目前設定，明確寫「無法確認」，不得猜測。
+4. 根 Task 需要人工調整時，等待使用者回覆「繼續」或明確覆寫後才執行。
+5. 每次切換階段、Skill、Implementation Node 或進入修正重測回圈時重做一次。
+
+> 已由 `.codex/agents/*.toml` 固定模型與 `model_reasoning_effort` 的自訂 Agent，仍須顯示 Checkpoint；設定吻合時可標示 `status: satisfied`。
+
+---
+
 ## 任務型態對照表
 
 | 任務描述關鍵字 | 型態 | 路徑 | 建議 Skill 序列 |
@@ -61,6 +75,7 @@ AI 收到任務時，先用這份判斷**走哪條路徑、要啟用哪些 Skill
 2. **一次一個主責 Skill**：不要同一步驟同時扮演多角色（設計原則 2.3）。
 3. **scope 不足就停**：執行中發現需求 / 範圍不足，停下回報，回 product-planner 或 task breakdown。
 4. **衝突不猜測**：Figma / 文件 / 程式碼衝突時回報，依 `mcp-map.md` 的 source of truth 原則處理。
+5. **每步先確認模型**：未完成 Model Checkpoint，不進入下一個階段、Skill 或 Node。
 
 ---
 
@@ -71,6 +86,7 @@ AI 收到任務時，先用這份判斷**走哪條路徑、要啟用哪些 Skill
 - [ ] 有沒有暗中動到資料模型或公共契約？（有 → 強制 Full-Loop）
 - [ ] 我知道這個任務屬於上表哪一型？第一個要啟用的 Skill 是哪個？
 - [ ] 這個 Skill 要讀的最小文件我清楚嗎？（看 skill-map）
+- [ ] 我已依 `model-routing-policy.md` 提醒並確認模型與推理強度嗎？
 - [ ] 走 Full-Loop 且進入開發前，`definition-of-ready.md` 通過了嗎？
 
 任一項為否 → 先補齊，不要開始改程式。

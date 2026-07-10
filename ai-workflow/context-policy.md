@@ -19,6 +19,7 @@
 
 ```text
 ✅ skill-map.md（索引，小）
+✅ model-routing-policy.md（只在階段 / Skill / Node 切點讀取）
 ✅ 當前要執行的 1 個 skill detail file
 ✅ 當前 1 個 node-00X.md
 ✅ 該 skill 在 Required Inputs 宣告的最小 docs
@@ -75,17 +76,19 @@
 
 ---
 
-## 4. 模型分級（Model Tiering）
+## 4. Codex 模型與推理強度分級
 
-不是每個 skill 都需要最強模型。派 subagent 時指定模型：
+使用 Codex 執行時，不只選模型，也要同時指定推理強度：
 
-| 工作性質 | 建議模型 | 對應 Skill |
+| 工作性質 | 預設模型 | 推理強度 |
 |---|---|---|
-| 需判斷力：架構、資料建模、審查 | Opus | system-architect、data-modeler、code-reviewer、product-planner |
-| 一般實作：CRUD、串接、測試案例 | Sonnet | frontend/backend-developer、qa-tester |
-| 機械性：文件回寫、changelog、格式整理 | Haiku | docs-maintainer、release notes 草稿 |
+| 高判斷、高風險：規劃、架構、資料、跨模組契約、重要 Review | GPT-5.6 Sol | high / xhigh |
+| 規格明確的一般實作、測試、修正 | GPT-5.6 Terra | medium；複雜時 high |
+| 低判斷成本、機械性轉換與格式整理 | GPT-5.6 Luna | low / medium |
 
-> 機械性回寫用 Haiku，成本是 Opus 的零頭。判斷錯了會擴散的決策才用 Opus。
+**硬規則**：每個階段、Skill、Implementation Node 與修正重測回圈開始前，先執行 `model-routing-policy.md` 的 **Model Checkpoint**。Codex 必須提醒使用者確認模型與 `model_reasoning_effort`，確認後才開始該步驟。
+
+> 本表只提供摘要；12 階段預設值、提醒格式與升級條件以 `model-routing-policy.md` 為唯一來源，避免多份表格漂移。
 
 ---
 
@@ -117,6 +120,7 @@ Anthropic prompt cache 會快取**穩定前綴**（TTL 約 5 分鐘），重複�
 - [ ] 這個工作「過程長、結論短」嗎？是 → 該派 subagent。
 - [ ] 這是新 Node 嗎？是 → 是否該開新 session 而非延續長對話？
 - [ ] 這個 skill 該用哪一級模型？
+- [ ] 我已輸出 Model Checkpoint，並確認模型與推理強度了嗎？
 - [ ] 我有沒有「為了保險」讀了用不到的東西？
 
 任一項讓你多燒 token 而無對應價值 → 修正再開工。
@@ -132,6 +136,7 @@ Anthropic prompt cache 會快取**穩定前綴**（TTL 約 5 分鐘），重複�
 | 主線親自做大量讀檔工作 | 污染 orchestrator 脈絡 | 派 subagent，只收摘要 |
 | 整檔讀取只為找一段 | 讀入大量無關內容 | Grep / Glob 定位後讀片段 |
 | 所有工作都用最強模型 | 機械工作付旗艦價 | 模型分級 |
+| 只選模型、不確認推理強度 | 成本與品質仍不可控 | 每步執行 Model Checkpoint |
 | 重複讀同一個檔 | 重複計費 | 同 session 不重讀 |
 
 ---

@@ -2,12 +2,13 @@
 
 這個資料夾是 MingMing AI Product Engineering Loop 的**總控層**。
 
-AI agent 開始任何任務前，只讀這層，不讀完整文件庫。總控層負責回答四個問題：
+AI agent 開始任何任務前，只讀這層，不讀完整文件庫。總控層負責回答五個問題：
 
 1. **現在走到哪個階段？** → `loop-map.md`
 2. **這個任務該啟用哪個 Skill？** → `skill-map.md` / `prompt-router.md`
-3. **這個 Node 要怎麼切、怎麼算完成？** → `node-template.md` / `definition-of-ready.md` / `definition-of-done.md` / `review-checklist.md`
-4. **能用哪些工具與 source of truth？** → `tool-map.md` / `mcp-map.md`
+3. **這一步該用哪個 Codex 模型與推理強度？** → `model-routing-policy.md`
+4. **這個 Node 要怎麼切、怎麼算完成？** → `node-template.md` / `definition-of-ready.md` / `definition-of-done.md` / `review-checklist.md`
+5. **能用哪些工具與 source of truth？** → `tool-map.md` / `mcp-map.md`
 
 ---
 
@@ -18,6 +19,7 @@ AI agent 開始任何任務前，只讀這層，不讀完整文件庫。總控�
 | `loop-map.md` | 12 階段主流程與階段交接 | 判斷目前在哪個階段 |
 | `skill-map.md` | 11 個 Skill 的路由摘要 | 決定啟用哪個 Skill |
 | `prompt-router.md` | 從任務描述判斷要啟用的 Skill 序列 | 收到新需求時 |
+| `model-routing-policy.md` | Codex 每步開始前的模型、推理強度提醒與升級規則 | 每次切換階段 / Skill / Node 前 |
 | `node-template.md` | Development Node 的標準格式 | 切分任務時 |
 | `node-status.md` | 目前功能的所有 Node 狀態 | 每次開工 / 收工 |
 | `definition-of-ready.md` | 進入開發的閘門 | Planning → Implementation 之前 |
@@ -36,6 +38,7 @@ AI agent 開始任何任務前，只讀這層，不讀完整文件庫。總控�
 ```text
 新任務進來
   → 讀 prompt-router.md   （判斷 Skill 序列）
+  → 讀 model-routing-policy.md（輸出 Model Checkpoint，確認模型與推理強度）
   → 讀 skill-map.md       （取得 Skill 摘要與 detail file 路徑）
   → 讀 對應 skills/{skill}.skill.md
   → 讀 loop-map.md        （確認階段交接）
@@ -62,13 +65,14 @@ tasks/         ← 任務層：當前 feature 的 spec、nodes、report
 
 ---
 
-## 本工作流的兩條設計主軸（v0.2 強化）
+## 本工作流的四條設計主軸（v0.3 強化）
 
-在原始規範之上，本套模板強化兩件事，避免淪為「漂亮但跑不動的流程儀式」：
+在原始規範之上，本套模板強化四件事，避免淪為「漂亮但跑不動的流程儀式」：
 
 1. **流程隨規模縮放**：`prompt-router.md` 先做變更分級，小改走 Fast-Track，不必每次跑完整 12 階段。
 2. **資料是第一公民**：資料形狀在 02 Planning 就起草（見 `loop-map.md` 核心原則 + product-planner 的 Data Shape Sketch），動資料模型一律走 Full-Loop。
 3. **最小上下文省 token**：`context-policy.md` 把「只讀必要、skill 當 subagent、Node 間切 session、模型分級」訂成執行規則 —— 這是工作流划不划算的關鍵。
+4. **模型與推理強度 Gate**：`model-routing-policy.md` 要求 Codex 在每個階段、Skill、Node 與修正回圈開始前提醒確認模型與 reasoning effort，再開始執行。
 
 > 偏離原始規範的決策都記在 `workflow-improvement-log.md`。
 
