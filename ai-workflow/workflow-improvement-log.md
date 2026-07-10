@@ -5,6 +5,18 @@
 
 ---
 
+## 2026-07-10 — v1.1 Codex Model Checkpoint
+
+**Changed**：新增 `ai-workflow/model-routing-policy.md`，把 Codex 模型分級從靜態建議改為每步執行前的 Model Checkpoint。每次切換 Loop 階段、Skill、Implementation Node 或進入 `09 → 10 → 09` 修正重測回圈時，Codex 必須提醒使用者確認模型與推理強度；根 Task 需要人工調整時，確認後才開始執行。同步更新 `prompt-router.md`、`loop-map.md`、`context-policy.md` 與兩層 README。
+
+**Reason**：只在工作流開頭選一次模型，無法反映規劃、實作、Review 與文件工作的風險差異。模型與推理強度也屬於兩個不同維度，必須同時確認，才能讓 Loop 的品質、成本與等待時間符合預期。
+
+**Impact**：`model-routing-policy.md`（新增）、`prompt-router.md`、`loop-map.md`、`context-policy.md`、`ai-workflow/README.md`、`README.md`。
+
+**待試跑驗證**：Checkpoint 是否過度頻繁、哪些自訂 Agent 可自動滿足 Gate、各階段的預設模型與推理強度是否需要依實際 token、返工與漏出缺陷調整。
+
+---
+
 ## 2026-06-16 — v0.2 三項強化
 
 ### 1. 流程隨規模縮放（Fast-Track / Full-Loop）
