@@ -8,6 +8,10 @@
 
 Node、實際 diff、需求與契約、review-checklist、測試證據。只讀本次必要內容；需要時擴充查證。共用政策依 ai-workflow/README.md。
 
+## React 資源使用
+
+對引用 [React 精選資源](../ai-workflow/frontend-resource-map.md)的變更，核對實際來源、使用條件與客製差異，檢查重複依賴、全域樣式衝突、SSR／hydration、動畫與事件清理及測試缺口。元件來自推薦清單不等於已通過專案 review。
+
 ## Workflow
 
 1. 核對目標、AC、範圍、依賴與目前版本；有重大缺口先查證，再依 clarification-policy 提問。

@@ -8,6 +8,10 @@
 
 Node、UI 規格、API 契約、既有前端慣例。只讀本次必要內容；需要時擴充查證。共用政策依 ai-workflow/README.md。
 
+## React 資源使用
+
+導入 React 元件時讀取 [React 精選資源](../ai-workflow/frontend-resource-map.md)，先查專案版本、既有元件與設計規格，再取得必要程式碼。按需評估 shadcn/ui、ReUI、Magic UI、React Bits，不預裝整份清單。核對新增依賴、全域樣式、SSR／client 邊界與客製檔案，串接真實資料並執行適用測試；記錄來源與修改。
+
 ## Workflow
 
 1. 核對目標、AC、範圍、依賴與目前版本；有重大缺口先查證，再依 clarification-policy 提問。
