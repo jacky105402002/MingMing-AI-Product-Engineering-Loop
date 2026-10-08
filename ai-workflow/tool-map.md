@@ -20,4 +20,6 @@
 
 ## 導入專案時替換
 
+React 介面資源選型見 [React 精選資源](frontend-resource-map.md)：按需使用 shadcn/ui、ReUI、Magic UI、React Bits。它們是產品元件候選，不是本工作流 repository 的執行依賴。
+
 記錄每類檢查的實際命令、工作目錄、runtime／lockfile、必要環境、成功條件與 N/A 原因。執行失敗或環境不可用記 blocked／fail，不能用預計命令代替執行結果。不要把 secrets 寫入檔案或 log。

@@ -8,6 +8,10 @@
 
 Node、AC、diff、相依與專案實際測試命令。只讀本次必要內容；需要時擴充查證。共用政策依 ai-workflow/README.md。
 
+## React 資源使用
+
+驗證使用 [React 精選資源](../ai-workflow/frontend-resource-map.md)的畫面時，依元件影響檢查手機／桌機、鍵盤焦點、loading／empty／error、減少動態效果與必要效能。進階資料元件須測實際排序、篩選、分頁及權限等適用行為，不能用展示資料成功代替 API 整合驗證。
+
 ## Workflow
 
 1. 核對目標、AC、範圍、依賴與目前版本；有重大缺口先查證，再依 clarification-policy 提問。

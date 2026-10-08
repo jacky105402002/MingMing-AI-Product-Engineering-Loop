@@ -11,7 +11,7 @@
 > 累積中、尚未發版的變更。發版時搬到新版本區塊。
 
 ### Added
--
+- 2026-10-08：新增 React 精選資源對照，收錄 shadcn/ui、ReUI、Magic UI、React Bits，並接入 UIUX、前端、架構、QA、review、文件角色。既有元件優先，按需查核與採用；未新增產品套件依賴。
 
 ### Changed
 -

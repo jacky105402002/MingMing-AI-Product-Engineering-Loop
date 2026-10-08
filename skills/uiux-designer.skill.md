@@ -8,6 +8,10 @@
 
 feature spec、flow、專案指派的設計來源與現有元件。只讀本次必要內容；需要時擴充查證。共用政策依 ai-workflow/README.md。
 
+## React 資源使用
+
+React 畫面選型時按需讀取 [React 精選資源](../ai-workflow/frontend-resource-map.md)。先用既有設計系統，缺少基礎介面才評估 shadcn/ui；後台進階操作評估 ReUI；有明確展示目的才選 Magic UI 或 React Bits。交付使用區域、元件、互動狀態與動效替代呈現，讓前端可依規格實作。
+
 ## Workflow
 
 1. 核對目標、AC、範圍、依賴與目前版本；有重大缺口先查證，再依 clarification-policy 提問。

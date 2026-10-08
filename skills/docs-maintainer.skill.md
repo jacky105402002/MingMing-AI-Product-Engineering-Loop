@@ -8,6 +8,10 @@
 
 本次 diff、spec、受影響文件、測試／review 結果。只讀本次必要內容；需要時擴充查證。共用政策依 ai-workflow/README.md。
 
+## React 資源使用
+
+採用 [React 精選資源](../ai-workflow/frontend-resource-map.md)後，在專案既有設計／前端文件補上元件名稱、官方來源、版本或取得日期、使用條件、客製內容與更新方式；沿用共用選型紀錄，不建立第二份任務狀態。
+
 ## Workflow
 
 1. 核對目標、AC、範圍、依賴與目前版本；有重大缺口先查證，再依 clarification-policy 提問。

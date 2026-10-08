@@ -8,6 +8,10 @@
 
 feature spec、流程、實際程式依賴、現有 ADR。只讀本次必要內容；需要時擴充查證。共用政策依 ai-workflow/README.md。
 
+## React 資源使用
+
+當 React 元件選型涉及主要依賴、框架升級或設計系統變更時，依 [React 精選資源](../ai-workflow/frontend-resource-map.md)評估相容性與維護取捨。既有相容元件可直接沿用；ReUI 等候選版本不合時先找替代，不為單一元件自行升級整個專案。需求與授權明確時由 AI 自主決定，沒有固定人工簽核。
+
 ## Workflow
 
 1. 核對目標、AC、範圍、依賴與目前版本；有重大缺口先查證，再依 clarification-policy 提問。

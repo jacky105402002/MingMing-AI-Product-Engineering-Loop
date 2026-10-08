@@ -19,6 +19,7 @@
 | [review-checklist](review-checklist.md) | review |
 | [release-policy](release-policy.md) | 發布、回復、觀察與歸檔 |
 | [tool-map](tool-map.md) | 專案驗證工具 |
+| [frontend-resource-map](frontend-resource-map.md) | React UI 選型、整合與驗證；其他任務不需載入 |
 | [mcp-map](mcp-map.md) | 實際來源與權限 |
 | [workflow-improvement-log](workflow-improvement-log.md) | 歷史決策 |
 
