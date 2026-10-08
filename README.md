@@ -1,6 +1,6 @@
 # MingMing AI Product Engineering Loop
 
-明明工作室的 AI 主導開發工作流。版本 **v1.1.0**，將需求、設計、實作、測試、審查、文件與發布串成可追蹤流程。
+明明工作室的 AI 主導開發工作流。**v1.1 系列主要版本：v1.1.1**，將需求、設計、實作、測試、審查、文件與發布串成可追蹤流程。
 
 **AI 在明確範圍內完成每個 Node 的完整 workflow；先查證資料，只有缺口、歧義或授權不足會影響結果時才詢問。** 人工不用介入例行的角色切換、測試重跑或節點交接。
 
@@ -27,6 +27,8 @@
 
 ## v1.1.0 的改變
 
+v1.1.1 已整合下列基礎能力與 [React 精選資源](ai-workflow/frontend-resource-map.md)：shadcn/ui、ReUI、Magic UI、React Bits，供六個相關角色按需選型與驗證。
+
 - 模型評估與進度通知不再是人工閘門；以重要不確定性與實際授權判斷是否詢問。
 - Fast-Track 與 Full-Loop 共用驗證底線，依風險選擇適用階段；不適用要記理由。
 - state.json 是唯一狀態來源，報告按 Node／attempt 保存並綁定版本與檔案 SHA-256。
@@ -52,6 +54,6 @@ node scripts/validate-workflow.mjs --state tasks/current/state.json --require-ac
 
 ## 發布與歷史
 
-本次版本為 v1.1.0（AI 主導版）。既有 v1.1 tag 與 2026-07-10 紀錄保留，升級政策見 [release notes](docs/releases/v1.1.0.md)與 [changelog](docs/changelog.md)。這是工作方式的重要更新，並非宣稱 SemVer 主版號已升到 2。
+本次主要版本為 v1.1.1（v1.1 系列）。[取得最新正式版本](https://github.com/jacky105402002/MingMing-AI-Product-Engineering-Loop/releases/latest)，或閱讀 [release notes](docs/releases/v1.1.1.md)與 [changelog](docs/changelog.md)。既有 v1.1、v1.1.0 tag 與歷史紀錄保留。
 
 [原始方法論](mingming-ai-product-engineering-loop.md)作為歷史背景；現行操作以 AGENTS.md 與 ai-workflow/ 為準。

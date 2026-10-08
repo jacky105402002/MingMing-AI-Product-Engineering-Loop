@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "mode": "active",
+  "feature": {
+    "id": "release-v1.1.1",
+    "route": "fast-track",
+    "risk": "low",
+    "status": "done",
+    "spec": "tasks/validation/release-v1.1.1/feature-spec.md",
+    "acceptance_criteria": [
+      {
+        "id": "AC-001",
+        "description": "Version metadata and resource content align"
+      },
+      {
+        "id": "AC-002",
+        "description": "Tests, links and evidence pass"
+      },
+      {
+        "id": "AC-003",
+        "description": "Release materials prepared for verified publication"
+      }
+    ],
+    "stages": [
+      {
+        "id": "01",
+        "status": "complete",
+        "reason": "Release metadata only; no product design change",
+        "artifact": "tasks/validation/release-v1.1.1/feature-spec.md"
+      },
+      {
+        "id": "02",
+        "status": "complete",
+        "reason": "Release metadata only; no product design change",
+        "artifact": "tasks/validation/release-v1.1.1/feature-spec.md"
+      },
+      {
+        "id": "03",
+        "status": "not_applicable",
+        "reason": "Release metadata only; no product design change",
+        "artifact": "tasks/validation/release-v1.1.1/feature-spec.md"
+      },
+      {
+        "id": "04",
+        "status": "not_applicable",
+        "reason": "Release metadata only; no product design change",
+        "artifact": "tasks/validation/release-v1.1.1/feature-spec.md"
+      },
+      {
+        "id": "05",
+        "status": "not_applicable",
+        "reason": "Release metadata only; no product design change",
+        "artifact": "tasks/validation/release-v1.1.1/feature-spec.md"
+      },
+      {
+        "id": "06",
+        "status": "not_applicable",
+        "reason": "Release metadata only; no product design change",
+        "artifact": "tasks/validation/release-v1.1.1/feature-spec.md"
+      },
+      {
+        "id": "07",
+        "status": "complete",
+        "reason": "Release metadata only; no product design change",
+        "artifact": "tasks/validation/release-v1.1.1/feature-spec.md"
+      }
+    ],
+    "release": {
+      "status": "not_requested",
+      "record": null
+    }
+  },
+  "nodes": [
+    {
+      "id": "node-001",
+      "goal": "Prepare primary v1.1 series release",
+      "owner": "release-manager",
+      "status": "done",
+      "depends_on": [],
+      "ac_ids": [
+        "AC-001",
+        "AC-002",
+        "AC-003"
+      ],
+      "spec": "tasks/validation/release-v1.1.1/node-001.md",
+      "allowed_files": [
+        "VERSION",
+        "README.md",
+        "docs/",
+        ".github/workflows/validate.yml",
+        "tasks/validation/release-v1.1.1/"
+      ],
+      "evidence_files": [
+        ".agents/skills/mingming-workflow/SKILL.md",
+        ".gitattributes",
+        ".github/workflows/validate.yml",
+        ".gitignore",
+        "AGENTS.md",
+        "README.md",
+        "VERSION",
+        "ai-workflow/README.md",
+        "ai-workflow/autonomy-policy.md",
+        "ai-workflow/clarification-policy.md",
+        "ai-workflow/context-policy.md",
+        "ai-workflow/definition-of-done.md",
+        "ai-workflow/definition-of-ready.md",
+        "ai-workflow/evidence-policy.md",
+        "ai-workflow/frontend-resource-map.md",
+        "ai-workflow/loop-map.md",
+        "ai-workflow/mcp-map.md",
+        "ai-workflow/model-routing-policy.md",
+        "ai-workflow/node-status.md",
+        "ai-workflow/node-template.md",
+        "ai-workflow/prompt-router.md",
+        "ai-workflow/release-policy.md",
+        "ai-workflow/review-checklist.md",
+        "ai-workflow/skill-map.md",
+        "ai-workflow/state-contract.md",
+        "ai-workflow/tool-map.md",
+        "ai-workflow/workflow-improvement-log.md",
+        "docs/README.md",
+        "docs/adoption.md",
+        "docs/architecture-decisions/adr-template.md",
+        "docs/changelog.md",
+        "docs/intake.md",
+        "docs/known-issues.md",
+        "docs/pilot-plan.md",
+        "docs/releases/v1.1.0-validation.md",
+        "docs/releases/v1.1.0.md",
+        "docs/releases/v1.1.1.md",
+        "docs/workflow-improvement-tracker.md",
+        "examples/README.md",
+        "examples/minimal-state.json",
+        "mingming-ai-product-engineering-loop.md",
+        "scripts/check.mjs",
+        "scripts/record-evidence.mjs",
+        "scripts/validate-workflow.mjs",
+        "scripts/workflow-lib.mjs",
+        "skills/backend-developer.skill.md",
+        "skills/code-reviewer.skill.md",
+        "skills/data-modeler.skill.md",
+        "skills/docs-maintainer.skill.md",
+        "skills/flow-designer.skill.md",
+        "skills/frontend-developer.skill.md",
+        "skills/product-planner.skill.md",
+        "skills/qa-tester.skill.md",
+        "skills/release-manager.skill.md",
+        "skills/system-architect.skill.md",
+        "skills/uiux-designer.skill.md",
+        "tasks/README.md",
+        "tasks/archive/README.md",
+        "tasks/current/feature-spec.md",
+        "tasks/current/handoff.md",
+        "tasks/current/iteration-log.md",
+        "tasks/current/node-001.md",
+        "tasks/current/nodes.md",
+        "tasks/current/review-report.md",
+        "tasks/current/state.json",
+        "tasks/current/test-report.md",
+        "tasks/templates/completion-report.md",
+        "tasks/templates/fast-track.md",
+        "tasks/templates/release-record.md",
+        "tasks/templates/release.json",
+        "tasks/templates/review-report.md",
+        "tasks/templates/test-report.md",
+        "tests/workflow.test.mjs"
+      ],
+      "revision": "release-v1.1.1-r1",
+      "checks": [
+        {
+          "id": "test",
+          "kind": "test",
+          "result": "pass",
+          "evidence": "tasks/validation/release-v1.1.1/reports/node-001/attempt-01/test.json"
+        },
+        {
+          "id": "review",
+          "kind": "review",
+          "result": "pass",
+          "evidence": "tasks/validation/release-v1.1.1/reports/node-001/attempt-01/review.json"
+        },
+        {
+          "id": "docs",
+          "kind": "docs",
+          "result": "pass",
+          "evidence": "tasks/validation/release-v1.1.1/reports/node-001/attempt-01/docs.json"
+        }
+      ]
+    }
+  ],
+  "questions": [],
+  "decisions": [
+    {
+      "id": "D-001",
+      "decision": "Publish v1.1.1 as primary v1.1 release",
+      "reason": "Include current React resources without overwriting older tags",
+      "source": "User request 2026-10-08"
+    }
+  ]
+}
