@@ -11,7 +11,7 @@
 > 累積中、尚未發版的變更。發版時搬到新版本區塊。
 
 ### Added
-- 2026-10-08：新增 React 精選資源對照，收錄 shadcn/ui、ReUI、Magic UI、React Bits，並接入 UIUX、前端、架構、QA、review、文件角色。既有元件優先，按需查核與採用；未新增產品套件依賴。
+-
 
 ### Changed
 -
@@ -73,3 +73,13 @@
 - 保留既有 v1.1 tag，以 v1.1.0 發布 AI 主導版；不覆蓋使用者專案規則。
 - 舊任務需轉 state 與重驗證據。真實產品試跑、成效數據與 LICENSE 仍待完成。
 - 舊版記錄僅供追溯；現行自治政策取代舊 Model Checkpoint 人工閘門。
+
+
+## [1.1.1] - 2026-10-08
+
+### Added
+- React 精選資源對照：shadcn/ui、ReUI、Magic UI、React Bits，並接入 UIUX、前端、架構、QA、review、文件角色。既有元件優先，按需採用；未安裝產品套件。
+
+### Changed
+- 將最新 AI 主導工作流與資源選型整合為 v1.1 系列主要版本，發布為 v1.1.1 並設為 Latest。
+- VERSION、README、發布說明與完整 ZIP 同步；保留舊版本 tag 與歷史證據。
