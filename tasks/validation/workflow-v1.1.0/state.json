@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "mode": "active",
+  "feature": {
+    "id": "workflow-v1.1.0-validation",
+    "route": "full-loop",
+    "risk": "medium",
+    "status": "done",
+    "spec": "tasks/validation/workflow-v1.1.0/feature-spec.md",
+    "acceptance_criteria": [
+      {
+        "id": "AC-001",
+        "description": "Autonomy and 11 roles aligned"
+      },
+      {
+        "id": "AC-002",
+        "description": "Evidence and gate validation rejects invalid completion"
+      },
+      {
+        "id": "AC-003",
+        "description": "Docs entry, links, migration and CI are provided honestly"
+      }
+    ],
+    "stages": [
+      {
+        "id": "01",
+        "status": "complete",
+        "reason": "Maintenance scope and design implemented",
+        "artifact": "tasks/validation/workflow-v1.1.0/feature-spec.md"
+      },
+      {
+        "id": "02",
+        "status": "complete",
+        "reason": "Maintenance scope and design implemented",
+        "artifact": "tasks/validation/workflow-v1.1.0/feature-spec.md"
+      },
+      {
+        "id": "03",
+        "status": "complete",
+        "reason": "Maintenance scope and design implemented",
+        "artifact": "tasks/validation/workflow-v1.1.0/feature-spec.md"
+      },
+      {
+        "id": "04",
+        "status": "complete",
+        "reason": "Maintenance scope and design implemented",
+        "artifact": "tasks/validation/workflow-v1.1.0/feature-spec.md"
+      },
+      {
+        "id": "05",
+        "status": "not_applicable",
+        "reason": "Workflow maintenance has no product DB/UI/API change",
+        "artifact": "tasks/validation/workflow-v1.1.0/feature-spec.md"
+      },
+      {
+        "id": "06",
+        "status": "not_applicable",
+        "reason": "Workflow maintenance has no product DB/UI/API change",
+        "artifact": "tasks/validation/workflow-v1.1.0/feature-spec.md"
+      },
+      {
+        "id": "07",
+        "status": "complete",
+        "reason": "Maintenance scope and design implemented",
+        "artifact": "tasks/validation/workflow-v1.1.0/feature-spec.md"
+      }
+    ],
+    "release": {
+      "status": "not_requested",
+      "record": null
+    }
+  },
+  "nodes": [
+    {
+      "id": "node-001",
+      "goal": "Verify AI-led workflow package",
+      "owner": "system-architect",
+      "status": "done",
+      "depends_on": [],
+      "ac_ids": [
+        "AC-001",
+        "AC-002",
+        "AC-003"
+      ],
+      "spec": "tasks/validation/workflow-v1.1.0/node-001.md",
+      "allowed_files": [
+        ".agents/skills/mingming-workflow/SKILL.md",
+        ".gitattributes",
+        ".github/workflows/validate.yml",
+        ".gitignore",
+        "AGENTS.md",
+        "ai-workflow/autonomy-policy.md",
+        "ai-workflow/clarification-policy.md",
+        "ai-workflow/context-policy.md",
+        "ai-workflow/definition-of-done.md",
+        "ai-workflow/definition-of-ready.md",
+        "ai-workflow/evidence-policy.md",
+        "ai-workflow/loop-map.md",
+        "ai-workflow/mcp-map.md",
+        "ai-workflow/model-routing-policy.md",
+        "ai-workflow/node-status.md",
+        "ai-workflow/node-template.md",
+        "ai-workflow/prompt-router.md",
+        "ai-workflow/README.md",
+        "ai-workflow/release-policy.md",
+        "ai-workflow/review-checklist.md",
+        "ai-workflow/skill-map.md",
+        "ai-workflow/state-contract.md",
+        "ai-workflow/tool-map.md",
+        "ai-workflow/workflow-improvement-log.md",
+        "docs/adoption.md",
+        "docs/architecture-decisions/adr-template.md",
+        "docs/changelog.md",
+        "docs/intake.md",
+        "docs/known-issues.md",
+        "docs/pilot-plan.md",
+        "docs/README.md",
+        "docs/releases/v1.1.0-validation.md",
+        "docs/releases/v1.1.0.md",
+        "docs/workflow-improvement-tracker.md",
+        "examples/minimal-state.json",
+        "examples/README.md",
+        "mingming-ai-product-engineering-loop.md",
+        "README.md",
+        "scripts/check.mjs",
+        "scripts/record-evidence.mjs",
+        "scripts/validate-workflow.mjs",
+        "scripts/workflow-lib.mjs",
+        "skills/backend-developer.skill.md",
+        "skills/code-reviewer.skill.md",
+        "skills/data-modeler.skill.md",
+        "skills/docs-maintainer.skill.md",
+        "skills/flow-designer.skill.md",
+        "skills/frontend-developer.skill.md",
+        "skills/product-planner.skill.md",
+        "skills/qa-tester.skill.md",
+        "skills/release-manager.skill.md",
+        "skills/system-architect.skill.md",
+        "skills/uiux-designer.skill.md",
+        "tasks/archive/README.md",
+        "tasks/current/feature-spec.md",
+        "tasks/current/handoff.md",
+        "tasks/current/iteration-log.md",
+        "tasks/current/node-001.md",
+        "tasks/current/nodes.md",
+        "tasks/current/review-report.md",
+        "tasks/current/state.json",
+        "tasks/current/test-report.md",
+        "tasks/README.md",
+        "tasks/templates/completion-report.md",
+        "tasks/templates/fast-track.md",
+        "tasks/templates/release-record.md",
+        "tasks/templates/release.json",
+        "tasks/templates/review-report.md",
+        "tasks/templates/test-report.md",
+        "tests/workflow.test.mjs",
+        "VERSION"
+      ],
+      "evidence_files": [
+        ".agents/skills/mingming-workflow/SKILL.md",
+        ".gitattributes",
+        ".github/workflows/validate.yml",
+        ".gitignore",
+        "AGENTS.md",
+        "ai-workflow/autonomy-policy.md",
+        "ai-workflow/clarification-policy.md",
+        "ai-workflow/context-policy.md",
+        "ai-workflow/definition-of-done.md",
+        "ai-workflow/definition-of-ready.md",
+        "ai-workflow/evidence-policy.md",
+        "ai-workflow/loop-map.md",
+        "ai-workflow/mcp-map.md",
+        "ai-workflow/model-routing-policy.md",
+        "ai-workflow/node-status.md",
+        "ai-workflow/node-template.md",
+        "ai-workflow/prompt-router.md",
+        "ai-workflow/README.md",
+        "ai-workflow/release-policy.md",
+        "ai-workflow/review-checklist.md",
+        "ai-workflow/skill-map.md",
+        "ai-workflow/state-contract.md",
+        "ai-workflow/tool-map.md",
+        "ai-workflow/workflow-improvement-log.md",
+        "docs/adoption.md",
+        "docs/architecture-decisions/adr-template.md",
+        "docs/changelog.md",
+        "docs/intake.md",
+        "docs/known-issues.md",
+        "docs/pilot-plan.md",
+        "docs/README.md",
+        "docs/releases/v1.1.0-validation.md",
+        "docs/releases/v1.1.0.md",
+        "docs/workflow-improvement-tracker.md",
+        "examples/minimal-state.json",
+        "examples/README.md",
+        "mingming-ai-product-engineering-loop.md",
+        "README.md",
+        "scripts/check.mjs",
+        "scripts/record-evidence.mjs",
+        "scripts/validate-workflow.mjs",
+        "scripts/workflow-lib.mjs",
+        "skills/backend-developer.skill.md",
+        "skills/code-reviewer.skill.md",
+        "skills/data-modeler.skill.md",
+        "skills/docs-maintainer.skill.md",
+        "skills/flow-designer.skill.md",
+        "skills/frontend-developer.skill.md",
+        "skills/product-planner.skill.md",
+        "skills/qa-tester.skill.md",
+        "skills/release-manager.skill.md",
+        "skills/system-architect.skill.md",
+        "skills/uiux-designer.skill.md",
+        "tasks/archive/README.md",
+        "tasks/current/feature-spec.md",
+        "tasks/current/handoff.md",
+        "tasks/current/iteration-log.md",
+        "tasks/current/node-001.md",
+        "tasks/current/nodes.md",
+        "tasks/current/review-report.md",
+        "tasks/current/state.json",
+        "tasks/current/test-report.md",
+        "tasks/README.md",
+        "tasks/templates/completion-report.md",
+        "tasks/templates/fast-track.md",
+        "tasks/templates/release-record.md",
+        "tasks/templates/release.json",
+        "tasks/templates/review-report.md",
+        "tasks/templates/test-report.md",
+        "tests/workflow.test.mjs",
+        "VERSION"
+      ],
+      "revision": "v1.1.0-r1",
+      "checks": [
+        {
+          "id": "test",
+          "kind": "test",
+          "result": "pass",
+          "evidence": "tasks/validation/workflow-v1.1.0/reports/node-001/attempt-01/test.json"
+        },
+        {
+          "id": "review",
+          "kind": "review",
+          "result": "pass",
+          "evidence": "tasks/validation/workflow-v1.1.0/reports/node-001/attempt-01/review.json"
+        },
+        {
+          "id": "docs",
+          "kind": "docs",
+          "result": "pass",
+          "evidence": "tasks/validation/workflow-v1.1.0/reports/node-001/attempt-01/docs.json"
+        }
+      ]
+    }
+  ],
+  "questions": [],
+  "decisions": [
+    {
+      "id": "D-001",
+      "decision": "AI leads complete workflows and asks on consequential uncertainty",
+      "reason": "User requested v1.1 release and provided direction",
+      "source": "User instruction 2026-10-08"
+    },
+    {
+      "id": "D-002",
+      "decision": "New v1.1.0 tag; preserve existing v1.1",
+      "reason": "Existing v1.1 already points to historical release",
+      "source": "Git tags inspected before release"
+    }
+  ]
+}

@@ -1,46 +1,14 @@
-# Node Status
+# Node Status 契約
 
-> 這份檔案追蹤**目前功能**的所有 Node 狀態。每次開工先看、收工後更新。
-> 功能完成歸檔時，整份移到 `tasks/archive/feature-{name}/`。
+唯一機器狀態：[tasks/current/state.json](../tasks/current/state.json)。本檔只定義規則，不再保存第二份狀態表。nodes.md 僅索引規格與依賴。
 
----
+## Node 轉換
 
-## Current Feature
+pending → ready → in_progress → review_needed → done。
+in_progress／review_needed 可轉 blocked；阻塞解除後回 ready 或 in_progress。review 未過回 in_progress；已 done 的依賴／產物失效要重開，不可保留舊 done。
+blocked 要能從 questions 或 handoff 找到原因與解除條件。
 
-`{feature-name}` — 一句話描述。
+## 更新責任
 
-關聯文件：
-- Spec：`tasks/current/feature-spec.md`
-- Nodes 總覽：`tasks/current/nodes.md`
-
----
-
-## Nodes
-
-| Node | Title | Status | Owner Skill | Depends on | Notes |
-|---|---|---|---|---|---|
-| 001 | {title} | pending | product-planner | — | |
-| 002 | {title} | pending | data-modeler | 001 | |
-| 003 | {title} | pending | backend-developer | 002 | |
-
----
-
-## Status Definition
-
-| 狀態 | 意義 |
-|---|---|
-| `pending` | 尚未開始 |
-| `in_progress` | 進行中 |
-| `blocked` | 被依賴 / 外部因素卡住（Notes 註明原因） |
-| `review_needed` | 實作完成，等待 review / test |
-| `done` | 通過 review checklist 與測試 |
-
----
-
-## 更新規則
-
-1. 開始一個 Node → 設為 `in_progress`。
-2. 卡住 → 設為 `blocked`，並在 Notes 寫明卡在什麼、需要誰。
-3. 實作完 → `review_needed`，交給 qa-tester / code-reviewer。
-4. 通過審查與測試 → `done`。
-5. 全部 `done` 且 `definition-of-done.md` 通過 → 功能可進入 Release。
+主線是 state.json 的唯一寫入協調者。各角色交付產物與結果，由主線檢查 DoD 後更新。新 session 先核對檔案與證據，再繼續；state 的字面值不能蓋過事實。
+每次有重要更新同步 handoff。歸檔時保存整個 current（含 state、所有 attempts、證據與決議）；不得搬走後不更新相對引用。見 tasks/archive/README.md。

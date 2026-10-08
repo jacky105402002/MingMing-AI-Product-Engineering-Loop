@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "mode": "active",
+  "feature": {
+    "id": "example-draft",
+    "route": "fast-track",
+    "risk": "low",
+    "status": "draft",
+    "spec": "examples/README.md",
+    "acceptance_criteria": [
+      {
+        "id": "AC-1",
+        "description": "Replace with the real task acceptance criterion before implementation"
+      }
+    ],
+    "stages": [],
+    "release": {
+      "status": "not_requested",
+      "record": null
+    }
+  },
+  "nodes": [],
+  "questions": [],
+  "decisions": []
+}

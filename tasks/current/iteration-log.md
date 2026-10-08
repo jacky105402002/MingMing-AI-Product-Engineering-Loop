@@ -1,18 +1,14 @@
-# Iteration Log — {feature name}
+# Iteration Log
 
-> 本功能開發過程的決策、卡點、回報流水帳。依時間倒序或正序皆可，保持簡短。
-> 用途：跨 session 接續時的快速回顧（配合 `ai-workflow/context-policy.md` 的 Node = session 邊界）。
+每次有重要決策、失敗、範圍調整或恢復時追加，不重複複製 state 狀態。
 
-## 格式
-```md
-### {date} — Node {n} / {skill}
-- 做了：
-- 決策 / 取捨：
-- 卡點 / 回報：（scope 不足、文件衝突、需人確認…）
+## 紀錄格式
+
+- 時間與 Node／attempt：
+- 查證與發現：
+- 決策／授權來源：
+- 原範圍與調整後範圍：
+- 相關問題／證據／revision：
 - 下一步：
-```
 
----
-
-### {date} — 起始
-- 功能建立，feature-spec 草擬中。
+模型設定見 attempt completion；未知實際設定記 unknown。用量數據僅記工具實際提供的數值。

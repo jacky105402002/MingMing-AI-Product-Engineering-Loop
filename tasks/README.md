@@ -1,31 +1,16 @@
-# tasks/ — 任務層
+# 任務層
 
-當前正在開發的功能，其 spec、node、report 都放這裡。功能完成後整包移到 `archive/`。
+current 是一次一個功能的工作區；state.json 是唯一狀態。templates 保存可複用格式，current 的報告索引不寫個別結果。
 
-```text
-tasks/
-  current/                 ← 當前功能的工作區（一次一個功能）
-    feature-spec.md        ← 功能規格（product-planner 產出）
-    nodes.md               ← Node 切分總覽與依賴
-    node-001.md            ← 各 Node 細節（用 ai-workflow/node-template.md）
-    node-002.md
-    test-report.md         ← qa-tester 產出
-    review-report.md       ← code-reviewer 產出
-    iteration-log.md       ← 本功能開發過程的決策 / 卡點流水帳
-  archive/
-    feature-{name}/        ← 完成功能歸檔（release-manager 搬移）
-```
+## 工作目錄
 
-## 與其他層的關係
+- feature-spec.md／node-001.md：需求與節點詳細內容。
+- state.json：mode、功能、階段、AC、Node、依賴、問題、驗證路徑。
+- handoff.md：接續摘要。
+- reports/{node-id}/{attempt-id}/：不可覆蓋的 test、review、completion、evidence 與 logs。
+- iteration-log.md：決策與過程紀錄。
 
-- 格式來源：`feature-spec` ← product-planner；`node-00X` ← `ai-workflow/node-template.md`；report ← `ai-workflow/review-checklist.md` 與 qa-tester。
-- 狀態總表：各 Node 的狀態同步登記到 `ai-workflow/node-status.md`。
-- 這層是 AI 執行時的**主要讀寫落點**（見 `ai-workflow/context-policy.md` 的最小上下文白名單）。
+初始 mode=template 且無 Node。填真實規格後改 active，依 ai-workflow/state-contract.md 建立資料。不要把模板樣板的 Node 001 當成已存在工作。
+想同時做另一功能時先明確指定獨立任務目錄並用 validator --state 指向它，不覆寫 current。
 
-## 使用規則
-
-1. **一次只開發一個功能**：`current/` 內只放當前功能。
-2. 功能完成（過 Definition of Done）→ release-manager 把 `current/` 內容搬到 `archive/feature-{name}/`，清空 `current/` 重置。
-3. 每個 Node 完成更新 `node-status.md`；過程中的決策 / 卡點記在 `iteration-log.md`。
-
-> 本資料夾現有的檔案皆為**空白模板**，導入新功能時直接填寫或複製。
+本 repository 的自身維護驗證保存於 tasks/validation，與使用者產品任務的 current／archive 分開。維護驗證完成不等於 GitHub 發布完成。

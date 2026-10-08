@@ -1,3 +1,5 @@
+> 歷史設計文件：保留原稿供追溯，不是 v1.1.0 的執行指令。現行規則見 [AGENTS.md](AGENTS.md) 與 [總控層](ai-workflow/README.md)。
+
 # MingMing AI Product Engineering Loop
 
 版本：v0.1 draft  

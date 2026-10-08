@@ -1,99 +1,24 @@
-# Loop Map — 產品開發主流程
+# Loop Map
 
-AI 用這份地圖判斷**目前走到哪個階段**、**上一階段該交付什麼給我**、**我做完要交給誰**。
+AI 依依賴自主推進。階段交接是產物檢查，不是固定人工核准點。
 
----
+| 階段 | 主責 | 交付與判定 |
+|---|---|---|
+| 01 Input | planner | 原始需求、現況與來源 |
+| 02 Planning | planner | 問題、範圍、AC、資料草圖、執行約定；Design Ready |
+| 03 Flow | flow-designer | 操作／例外／狀態流程；無此需求可附理由略過 |
+| 04 Architecture | architect | 影響範圍、必要 ADR；明確需求內可自主決定 |
+| 05 Data | data-modeler | schema 計畫、生命週期、migration 與恢復設計 |
+| 06 UI／Contract | UIUX、backend 契約設計 | 適用 UI、狀態與 API 契約，前後端共同依據 |
+| 07 Breakdown | planner + architect | Node、依賴、範圍、測試與文件義務；Implementation Ready |
+| 08 Implementation | developer | 本 Node 程式／測試／diff |
+| 09 Test and Review | QA → reviewer | 對應版本的證據、AC 覆蓋與問題 |
+| 10 Fix | developer | 修正後回 09，相關舊證據失效 |
+| 11 Docs | docs-maintainer | 更新受影響文件或記 N/A 理由；Node 才可 done |
+| 12 Release and Feedback | release-manager | DoD、授權、發布結果、smoke test、回復方式與後續觀察 |
 
-## 兩條路徑
+08–11 是每個 Node 的內迴圈；完成後選下一個依賴已滿足的 Node。全部 done 再做功能級整合／回歸檢查及發布準備。
+05 交付設計，migration 程式在 08 的明確 Node 實作。
+設計衝突先查證，能在原範圍修正就更新 spec／Node；重大未知依 clarification-policy 詢問。不要因每次退回設計就要求人工「繼續」。
 
-並非所有變更都跑完整 12 階段。先到 `prompt-router.md` 做**變更分級**：
-- **Fast-Track**：bugfix / 微調 / 文件，走精簡序列（developer → code-reviewer →（必要時）docs）。
-- **Full-Loop**：新功能 / 動架構 / **動資料模型** / 動公共契約，走完整下列 12 階段。
-
-> 鐵則：只要動到資料模型或跨模組契約，一律 Full-Loop。
-
----
-
-## 核心原則：資料是第一公民
-
-對要活 3 年以上的產品，**資料模型是最貴、最難改的東西**。因此：
-
-1. **資料形狀在 02 Planning 就要起草**，不等到 05。product-planner 的 feature-spec 必須附「資料形狀草圖」（主要實體、關鍵欄位、關聯、生命週期），它往往才是真正定義功能邊界的東西。
-2. 05 Data Modeling 負責把草圖**細化成可落地的 schema / migration**，而不是從零開始想資料長相。
-3. 任一階段發現資料草圖與後續設計衝突 → 回 02 重對齊，不在下游硬湊。
-
----
-
-## 主流程
-
-```text
-01 Idea / Requirement Input
-   ↓
-02 Product Planning        (product-planner)
-   ↓
-03 Flow Design             (flow-designer)
-   ↓
-04 System Architecture     (system-architect)
-   ↓
-05 Data Modeling           (data-modeler)
-   ↓
-06 UIUX Design             (uiux-designer)
-   ↓
-07 Task Breakdown          (product-planner + system-architect)
-   ↓
-08 Implementation Nodes    (frontend-developer / backend-developer)
-   ↓
-09 Test & Review           (qa-tester + code-reviewer)
-   ↓
-10 Fix & Refactor          (frontend/backend-developer)
-   ↓
-11 Docs Update             (docs-maintainer)
-   ↓
-12 Release / Next Iteration(release-manager)
-```
-
-流程**不一定線性**。常見回圈：
-- 09 → 10 → 09（修正後重測）
-- 04/05 發現需求不清 → 回 02
-- 08 發現 scope 不足 → 停下回報，回 07 重切 Node
-
-> 每個箭頭不是直接執行指令。進入下一階段、切換 Skill、開始新 Node 或重跑 `09 → 10 → 09` 前，都必須先完成 `model-routing-policy.md` 的 Model Checkpoint，提醒使用者確認 Codex 模型與推理強度。
-
----
-
-## 階段交接表
-
-每個階段定義：**輸入（上一棒交什麼）→ 主責 Skill → 輸出（交給下一棒什麼）**。
-
-| # | 階段 | 輸入 | 主責 Skill | 輸出（交付物） |
-|---|---|---|---|---|
-| 01 | Requirement Input | 原始想法 / issue / 客戶需求 | —（人/PO） | raw requirement、brief |
-| 02 | Product Planning | raw requirement | product-planner | feature spec、acceptance criteria、**資料形狀草圖**、影響範圍初判 |
-| 03 | Flow Design | feature spec | flow-designer | user flow、business flow、state / sequence notes |
-| 04 | System Architecture | feature spec + flow | system-architect | ADR、module impact report |
-| 05 | Data Modeling | 資料形狀草圖 + ADR + flow | data-modeler | DB change plan、ERD、migration 計畫（細化草圖，非從零） |
-| 06 | UIUX Design | feature spec + flow | uiux-designer | wireframe、component spec、互動狀態 |
-| 07 | Task Breakdown | 02–06 全部產出 | product-planner + system-architect | development nodes（`tasks/current/nodes.md` + `node-00X.md`） |
-| 08 | Implementation | node files | frontend / backend-developer | code、partial tests、partial docs |
-| 09 | Test & Review | code + nodes | qa-tester + code-reviewer | test-report.md、review-report.md |
-| 10 | Fix & Refactor | review/test 問題 | frontend / backend-developer | fix log、refactor notes |
-| 11 | Docs Update | 全部變更 | docs-maintainer | 更新後的 docs、changelog、known-issues |
-| 12 | Release | DoD 通過 | release-manager | release notes、next backlog |
-
----
-
-## 進入下一階段的閘門
-
-- **全階段共通 Gate**：先輸出 Model Checkpoint；模型與推理強度經確認，或自訂 Agent 設定已滿足建議後，才能開始下一步。
-- **02 → 08**：必須通過 `definition-of-ready.md`（需求、邊界、驗收、影響、Node 切分都齊全）。
-- **09 完成**：每個 Node 必須通過 `review-checklist.md`。
-- **12 之前**：必須通過 `definition-of-done.md`（測試、文件、ADR、changelog 全部到位）。
-
----
-
-## 給 AI 的判讀規則
-
-1. 不確定自己在哪個階段時，看 `tasks/current/node-status.md` 的 Node 狀態。
-2. 收到的輸入不足上表要求時 → **停下回報**，不要硬往下做。
-3. 一次只推進一個階段；跨階段大跳要先說明理由。
-4. 每次推進前重新判斷模型與推理強度；風險改變時不得沿用舊 Checkpoint。
+唯一執行狀態是 tasks/current/state.json。設計階段登記 feature.stages；nodes 只追蹤已切分的實作／驗證交付工作，不在尚未切 Node 前製造虛假完成紀錄。
