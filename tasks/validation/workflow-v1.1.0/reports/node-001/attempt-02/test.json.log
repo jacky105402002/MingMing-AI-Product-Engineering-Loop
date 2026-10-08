@@ -1,0 +1,216 @@
+["node","scripts/check.mjs"]
+PASS template structure; no active feature or product validation claimed.
+TAP version 13
+# Subtest: real passing command and review produce valid active evidence
+ok 1 - real passing command and review produce valid active evidence
+  ---
+  duration_ms: 501.2381
+  type: 'test'
+  ...
+# Subtest: template passes structure but never active validation
+ok 2 - template passes structure but never active validation
+  ---
+  duration_ms: 2.0843
+  type: 'test'
+  ...
+# Subtest: template cannot claim completed nodes
+ok 3 - template cannot claim completed nodes
+  ---
+  duration_ms: 301.7809
+  type: 'test'
+  ...
+# Subtest: actual nonzero command cannot be passed as success
+ok 4 - actual nonzero command cannot be passed as success
+  ---
+  duration_ms: 470.5186
+  type: 'test'
+  ...
+# Subtest: recorder refuses overwriting previous attempt
+ok 5 - recorder refuses overwriting previous attempt
+  ---
+  duration_ms: 257.7696
+  type: 'test'
+  ...
+# Subtest: wrong revision rejected
+ok 6 - wrong revision rejected
+  ---
+  duration_ms: 330.8508
+  type: 'test'
+  ...
+# Subtest: wrong node rejected
+ok 7 - wrong node rejected
+  ---
+  duration_ms: 298.5654
+  type: 'test'
+  ...
+# Subtest: wrong kind rejected
+ok 8 - wrong kind rejected
+  ---
+  duration_ms: 304.6307
+  type: 'test'
+  ...
+# Subtest: failed exit rejected
+ok 9 - failed exit rejected
+  ---
+  duration_ms: 301.189
+  type: 'test'
+  ...
+# Subtest: missing command rejected
+ok 10 - missing command rejected
+  ---
+  duration_ms: 301.459
+  type: 'test'
+  ...
+# Subtest: missing source coverage rejected
+ok 11 - missing source coverage rejected
+  ---
+  duration_ms: 289.7536
+  type: 'test'
+  ...
+# Subtest: missing AC coverage rejected
+ok 12 - missing AC coverage rejected
+  ---
+  duration_ms: 306.1321
+  type: 'test'
+  ...
+# Subtest: missing artifacts rejected
+ok 13 - missing artifacts rejected
+  ---
+  duration_ms: 312.726
+  type: 'test'
+  ...
+# Subtest: source modification invalidates evidence
+ok 14 - source modification invalidates evidence
+  ---
+  duration_ms: 312.7909
+  type: 'test'
+  ...
+# Subtest: feature requirement modification invalidates evidence
+ok 15 - feature requirement modification invalidates evidence
+  ---
+  duration_ms: 295.6071
+  type: 'test'
+  ...
+# Subtest: report modification invalidates evidence
+ok 16 - report modification invalidates evidence
+  ---
+  duration_ms: 332.3019
+  type: 'test'
+  ...
+# Subtest: missing QA gate rejected
+ok 17 - missing QA gate rejected
+  ---
+  duration_ms: 303.0215
+  type: 'test'
+  ...
+# Subtest: test/review N/A cannot bypass gate
+ok 18 - test/review N/A cannot bypass gate
+  ---
+  duration_ms: 302.8994
+  type: 'test'
+  ...
+# Subtest: N/A requires meaningful reason
+ok 19 - N/A requires meaningful reason
+  ---
+  duration_ms: 320.1352
+  type: 'test'
+  ...
+# Subtest: blocking question prevents affected node completion
+ok 20 - blocking question prevents affected node completion
+  ---
+  duration_ms: 309.721
+  type: 'test'
+  ...
+# Subtest: resolved question requires actual answer and source
+ok 21 - resolved question requires actual answer and source
+  ---
+  duration_ms: 302.2983
+  type: 'test'
+  ...
+# Subtest: cycles and unfinished dependencies rejected
+ok 22 - cycles and unfinished dependencies rejected
+  ---
+  duration_ms: 334.5085
+  type: 'test'
+  ...
+# Subtest: dependency sources must be included transitively
+ok 23 - dependency sources must be included transitively
+  ---
+  duration_ms: 374.4157
+  type: 'test'
+  ...
+# Subtest: path traversal and Windows absolute paths rejected
+ok 24 - path traversal and Windows absolute paths rejected
+  ---
+  duration_ms: 236.725
+  type: 'test'
+  ...
+# Subtest: malformed state yields errors without crashing
+ok 25 - malformed state yields errors without crashing
+  ---
+  duration_ms: 308.282
+  type: 'test'
+  ...
+# Subtest: high risk cannot use fast-track
+ok 26 - high risk cannot use fast-track
+  ---
+  duration_ms: 310.3851
+  type: 'test'
+  ...
+# Subtest: unfinished design stage cannot pass execution
+ok 27 - unfinished design stage cannot pass execution
+  ---
+  duration_ms: 314.3667
+  type: 'test'
+  ...
+# Subtest: release cannot be verified without deployment and smoke evidence
+ok 28 - release cannot be verified without deployment and smoke evidence
+  ---
+  duration_ms: 396.6512
+  type: 'test'
+  ...
+# Subtest: recorder detects source mutation during test
+ok 29 - recorder detects source mutation during test
+  ---
+  duration_ms: 885.4153
+  type: 'test'
+  ...
+# Subtest: CLI requires active state and fails malformed JSON
+ok 30 - CLI requires active state and fails malformed JSON
+  ---
+  duration_ms: 612.4354
+  type: 'test'
+  ...
+# Subtest: draft feature cannot hide executing nodes with unfinished design
+ok 31 - draft feature cannot hide executing nodes with unfinished design
+  ---
+  duration_ms: 298.9744
+  type: 'test'
+  ...
+# Subtest: null acceptance criteria produces diagnostics
+ok 32 - null acceptance criteria produces diagnostics
+  ---
+  duration_ms: 314.1948
+  type: 'test'
+  ...
+# Subtest: documentation check finds missing relative targets
+ok 33 - documentation check finds missing relative targets
+  ---
+  duration_ms: 277.7159
+  type: 'test'
+  ...
+# Subtest: minimal example is a valid draft, not a completed feature
+ok 34 - minimal example is a valid draft, not a completed feature
+  ---
+  duration_ms: 1.6634
+  type: 'test'
+  ...
+1..34
+# tests 34
+# suites 0
+# pass 34
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 11293.7471

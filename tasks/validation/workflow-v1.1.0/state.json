@@ -229,25 +229,25 @@
         "tests/workflow.test.mjs",
         "VERSION"
       ],
-      "revision": "v1.1.0-r1",
+      "revision": "v1.1.0-r2",
       "checks": [
         {
           "id": "test",
           "kind": "test",
           "result": "pass",
-          "evidence": "tasks/validation/workflow-v1.1.0/reports/node-001/attempt-01/test.json"
+          "evidence": "tasks/validation/workflow-v1.1.0/reports/node-001/attempt-02/test.json"
         },
         {
           "id": "review",
           "kind": "review",
           "result": "pass",
-          "evidence": "tasks/validation/workflow-v1.1.0/reports/node-001/attempt-01/review.json"
+          "evidence": "tasks/validation/workflow-v1.1.0/reports/node-001/attempt-02/review.json"
         },
         {
           "id": "docs",
           "kind": "docs",
           "result": "pass",
-          "evidence": "tasks/validation/workflow-v1.1.0/reports/node-001/attempt-01/docs.json"
+          "evidence": "tasks/validation/workflow-v1.1.0/reports/node-001/attempt-02/docs.json"
         }
       ]
     }

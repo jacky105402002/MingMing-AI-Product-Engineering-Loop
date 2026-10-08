@@ -46,4 +46,3 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
   try{const e=record(process.cwd(),process.argv.slice(2));console.log(e.result+' evidence recorded; inspect then link check.evidence in state.json');process.exitCode=e.result==='pass'?0:1;}
   catch(e){console.error('FAIL '+e.message);process.exitCode=1;}
 }
-

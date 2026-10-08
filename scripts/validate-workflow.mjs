@@ -44,4 +44,3 @@ export function main(args=process.argv.slice(2)) {
 if(process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   try{process.exitCode=main();}catch(e){console.error('FAIL '+e.message);process.exitCode=1;}
 }
-

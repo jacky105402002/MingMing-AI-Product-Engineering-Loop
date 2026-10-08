@@ -11,3 +11,6 @@ desktop.ini
 # Logs / temp
 *.log
 *.tmp
+
+# Workflow evidence logs are versioned artifacts.
+!tasks/**/reports/**/*.log
