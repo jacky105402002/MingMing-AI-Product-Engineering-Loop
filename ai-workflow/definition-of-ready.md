@@ -1,38 +1,19 @@
-# Definition of Ready (DoR)
+# Definition of Ready
 
-一個功能要從 **Planning 進入 Implementation** 之前，必須通過這道閘門。
-未通過代表還在 Planning / Design 階段，不可開始寫實作程式。
+## Design Ready
 
----
+planner 能確認問題、目標使用者、初步範圍與可驗證 AC，已有來源和重要未知清單，即可進入設計。非阻塞未知可隨設計查證；不要求設計開始前已切完 Node。
 
-## 檢查清單
+## Implementation Ready
 
-一個功能可以進入開發，必須滿足：
+每個適用條件須有來源／產物。可用 N/A，但須說明理由。
 
-1. [ ] 已定義使用者場景（誰、在什麼情境、要達成什麼）。
-2. [ ] 已定義功能邊界（做什麼 / 不做什麼，Out of Scope 明確）。
-3. [ ] 已定義驗收條件（可驗證、可測試的 acceptance criteria）。
-4. [ ] 已確認會影響哪些模組（module impact 初判）。
-5. [ ] 已完成**資料形狀草圖**（主要實體、關鍵欄位、關聯、生命週期、對既有資料的影響）——「這個功能的資料長怎樣」答得出來。
-6. [ ] 已確認是否需要 API contract（要 / 不要，要的話有大致 request/response）。
-7. [ ] 已確認是否需要 UIUX 設計（要 / 不要，要的話有 wireframe / 參考）。
-8. [ ] 已拆成 Development Nodes（`tasks/current/nodes.md` 存在且依賴清楚）。
-9. [ ] 已定義每個 Node 的測試方式。
-10. [ ] 已確認不應修改的範圍（Forbidden Changes）。
+- 需求、範圍與 AC 足夠明確，沒有影響該 Node 的 open blocking question。
+- 適用流程、架構、資料及 UI 設計完整，重要決策有理由。
+- API 需要時已有共用契約：授權、validation、成功／失敗回應、版本與相容性，以及適用的分頁、冪等或併發語意。
+- 資料變更已有來源、生命週期、遷移和恢復計畫；不把 down 的存在當資料可恢復證明。
+- Node 目標、AC、依賴、Allowed Files、Forbidden Changes、驗證及文件義務已定義。
+- 必要工具與測試指令已確認可執行，或已明確區分本 Node 可做工作與環境阻塞。
+- 執行與外部操作範圍符合使用者授權。
 
----
-
-## 使用方式
-
-- **由 product-planner 主導檢查**，必要項目向 system-architect / data-modeler / uiux-designer 確認。
-- 任一項為否 → 功能 **not ready**，回對應 Skill 補齊。
-- 全部通過 → 在 `feature-spec.md` 標記 `Status: Ready`，進入 Implementation。
-
----
-
-## 常見不通過原因
-
-- 驗收條件寫成「做得好用」這種無法驗證的描述。
-- Out of Scope 空白，導致開發中無限擴張。
-- Node 切太大（一個 Node 等於整個功能）。
-- 資料形狀草圖跳過，實作到一半才發現要改 schema 或遷移既有資料。
+planner 檢查後把 feature.status 設 ready，Node 依條件設 ready。Fast-Track 可用精簡 spec，但上述適用條件不可跳過。Ready 是 AI 根據證據作出的判斷，不要求例行人工簽核。

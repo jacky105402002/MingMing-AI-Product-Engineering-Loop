@@ -1,54 +1,23 @@
-# Tool Map — 一般工具用途對照
+# Tool Map
 
-定義工具在工作流中的用途與使用階段。
-**這份是通用範本**，請依專案實際技術棧增刪，技術棧細節寫進 `docs/architecture.md`，不要硬寫死。
+命令必須從專案設定與實際環境查證，不能把下表工具舉例當成已安裝。
 
----
-
-## 通用工具
-
-| 工具 | 用途 | 使用階段 |
+| 類型 | 用途 | 適用性 |
 |---|---|---|
-| git | 差異檢查、分支、提交紀錄 | 全階段 |
-| terminal | 執行測試、build、lint、migration | 開發、測試 |
-| rg (ripgrep) | 搜尋程式碼與文件 | 分析、開發、review |
-| playwright | UI 自動化測試與截圖檢查 | UIUX、前端、QA |
+| git / rg / terminal | 讀取現況、差異、查證與執行 | 按可用性 |
+| test runner | AC、負向與回歸驗證 | 每個 Node 必須有實際驗證 |
+| lint / type / build | 專案品質檢查 | 依技術棧與變更判定，N/A 記原因 |
+| browser / UI testing | UI 狀態、操作、可及性 | 有 UI 影響時 |
+| migration / DB tools | 升級、資料驗證與恢復 | 有資料變更時 |
 
-## 前端（依專案）
+## 本工作流 repository
 
-| 工具 | 用途 | 使用階段 |
-|---|---|---|
-| eslint / prettier | 格式與規範檢查 | 前端、QA |
-| typescript | 型別檢查 | 前端、QA |
-| vitest / jest | 前端單元測試 | 前端、QA |
+- Runtime：Node.js 22，僅標準函式庫，無 npm install 步驟。
+- 模板與連結驗證：`node scripts/validate-workflow.mjs`。
+- 自動測試：`node --test tests/*.test.mjs`。
+- 真實任務狀態：`node scripts/validate-workflow.mjs --require-active`。
+- 本 repo 不含產品 UI、資料庫或部署服務，不能宣稱跑過產品 E2E。
 
-## 後端（依專案）
+## 導入專案時替換
 
-| 工具 | 用途 | 使用階段 |
-|---|---|---|
-| phpunit / pest | Laravel 後端測試 | 後端、QA |
-| larastan / phpstan | PHP 靜態分析 | 後端、QA |
-| 各語言 test runner | 後端單元 / 整合測試 | 後端、QA |
-
----
-
-## 使用原則
-
-1. **Quality gate 工具（lint / type / test）在 Node 完成前必須跑過**，結果寫進 report。
-2. 工具新增（尤其新依賴）必須在 Node 的 Quality Gates 與 `docs/architecture.md` 留紀錄。
-3. 此表是「有哪些工具、何時用」，**具體指令**寫在各 `skills/*.skill.md` 的 Tools 段落或 `docs/`。
-
----
-
-## 本專案技術棧填寫區
-
-> 初始化新專案時，在此填入實際使用的工具與指令範例。
-
-```text
-前端：
-後端：
-DB / migration：
-測試指令：
-lint / format / type 指令：
-build / deploy 指令：
-```
+記錄每類檢查的實際命令、工作目錄、runtime／lockfile、必要環境、成功條件與 N/A 原因。執行失敗或環境不可用記 blocked／fail，不能用預計命令代替執行結果。不要把 secrets 寫入檔案或 log。

@@ -1,92 +1,28 @@
-# uiux-designer — UIUX 設計師
+# uiux-designer — 介面與體驗設計
 
-> Loop 階段：**06 UIUX Design**｜路徑：Full-Loop（純畫面微調可走 Fast-Track）。
-> 把 user flow 變成可實作的畫面與互動規格。
+## 使用時機
 
-## Responsibility
+適用階段：06。這是角色操作說明；同一 agent 可依序扮演角色，不要求每次開新 session 或 subagent。
 
-- 畫面結構（wireframe / layout）
-- 元件規格（component spec：props、變體、狀態）
-- 互動狀態（loading / empty / error / success / disabled）
-- 與設計系統對齊（token、元件庫）
+## 必要輸入
 
-## When to Use
-
-- 功能有畫面 / 互動需求。
-- 新元件或既有元件的新變體。
-- 需定義各種 UI 狀態。
-
-## Required Inputs
-
-- `tasks/current/feature-spec.md` + flow 的 User Flow
-- `docs/uiux.md`、`docs/design-system.md`（既有規範、token、元件）
-
-## Optional Inputs
-
-- Figma 既有 frame / prototype
-- 既有相似畫面（沿用 pattern）
-
-## Tools and MCP
-
-- **Figma MCP**：UI frame / component / token 的 source of truth。
-- playwright：對既有畫面截圖比對。
+feature spec、flow、專案指派的設計來源與現有元件。只讀本次必要內容；需要時擴充查證。共用政策依 ai-workflow/README.md。
 
 ## Workflow
 
-1. **對 User Flow 排畫面**：每個操作步驟對應到哪個畫面 / 區塊。
-2. **搭既有元件**：優先用 design-system 既有元件；缺的才設計新元件並標明。
-3. **定元件規格**：props、變體、尺寸、互動行為。
-4. **補全狀態**：每個會載入 / 可能為空 / 可能出錯的區塊，都定義 loading / empty / error。
-5. **檢查 RWD**：各斷點的佈局行為。
-6. **對齊設計系統**：用 token（色 / 間距 / 字級），不寫死值；衝突則回報。
+1. 核對目標、AC、範圍、依賴與目前版本；有重大缺口先查證，再依 clarification-policy 提問。
+2. 核對 loading、empty、error、權限、鍵盤與 RWD；依實际來源決定是否使用 Figma。
+3. 已有規範且缺少非關鍵偏好時沿用並記錄；沒有 UI 的任務記 N/A。
+4. 把產物、依據與實際結果交給主線；progress 與 model 檢查不需等待使用者說「繼續」。
 
-## Output Format
+## 產物與品質門檻
 
-**Component / Screen Spec**（寫入 `docs/specs/feature-{name}.md` UI 段）：
-```md
-## Screens
-- {畫面名}：{包含哪些區塊，對應哪個 flow 步驟}
+畫面／元件規格、互動狀態與可及性要求。適用 check 寫進 tasks/current/state.json，由主線協調者更新狀態。
+Node 證據按 ai-workflow/evidence-policy.md 保存在每個 Node／attempt 的獨立路徑，不覆蓋前次報告。
+不適用的設計階段附理由；Node 的 test／review 不可略過，docs 可附具體理由 N/A。
 
-## Components
-### {ComponentName}
-- 用途：
-- Props / 變體：
-- 狀態：default / hover / active / disabled / loading / error
-- 用到的 design token：
+## 邊界與交接
 
-## States
-| 區塊 | loading | empty | error |
-|---|---|---|---|
-
-## RWD
-- {斷點}：{佈局如何變化}
-```
-
-## Quality Gates
-
-1. 每個 User Flow 步驟都有對應畫面。
-2. 每個動態區塊都定義了 loading / empty / error（缺一即不通過）。
-3. 優先複用既有元件；新元件有明確理由。
-4. 全程用 design token，無寫死的色 / 尺寸（衝突已回報）。
-5. RWD 行為已定義。
-
-## Quality Heuristics（品質判準）
-
-- **empty / error 才是設計的試金石**：happy path 大家都會畫，產品好不好用差在沒資料、出錯時的樣子。
-- **複用 > 新增**：每個新元件都是設計系統的長期負債。能用既有元件的變體解決，就別造新的。
-- **狀態要窮舉不要漏**：使用者一定會遇到載入中、沒資料、網路錯誤 —— 沒定義就是丟給工程師亂猜。
-- **對齊勝於漂亮**：與設計系統一致的「普通」畫面，比好看但破壞一致性的畫面更有價值。
-- **Figma 是真相**：若 Figma 與文件衝突，以 Figma 為準並回報，不自行裁決。
-
-## Forbidden Actions
-
-- 不定義後端 API / 資料表。
-- 不寫前端實作程式（交 frontend-developer）。
-- 不繞過設計系統自創一套色 / 間距。
-- 不省略狀態定義。
-
-## Handoff
-
-- → frontend-developer（08）依 component spec 實作。
-- 更新 `docs/uiux.md`；新元件回寫 `docs/design-system.md`。
-完成後更新 `node-status.md`。
+不要把某個工具自動當成權威來源；不要在設計階段偷偷改產品範圍。
+需要擴充工程檔案時由主線先更新 Node；已授權範圍內可自主調整，涉及未定產品結果或額外授權才詢問。
+工具依 ai-workflow/tool-map.md 的實際可用命令選擇；外部來源依 ai-workflow/mcp-map.md，不預設平台已連線。

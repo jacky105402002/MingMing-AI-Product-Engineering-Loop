@@ -1,3 +1,5 @@
+> 歷史設計文件：保留原稿供追溯，不是 v1.1.0 的執行指令。現行規則見 [AGENTS.md](AGENTS.md) 與 [總控層](ai-workflow/README.md)。
+
 # MingMing AI Product Engineering Loop
 
 版本：v0.1 draft  
@@ -848,4 +850,3 @@ MingMing AI Product Engineering Loop 的最終目標，是讓明明工作室能�
 核心精神：
 
 > 規劃有輸入，流程有節點，架構有邊界，資料有來源，UI 有依據，開發有檢查，測試有證據，文件有回寫，產品有下一輪。
-

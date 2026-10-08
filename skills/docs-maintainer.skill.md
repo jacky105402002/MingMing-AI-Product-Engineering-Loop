@@ -1,95 +1,28 @@
-# docs-maintainer — 文件維護者
+# docs-maintainer — 文件維護
 
-> Loop 階段：**11 Docs Update**｜路徑：全路徑（有對外行為改變就要回寫）。
-> 守的是「文件與程式同步」—— 工作流最容易失控的環節。
+## 使用時機
 
-## Responsibility
+適用階段：11。這是角色操作說明；同一 agent 可依序扮演角色，不要求每次開新 session 或 subagent。
 
-- 回寫受影響的 `docs/*.md`
-- 維護 changelog、known-issues
-- 同步 ADR、API doc、DB doc、UIUX doc
-- 確保文件與本次變更一致
+## 必要輸入
 
-## When to Use
-
-- Node 或功能完成、有任何文件需同步。
-- 對外行為 / API / DB / UI 改變。
-- 發現文件與程式不一致。
-
-## Required Inputs
-
-- 本次變更摘要（developer 的 Completion Report / diff）
-- 受影響的 `docs/*.md`
-- `ai-workflow/`（回寫規則：哪種變更回寫哪份文件）
-
-## Optional Inputs
-
-- review-report / test-report（擷取已知問題）
-
-## Tools and MCP
-
-- git（看變更）、**Notion / Docs**（外部產品文件）。
+本次 diff、spec、受影響文件、測試／review 結果。只讀本次必要內容；需要時擴充查證。共用政策依 ai-workflow/README.md。
 
 ## Workflow
 
-1. **判斷回寫範圍**：依變更類型對照下表，決定要更新哪些文件。
-2. **逐份回寫**：用統一回寫格式（日期 + Changed / Reason / Impact / Related）。
-3. **更新 changelog**：對外行為改變一定要記。
-4. **更新 known-issues**：殘留問題、暫時的權衡、技術債。
-5. **檢查一致性**：文件描述與實際程式 / API / schema 相符。
+1. 核對目標、AC、範圍、依賴與目前版本；有重大缺口先查證，再依 clarification-policy 提問。
+2. 只同步受影響的 API／DB／UI／ADR 等；沒有文件影響可具體說明 N/A，不製造空更新。
+3. 使用 tasks/templates/completion-report.md 記錄實際模型（未知就寫 unknown）、結果、限制與下一步；文件證據也要對應本版檔案。
+4. 把產物、依據與實際結果交給主線；progress 與 model 檢查不需等待使用者說「繼續」。
 
-**回寫對照**：
-| 變更類型 | 回寫文件 |
-|---|---|
-| 產品行為 | `docs/product.md`、`docs/specs/*.md` |
-| 流程 | `docs/specs/*.md` |
-| 架構 | `docs/architecture.md`、`docs/architecture-decisions/*.md` |
-| DB | `docs/database.md` |
-| API | `docs/api.md` / OpenAPI |
-| UI | `docs/uiux.md`、`docs/design-system.md` |
-| 測試策略 | `docs/testing.md` |
-| 部署 | `docs/deployment.md` |
-| 已知問題 | `docs/known-issues.md` |
-| 對外版本 | `docs/changelog.md` |
+## 產物與品質門檻
 
-## Output Format
+文件差異、changelog、known issues、完成與交接報告。適用 check 寫進 tasks/current/state.json，由主線協調者更新狀態。
+Node 證據按 ai-workflow/evidence-policy.md 保存在每個 Node／attempt 的獨立路徑，不覆蓋前次報告。
+不適用的設計階段附理由；Node 的 test／review 不可略過，docs 可附具體理由 N/A。
 
-每次回寫用統一格式：
-```md
-## {date} - {feature or node}
-Changed:
-- 變更內容
-Reason:
-- 為什麼
-Impact:
-- 影響哪些模組 / 流程
-Related:
-- issue / PR / node / ADR
-```
+## 邊界與交接
 
-## Quality Gates
-
-1. 對照表涵蓋的變更類型都已回寫，無遺漏。
-2. changelog 已更新（若有對外行為改變）。
-3. known-issues 已更新（若有殘留問題）。
-4. 文件描述與實際程式 / schema / API 一致。
-5. 每筆回寫含 Reason 與 Impact（不只記 What）。
-
-## Quality Heuristics（品質判準）
-
-- **過期文件比沒文件更危險**：它讓人基於錯誤資訊做決定。發現對不上，先修或先標註，不要放著。
-- **記 Why 勝過記 What**：程式本身就是 What，文件的價值在「為什麼這樣決定」。
-- **誠實記 known-issues**：把技術債、暫時的權衡寫清楚，是專業而非示弱。藏起來的債最貴。
-- **回寫要即時**：拖到「之後補」就永遠不會補。文件與程式同一個 Node 內一起完成。
-- **只寫會被讀的**：別為了「有文件」而灌水。沒人會讀的文件等於沒有。
-
-## Forbidden Actions
-
-- 不改功能程式邏輯。
-- 不在文件寫入與實際不符的描述（不確定先標 TBD / 回報）。
-- 不省略 changelog / known-issues 的更新。
-
-## Handoff
-
-- → release-manager（12）：文件齊全後可進發布檢查。
-完成後更新 `node-status.md`，相關 Node 可標 `done`。
+不能自行宣布功能或發布完成；不能把規格計畫寫成已實作事實。
+需要擴充工程檔案時由主線先更新 Node；已授權範圍內可自主調整，涉及未定產品結果或額外授權才詢問。
+工具依 ai-workflow/tool-map.md 的實際可用命令選擇；外部來源依 ai-workflow/mcp-map.md，不預設平台已連線。

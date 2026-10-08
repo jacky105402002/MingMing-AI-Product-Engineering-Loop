@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "mode": "template",
+  "feature": {
+    "id": null,
+    "route": "full-loop",
+    "risk": "medium",
+    "status": "draft",
+    "spec": "tasks/current/feature-spec.md",
+    "acceptance_criteria": [],
+    "stages": [],
+    "release": {
+      "status": "not_requested",
+      "record": null
+    }
+  },
+  "nodes": [],
+  "questions": [],
+  "decisions": []
+}

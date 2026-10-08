@@ -1,92 +1,28 @@
-# Prompt Router — 任務描述 → Skill 序列
+# Prompt Router
 
-AI 收到任務時，先用這份判斷**走哪條路徑、要啟用哪些 Skill、依什麼順序**。判斷後再去 `skill-map.md` 取摘要、讀對應 detail file。
+先確認使用者要規劃、實作、審查或發布；只完成該範圍。純討論不自行進入程式實作。
 
----
+## 分流
 
-## 第一步：變更分級（決定走哪條路徑）
-
-流程的重量必須隨變更大小縮放。先判斷這次變更屬於哪一級，再決定走 **Fast-Track** 還是 **Full-Loop**。
-**一條鐵則優先於分級：只要動到「資料模型」或「公共/跨模組契約」，一律走 Full-Loop，不論改動看起來多小。**
-
-| | Fast-Track（輕量路徑） | Full-Loop（完整閉環） |
+| 路徑 | 條件 | 必要流程 |
 |---|---|---|
-| 適用 | bugfix、文案 / 樣式微調、單檔小邏輯、設定值調整、文件更新 | 新功能、新模組、動架構、動資料模型、動公共 API / 契約 |
-| 動到資料模型？ | **否**（動到就升級 Full-Loop） | 是 / 可能 |
-| 動到跨模組契約？ | 否 | 是 / 可能 |
-| 影響檔案 | 少、集中、可一眼看完 | 多、跨層、跨模組 |
-| 流程 | 直接到對應 developer → code-reviewer →（必要時）docs-maintainer | 走完整 12 階段 loop |
-| 仍必須 | 通過 review-checklist 對應子項、跑該動的測試、回寫 changelog/known-issues | DoR → 全流程 → DoD |
+| Fast-Track | 局部修正／文件；無資料模型、公共契約或高風險變更 | 最小 spec → 實作 → 適用測試 → review → 文件 → 狀態與交接 |
+| Full-Loop | 新功能、資料模型、公共契約、跨模組、高風險權限／資料／正式環境變更 | 評估全部階段，完成適用階段與每 Node 的完整驗證 |
 
-**判斷不確定時，往重的走（選 Full-Loop）。** Fast-Track 是為了不被儀式拖死，不是為了跳過檢查。
+檔案少不代表低風險。資料模型或公共／跨模組契約變更一律 Full-Loop。高風險 bugfix 亦走 Full-Loop。
+Full-Loop 不強迫沒有 UI 的功能產生 UI 設計；在 state.json 的 feature.stages 記 not_applicable 與理由，不能因此省略必要測試、review 或發布驗證。
 
-### Fast-Track 仍不可省的最小檢查
-1. [ ] 確認沒有暗中動到資料模型或公共契約（動了就升級）。
-2. [ ] 跑過受影響範圍的測試 + lint / type check。
-3. [ ] code-reviewer 至少掃過 review-checklist 的「架構」「程式品質」兩類。
-4. [ ] 有對外行為改變 → 回寫 `changelog.md`；有已知殘留 → 回寫 `known-issues.md`。
+## 角色順序
 
----
+- 新功能：planner → 適用 flow／architecture／data／API contract／UI 設計 → task breakdown → 各 Node 的 developer → QA → reviewer → 必要 fix／retest → docs。
+- 資料變更：planner 確認語意 → architect 視影響 → data-modeler → backend／migration Node → QA → reviewer → docs。
+- API：planner → architect 視影響 → backend 契約設計 → 必要 UI／資料設計 → 實作 Node → QA → reviewer → docs。
+- Bug：先重現與風險判斷，走對應路徑；偶發缺陷可先保留觀測證據，不因無法穩定重現就丟棄。
+- 純 review／文件：直接到指定角色，執行對應驗證，不擴大成新功能。
+- 發布：核對既有功能證據與 DoD，進入 release-manager；不重做所有需求設計。
 
-## 第二步：判讀 Skill 序列（主要針對 Full-Loop）
+## 開工
 
-1. 先分類任務型態（見下表）。
-2. 取得建議 Skill 序列。
-3. 確認進入點是否符合 `definition-of-ready.md`；不符合就回到 product-planner。
-4. 依序啟用，每個 Skill 完成後依 `loop-map.md` 交接。
-
----
-
-## 第三步：執行 Model Checkpoint
-
-決定路徑與下一個 Skill 後、開始任何實作或工具操作前，依 `model-routing-policy.md`：
-
-1. 判斷風險、不確定性、影響範圍與規格成熟度。
-2. 輸出建議模型與推理強度，不得只寫「用較強模型」。
-3. 若無法可靠讀取目前設定，明確寫「無法確認」，不得猜測。
-4. 根 Task 需要人工調整時，等待使用者回覆「繼續」或明確覆寫後才執行。
-5. 每次切換階段、Skill、Implementation Node 或進入修正重測回圈時重做一次。
-
-> 已由 `.codex/agents/*.toml` 固定模型與 `model_reasoning_effort` 的自訂 Agent，仍須顯示 Checkpoint；設定吻合時可標示 `status: satisfied`。
-
----
-
-## 任務型態對照表
-
-| 任務描述關鍵字 | 型態 | 路徑 | 建議 Skill 序列 |
-|---|---|---|---|
-| 「我想做一個新功能 / 新模組」 | 全新功能 | Full-Loop | product-planner → flow-designer → system-architect → data-modeler → uiux-designer → (task breakdown) → frontend/backend-developer → qa-tester → code-reviewer → docs-maintainer |
-| 「這個需求還很模糊 / 幫我釐清」 | 需求釐清 | Full-Loop | product-planner |
-| 「畫面 / 互動 / 元件怎麼設計」 | 純 UIUX | 視範圍 | uiux-designer → frontend-developer |
-| 「加 / 改一張資料表 / 欄位」 | 資料變更 | **Full-Loop**（動資料模型必走） | data-modeler → backend-developer → qa-tester → docs-maintainer |
-| 「加 / 改一支 API」 | API 變更 | Full-Loop（動公共契約必走） | system-architect（影響評估）→ backend-developer → qa-tester → docs-maintainer |
-| 「修一個 bug」 | 修正 | Fast-Track（未動資料/契約時） | qa-tester（重現）→ frontend/backend-developer → code-reviewer → docs-maintainer（known-issues / changelog） |
-| 「文案 / 樣式 / 設定微調」 | 微調 | Fast-Track | frontend/backend-developer → code-reviewer |
-| 「重構 / 整理這段程式」 | 重構 | 視範圍（跨模組則 Full-Loop） | system-architect（確認邊界）→ frontend/backend-developer → code-reviewer |
-| 「幫我檢查 / review 這段」 | 審查 | Fast-Track | code-reviewer |
-| 「要發版 / 部署」 | 發布 | Full-Loop | release-manager（前置需 DoD 通過） |
-| 「文件對不上 / 幫我更新文件」 | 文件同步 | Fast-Track | docs-maintainer |
-
----
-
-## 路由原則
-
-1. **入口幾乎都是 product-planner**：除非任務明確只屬於單一下游 Skill（如純 review、純文件），否則先讓 product-planner 確認邊界與驗收條件。
-2. **一次一個主責 Skill**：不要同一步驟同時扮演多角色（設計原則 2.3）。
-3. **scope 不足就停**：執行中發現需求 / 範圍不足，停下回報，回 product-planner 或 task breakdown。
-4. **衝突不猜測**：Figma / 文件 / 程式碼衝突時回報，依 `mcp-map.md` 的 source of truth 原則處理。
-5. **每步先確認模型**：未完成 Model Checkpoint，不進入下一個階段、Skill 或 Node。
-
----
-
-## 進入點檢查（給 AI 的 self-check）
-
-開工前回答：
-- [ ] 這次變更是 Fast-Track 還是 Full-Loop？（先過變更分級）
-- [ ] 有沒有暗中動到資料模型或公共契約？（有 → 強制 Full-Loop）
-- [ ] 我知道這個任務屬於上表哪一型？第一個要啟用的 Skill 是哪個？
-- [ ] 這個 Skill 要讀的最小文件我清楚嗎？（看 skill-map）
-- [ ] 我已依 `model-routing-policy.md` 提醒並確認模型與推理強度嗎？
-- [ ] 走 Full-Loop 且進入開發前，`definition-of-ready.md` 通過了嗎？
-
-任一項為否 → 先補齊，不要開始改程式。
+讀 autonomy-policy、當前 state、skill-map 與下一角色必要來源。模型評估是自動判斷，只有重要資訊或授權不足才問。
+新功能先達 Design Ready，適用設計與 Node 完成後才檢查 Implementation Ready；兩者見 definition-of-ready。
+Fast-Track 以 tasks/templates/fast-track.md 建立最小紀錄，仍登記 state 與證據。

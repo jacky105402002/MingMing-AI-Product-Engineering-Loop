@@ -1,24 +1,13 @@
-# tasks/archive/ — 已完成功能歸檔
+# 任務歸檔
 
-功能通過 `ai-workflow/definition-of-done.md` 後，由 release-manager 把 `tasks/current/` 整包搬到這裡。
+功能已完成且發布需求已滿足（verified，或明確 not_requested）才歸檔。整包保留 spec、Node、state、questions、decisions、handoff 與全部 attempts。
 
-## 結構
+## 步驟
 
-```text
-archive/
-  feature-{name}/
-    feature-spec.md
-    nodes.md
-    node-001.md ...
-    test-report.md
-    review-report.md
-    iteration-log.md
-```
+1. 選未存在的 feature-{id} 目的地，先複製 current，保留原檔。
+2. 將新 state 的根目錄相對引用改為 archive 路徑；evidence 的搬移 artifact／spec 路徑也同步更新並重新計算檔案 hash。程式檔案 hash 不得改寫來掩蓋差異。
+3. 執行 validator --state 新位置 --require-active。驗證成功後才標 archived。
+4. 確認沒有未保存變更，再準備下一個 current 模板。歸檔內容保留歷史，不以新功能覆蓋。
+5. 未要求發布時，release.record 保留 null，feature.release.status 保留 not_requested；於 handoff 記「開發完成，未要求發布」。不要改成已發布。
 
-## 歸檔規則
-
-1. 一個完成的功能 = 一個 `feature-{name}/` 資料夾。
-2. 搬移後清空 `tasks/current/`、重置 `ai-workflow/node-status.md`，準備下一個功能。
-3. 歸檔內容是**留痕**：未來除錯、回顧決策、新功能參考都靠它，不要刪。
-
-> 歸檔由 release-manager 在 12 Release 階段執行，見 `skills/release-manager.skill.md` 的 Handoff。
+歸檔後程式會演進，驗證歷史時應使用當時的程式版本；目前 checkout 的 hash 差異不能反推當年測試沒有執行。

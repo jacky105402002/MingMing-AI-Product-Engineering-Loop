@@ -1,32 +1,9 @@
-# Nodes — {feature name}
+# Nodes 索引
 
-> Task Breakdown 產出（product-planner + system-architect）。
-> Node 切分原則見 `ai-workflow/node-template.md`；狀態同步到 `ai-workflow/node-status.md`。
+狀態、owner、依賴與驗證結果唯一存放在 [state.json](state.json)。本檔僅供閱讀，不維護第二份狀態表。
 
-## Feature
-`{feature name}` — 一句話。關聯：`feature-spec.md`
+| Node | 規格 | 用途 |
+|---|---|---|
+| 001（模板，未登記為真實 Node） | [node-001.md](node-001.md) | 初始化時依需求填寫 |
 
-## Node 總覽
-
-| Node | Title | Owner Skill | Depends on | 路徑 | Status |
-|---|---|---|---|---|---|
-| 001 | {title} | product-planner | — | Full-Loop | pending |
-| 002 | {title} | data-modeler | 001 | Full-Loop | pending |
-| 003 | {title} | backend-developer | 002 | Full-Loop | pending |
-| 004 | {title} | frontend-developer | 003 | Full-Loop | pending |
-
-> Status 定義見 `ai-workflow/node-status.md`：pending / in_progress / blocked / review_needed / done。
-
-## 依賴關係
-
-```text
-001 → 002 → 003 → 004
-```
-
-## 切分檢查（給 product-planner / system-architect）
-
-- [ ] 每個 Node 有單一、可獨立驗證的 Goal。
-- [ ] 每個 Node 的 Allowed Files 範圍可控（非「整個模組」）。
-- [ ] 沒有 Node 同時跨 DB + API + UI 三層（太大要再切）。
-- [ ] Node 之間依賴明確、無循環。
-- [ ] 每個 Node 對應到 feature-spec 的某些 Acceptance Criteria。
+先完成適用設計再切實作 Node；依賴不可循環，所有 feature AC 都要有驗證落點。跨層小功能可做可獨立驗證的垂直 Node，不以「碰三層」自動判定太大；以風險、可驗證性與上下文判斷。

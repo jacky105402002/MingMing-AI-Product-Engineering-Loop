@@ -1,41 +1,23 @@
-# Definition of Done (DoD)
+# Definition of Done
 
-一個功能要進入 **Release** 之前，必須通過這道閘門。任一項未達成，功能 **not done**。
+## Node Done
 
----
+主線核對以下條件才把 state.json 的 Node 標 done：
+- 目標與該 Node 的 AC 已由必要驗證覆蓋。
+- 必要 test、review 及 docs check 均有結果與證據；不適用只可附具體理由，test 和 review 不可略過（文件任務可用文件驗證作為 test）。
+- 測試含適用回歸，review 無未解 blocking；高風險部分明確檢查權限／資料／相容性。
+- 證據綁定相同 revision 與實際 artifact hash；程式／spec／契約變更後重做受影響驗證。
+- 文件同步完成；無須改文件記 not_applicable 與理由。
+- 依賴 Node 均 done，沒有該 Node 的 open blocking question。
+- 完成與交接報告可找到實際產物與剩餘風險。
 
-## 檢查清單
+## Feature Done
 
-一個功能完成，必須滿足：
+所有 Node done；每條 feature AC 至少對應一個完成 Node。跨 Node 的必要整合／回歸驗證以最後一個整合 Node 保存，不能只用各模組單測宣稱整體通過。
+lint／type／build／API／DB／UI／ADR 等依適用性核對。沒有變更不必製造無意義更新，N/A 要理由。
+機器檢查不能證明語意正確；主線仍須核對需求與證據。
 
-1. [ ] 所有 Development Nodes 狀態為 `done`（見 `node-status.md`）。
-2. [ ] 所有必要測試已通過（單元 / 整合 / 必要的 E2E）。
-3. [ ] Lint / format / type check 已通過。
-4. [ ] API 文件已更新（`docs/api.md` 或 OpenAPI）。
-5. [ ] DB 文件與 migration 狀態已更新（`docs/database.md`，migration 可回滾）。
-6. [ ] UIUX 文件已更新（`docs/uiux.md` / `docs/design-system.md`）。
-7. [ ] Architecture Decision Record 已更新（`docs/architecture-decisions/`）。
-8. [ ] changelog 已更新（`docs/changelog.md`）。
-9. [ ] known issues 已更新（`docs/known-issues.md`）。
-10. [ ] code-reviewer 已完成審查（`review-report.md` 無 blocking 項）。
-11. [ ] 沒有未說明的架構偏移。
+## Release
 
----
-
-## 使用方式
-
-- **由 release-manager 主導檢查**，逐項核對。
-- 文件類項目（4–9）由 docs-maintainer 在 Docs Update 階段完成。
-- 全部通過 → 產出 release notes，歸檔 `tasks/current/` 至 `tasks/archive/feature-{name}/`。
-
----
-
-## 與 DoR 的關係
-
-| | Definition of Ready | Definition of Done |
-|---|---|---|
-| 守的閘門 | Planning → Implementation | Implementation → Release |
-| 主責 | product-planner | release-manager |
-| 核心問題 | 「需求夠清楚可以開工了嗎？」 | 「功能與文件都閉環了嗎？」 |
-
-> 核心精神：規劃有輸入，流程有節點，架構有邊界，資料有來源，UI 有依據，開發有檢查，測試有證據，文件有回寫，產品有下一輪。
+feature.status=done 只表示開發完成。feature.release.status 分別為 not_requested、ready、released、verified、archived。
+未要求發布可停在 done，交付成果；要求發布則依 release-policy 完成授權、實際發布與驗證。發布失敗不能宣稱 released；未驗證不能歸檔。
