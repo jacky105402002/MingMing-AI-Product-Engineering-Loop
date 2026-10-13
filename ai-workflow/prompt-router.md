@@ -26,3 +26,9 @@ Full-Loop 不強迫沒有 UI 的功能產生 UI 設計；在 state.json 的 feat
 讀 autonomy-policy、當前 state、skill-map 與下一角色必要來源。模型評估是自動判斷，只有重要資訊或授權不足才問。
 新功能先達 Design Ready，適用設計與 Node 完成後才檢查 Implementation Ready；兩者見 definition-of-ready。
 Fast-Track 以 tasks/templates/fast-track.md 建立最小紀錄，仍登記 state 與證據。
+
+## 政府標案分支
+
+確認政府標案為是 → security-planner 盤點來源／等級／契約／匯入表單 → planner 建立 AC 與 Nodes → architect／developer 落實措施 → QA 產生證據 → reviewer 核對 → security-planner 更新清單 → docs 匯出表單副本。等級未知也啟動盤點，關鍵依賴確認前不定案。防護等級不直接等於 Fast-Track／Full-Loop 風險分類。
+
+新開發先確認政府屬性，再確認等級與政策採納範圍；不重問已記錄的答案。工作流選擇遵循使用者規範。詳見 [資安規劃師](../skills/security-planner.skill.md)。

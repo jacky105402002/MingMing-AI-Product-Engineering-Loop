@@ -1,0 +1,64 @@
+[
+  {
+    "id": "LAW-LEVEL",
+    "title": "資通安全責任等級分級辦法",
+    "issuer": "數位發展部",
+    "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030304",
+    "version": "115-01-07",
+    "checked_at": "2026-10-13"
+  },
+  {
+    "id": "APP09",
+    "title": "附表九 資通系統防護需求分級原則",
+    "issuer": "數位發展部",
+    "url": "https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000410774&lan=C",
+    "version": "法規入口 115-01-07 所列附件",
+    "checked_at": "2026-10-13",
+    "snapshot": "official/appendix-09.pdf",
+    "sha256": "5d7739d6200fe571c0c81c145e65fafc200cae5d2b1d2570a281a6c3b514d890"
+  },
+  {
+    "id": "APP10",
+    "title": "附表十 資通系統防護基準",
+    "issuer": "數位發展部",
+    "url": "https://law.moj.gov.tw/LawClass/LawGetFile.ashx?FileId=0000410775&lan=C",
+    "version": "法規入口 115-01-07 所列附件",
+    "checked_at": "2026-10-13",
+    "snapshot": "official/appendix-10.pdf",
+    "sha256": "623c76d57c329afffc8404f234cc3c54be63c5b377a0adb5c9ce7caab747812a"
+  },
+  {
+    "id": "RULE7",
+    "title": "資通安全管理法施行細則 第七條",
+    "issuer": "數位發展部",
+    "url": "https://law.moda.gov.tw/LawContent.aspx?id=FL089964",
+    "version": "115-01-05",
+    "checked_at": "2026-10-13"
+  },
+  {
+    "id": "JOINT115",
+    "title": "115年度政府機關受託者資通安全聯合稽核計畫 附件3",
+    "issuer": "數位發展部資通安全署",
+    "url": "https://www-api.moda.gov.tw/File/Get/acs/zh-tw/WO9Kf2u1yc3mNUL",
+    "version": "115年度；入口更新2026-06-04",
+    "checked_at": "2026-10-13",
+    "retrieval_note": "已由官方網頁/PDF閱讀工具查核；直接下載403，未附本機PDF"
+  },
+  {
+    "id": "FORMS",
+    "title": "資通安全維護計畫範本參考附件",
+    "issuer": "數位發展部資通安全署",
+    "url": "https://moda.gov.tw/ACS/laws/documents/680",
+    "version": "參考附件入口2026-06-01；計畫範本入口2026-10-07",
+    "checked_at": "2026-10-13"
+  },
+  {
+    "id": "PCC",
+    "title": "資訊服務採購契約範本入口",
+    "issuer": "行政院公共工程委員會",
+    "url": "https://www.pcc.gov.tw/content/index?eid=9819&type=C",
+    "version": "待個案確認引用版本",
+    "checked_at": "2026-10-13",
+    "retrieval_note": "頁面讀取逾時；不可視為已核對範本條款"
+  }
+]

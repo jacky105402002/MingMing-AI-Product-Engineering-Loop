@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
-export const roles = ['product-planner','flow-designer','system-architect','data-modeler','uiux-designer','frontend-developer','backend-developer','qa-tester','code-reviewer','docs-maintainer','release-manager'];
+import {validatePlan} from '../.agents/skills/security-planner/scripts/security-lib.mjs';
+export const roles = ['product-planner','security-planner','flow-designer','system-architect','data-modeler','uiux-designer','frontend-developer','backend-developer','qa-tester','code-reviewer','docs-maintainer','release-manager'];
 export const kinds = ['test','review','docs','build','lint','type','migration'];
 export const meaningful = v => typeof v === 'string' && v.trim().length > 0 && !/^(TBD|TODO|待填|待確認|\.\.\.)$/i.test(v.trim());
 export const hash = p => crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
@@ -72,6 +73,19 @@ export function validateState(root,state,{requireActive=false}={}) {
   }
   const ids=new Set();
   for(let n of nodes) {n=object(n,'node');need(meaningful(n.id),'node id required');need(!ids.has(n.id),'duplicate node '+n.id);ids.add(n.id);}
+  if (f.security !== undefined) {
+    const security=object(f.security,'feature.security');
+    need(['yes','no','unknown'].includes(security.government_project),'invalid security government_project');
+    const executing=['ready','in_progress','done'].includes(f.status) || nodes.some(n=>['ready','in_progress','review_needed','done'].includes(n?.status));
+    if(executing)need(security.government_project!=='unknown','government project intake unresolved');
+    if(security.government_project==='yes' || security.plan) {
+      try {
+        const plan=readJson(root,security.plan);
+        need(plan.profile?.government_project===security.government_project,'security profile government mismatch');
+        errors.push(...validatePlan(root,plan,f.status==='done'?'delivery':executing?'planning':'draft',[...ids]).map(e=>'security: '+e));
+      }catch(e){errors.push('security: '+e.message);}
+    }
+  }
   for(let q of questions) {
     q=object(q,'question');
     need(meaningful(q.id)&&meaningful(q.question)&&meaningful(q.impact),'question id/text/impact required');

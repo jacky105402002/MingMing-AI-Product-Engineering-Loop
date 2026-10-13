@@ -2,7 +2,7 @@
 
 ## 新專案
 
-將 ai-workflow、skills、tasks/templates、scripts、tests、.agents/skills/mingming-workflow、AGENTS.md 與必要文件導入專案。若要沿用本 repo 的文件驗證器，保留本套文件相對路徑；只採用執行狀態檢查時加 --state-only。CI 另按專案合併。
+將 ai-workflow、skills、tasks/templates、scripts、tests、.agents/skills/mingming-workflow、.agents/skills/security-planner、AGENTS.md 與必要文件導入專案。若要沿用本 repo 的文件驗證器，保留本套文件相對路徑；只採用執行狀態檢查時加 --state-only。CI 另按專案合併。
 有同名檔案先比較與合併；保留原有 AGENTS、產品規格與未完成任務。不要把此 repo 的 VERSION 覆蓋產品版本。
 
 Codex 的原生入口在 .agents/skills/mingming-workflow/SKILL.md；依目前官方文件，專案技能可由此位置發現。其他 agent 可明確讀 AGENTS.md，再按角色按需讀文件；不宣稱所有客戶端都會自動載入。
@@ -58,3 +58,9 @@ Windows 下 recorder 使用 shell=false；需要 npm.cmd 等 shell 命令時明�
 
 目前 repository 未定義 LICENSE，本版不代替擁有者選擇開源授權，也不宣稱已授予第三方商業再散布權利。授權選擇列入追蹤，與工作流技術驗證分開處理。
 本版是 agent 可執行的規範與輔助檢查工具，並非常駐排程器、模型 API 編排服務或平台權限繞過工具。
+
+## v1.1.1 資安規劃擴充（2026-10-13 修訂）
+
+更新的 workflow-lib.mjs 會載入 .agents/skills/security-planner/scripts/security-lib.mjs，因此須一併導入整個 security-planner 目錄，保留其相對路徑。獨立使用時，可把該目錄完整安裝成個人 Skill，工具仍在產品專案根目錄執行。
+
+舊 state 沒有 feature.security 時保留相容性；這不是已確認非政府標案。新任務與舊案接續，先從既有紀錄確認政府屬性並補欄位。是則登錄 plan，否可記 plan=null；未知只做不依賴答案的調查。已存在的產品任務不由模板覆蓋。

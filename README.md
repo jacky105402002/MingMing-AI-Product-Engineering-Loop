@@ -12,14 +12,14 @@
 4. AI 初始化 tasks/current/state.json，通過適用的 Ready Gate 後連續推進。進度與阻塞寫入 [交接](tasks/current/handoff.md)。
 5. 請求示例：「依 MingMing 工作流完成此功能。先查證現況，重要資訊不足時詢問，其餘工作自主推進到測試、審查與文件完成。」
 
-本套包含一個可發現的 Codex Skill，位於 .agents/skills/mingming-workflow；11 個角色文件是其按需讀取的專業規範，不必部署 11 個 agent。其他客戶端可明確讀取 AGENTS.md，見 [相容性與導入](docs/adoption.md)。
+本套包含 MingMing 與 security-planner 兩個 Codex Skill，位於 .agents/skills/；12 個角色文件是按需讀取的專業規範，不必部署 12 個 agent。其他客戶端可明確讀取 AGENTS.md，見 [相容性與導入](docs/adoption.md)。
 
 ## 四層結構
 
 | 層 | 內容 | 用途 |
 |---|---|---|
 | ai-workflow/ | 路由、自治、釐清、Ready／Done、證據契約 | 決定如何執行與何時詢問 |
-| skills/ | 11 個角色 | 標準化專業產物與品質 |
+| skills/ | 12 個角色 | 標準化專業產物與品質 |
 | docs/ | 專案來源、知識、決策、版本與問題 | 保存長期知識 |
 | tasks/ | 唯一狀態、節點、各次證據、交接與歸檔 | 支援可恢復的執行 |
 
@@ -54,6 +54,12 @@ node scripts/validate-workflow.mjs --state tasks/current/state.json --require-ac
 
 ## 發布與歷史
 
-本次主要版本為 v1.1.1（v1.1 系列）。[取得最新正式版本](https://github.com/jacky105402002/MingMing-AI-Product-Engineering-Loop/releases/latest)，或閱讀 [release notes](docs/releases/v1.1.1.md)與 [changelog](docs/changelog.md)。既有 v1.1、v1.1.0 tag 與歷史紀錄保留。
+本次主要版本為 v1.1.1（v1.1 系列）。[取得最新正式版本](https://github.com/jacky105402002/MingMing-AI-Product-Engineering-Loop/releases/latest)，或閱讀 [本次 release notes](docs/releases/v1.1.1-security-20261013.md)與 [changelog](docs/changelog.md)。既有 v1.1、v1.1.0 tag 與歷史紀錄保留。
 
 [原始方法論](mingming-ai-product-engineering-loop.md)作為歷史背景；現行操作以 AGENTS.md 與 ai-workflow/ 為準。
+
+## v1.1.1 資安規劃更新
+
+v1.1.1 的 2026-10-13 修訂加入 [資安規劃師](.agents/skills/security-planner/SKILL.md)；工作流版本維持 1.1.1，發布標籤為 `v1.1.1-security-20261013`。確認政府標案為是後即啟動；高／中／普決定基準草稿，未知時先盤點，不自行定級。
+
+62 項候選來源包含 27 列防護基準、8 款委外要求及 27 項年度聯合稽核項目；逐項評估適用性，不代表每案皆必須適用。個案契約追加要求與匯入表單一起登錄，依證據回填副本。操作見 [資安規劃操作](.agents/skills/security-planner/references/operations.md)。

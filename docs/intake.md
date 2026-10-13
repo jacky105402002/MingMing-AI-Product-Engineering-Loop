@@ -22,3 +22,11 @@
 5. 初始化 state.json（mode=active）並記錄問題／決策；缺資料依 clarification-policy 處理。
 
 TBD 僅表示尚未完成。重要未定事項不能靠填 TBD 通過 Ready；不相關的資料缺口不必阻塞。
+
+## 政府標案資安輸入
+
+先查現有專案與對話紀錄。未知時先確認是否台灣政府標案（含委外、維運、分包）：是／否／尚不確定。是則確認系統防護需求高／中／普／未知及依據，與政策範圍 extended／mandatory_only／assess；政策選擇不能免除法令或契約要求。機關責任等級 A～E 另記，不互相替代。
+
+政府為是即呼叫 [security-planner](../.agents/skills/security-planner/SKILL.md)，按需取得 RFP、契約、原始查核表、系統邊界、核心系統／客製化／委託金額及檢測責任。可由文件確認者自行查證，只對影響結果的缺口詢問。未知不推定為普；允許先盤點，不讓受影響的設計與實作定案。
+
+新 active 任務將 government_project 與 plan 相對路徑記在 feature.security，個案資料不回寫全域 AGENTS.md。

@@ -30,3 +30,7 @@ Node 證據按 ai-workflow/evidence-policy.md 保存在每個 Node／attempt 的
 review pass 不直接等於 Node done；文件與其他適用 checks 仍由主線核對。
 需要擴充工程檔案時由主線先更新 Node；已授權範圍內可自主調整，涉及未定產品結果或額外授權才詢問。
 工具依 ai-workflow/tool-map.md 的實際可用命令選擇；外部來源依 ai-workflow/mcp-map.md，不預設平台已連線。
+
+## 政府標案配合
+
+政府案件依 [資安規劃師](security-planner.skill.md)共用 security-plan.json。核對來源適用性、複合條款各款覆蓋、所列輸入完整性及證據語意；同一 agent 審查標 self-review。

@@ -4,7 +4,7 @@ import {fileURLToPath} from 'node:url';
 import {readJson,validateState,roles,safePath} from './workflow-lib.mjs';
 export function validateDocs(root) {
   const errors=[];
-  const required=['AGENTS.md','VERSION','.agents/skills/mingming-workflow/SKILL.md','docs/adoption.md','docs/pilot-plan.md',...roles.map(r=>'skills/'+r+'.skill.md')];
+  const required=['AGENTS.md','VERSION','.agents/skills/mingming-workflow/SKILL.md','.agents/skills/security-planner/SKILL.md','docs/adoption.md','docs/pilot-plan.md',...roles.map(r=>'skills/'+r+'.skill.md')];
   for(const p of required)try{safePath(root,p);}catch(e){errors.push(e.message);}
   function walk(dir) {
     for(const ent of fs.readdirSync(dir,{withFileTypes:true})) {

@@ -21,3 +21,7 @@ lint／type／build／API／DB／UI／ADR 等依適用性核對。沒有變更�
 
 feature.status=done 只表示開發完成。feature.release.status 分別為 not_requested、ready、released、verified、archived。
 未要求發布可停在 done，交付成果；要求發布則依 release-policy 完成授權、實際發布與驗證。發布失敗不能宣稱 released；未驗證不能歸檔。
+
+## 政府標案資安 Done
+
+政府案件 feature done 前須通過 security-plan 的 delivery 檢查，並實際覆核證據語意及表單。未實作、未驗證、過期證據、必要外部檢測或簽核未完成時不得宣告資安驗收通過。純規劃交付只報 planning 完成；不得把產品開發任務標 done 來表示規劃結束。

@@ -22,3 +22,7 @@
 - `node --test tests/*.test.mjs`
 
 使用到產品專案時，上述只檢查工作流契約；產品測試依專案的 tool-map 執行。不得以模板測試通過宣稱產品功能或正式部署通過。
+
+## 政府標案資安分流
+
+新開發依 [intake](docs/intake.md)確認政府標案屬性及工作流選擇，沿用已回答的資訊。確認是政府標案時，讀 [security-planner](.agents/skills/security-planner/SKILL.md)，等級未知也先開始來源盤點；重要依賴未確認不能定案。資安要求、證據與表單對照放在產品 security-plan.json，並以 feature.security 接入 state。

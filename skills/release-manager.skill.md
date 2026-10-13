@@ -26,3 +26,7 @@ Node 證據按 ai-workflow/evidence-policy.md 保存在每個 Node／attempt 的
 不可用打 tag 冒充部署成功，不可未驗證就歸檔；不在發布階段增加功能。
 需要擴充工程檔案時由主線先更新 Node；已授權範圍內可自主調整，涉及未定產品結果或額外授權才詢問。
 工具依 ai-workflow/tool-map.md 的實際可用命令選擇；外部來源依 ai-workflow/mcp-map.md，不預設平台已連線。
+
+## 政府標案配合
+
+政府案件依 [資安規劃師](security-planner.skill.md)共用 security-plan.json。交付前核對 delivery 結果、表單副本與必要外部證據，依個案要求處理正式簽核，發布授權另依既有紀錄。

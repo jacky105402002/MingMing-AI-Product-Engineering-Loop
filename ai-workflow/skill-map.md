@@ -17,3 +17,11 @@
 | release-manager | release record、發布與驗證證據、後續觀察與歸檔 | [發布管理](../skills/release-manager.skill.md) |
 
 backend-developer 在 06 主責 API 契約，frontend-developer 與 QA 共同核對。主線協調者唯一更新 state.json；roles 不各自建立第二份狀態表。
+
+## 資安規劃角色
+
+| 角色 | 主責／交付 | 說明 |
+|---|---|---|
+| security-planner | 官方來源與契約適用性、分級基準、措施／Node／證據／表單對照、待確認與外部責任 | [資安規劃師](../skills/security-planner.skill.md) |
+
+政府標案屬性為是即加入規劃及各 Node 交付循環，不等到最後驗收才補表。角色總數為 12；同一 agent 可依序執行，獨立性須如實記錄。

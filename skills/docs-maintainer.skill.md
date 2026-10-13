@@ -30,3 +30,7 @@ Node 證據按 ai-workflow/evidence-policy.md 保存在每個 Node／attempt 的
 不能自行宣布功能或發布完成；不能把規格計畫寫成已實作事實。
 需要擴充工程檔案時由主線先更新 Node；已授權範圍內可自主調整，涉及未定產品結果或額外授權才詢問。
 工具依 ai-workflow/tool-map.md 的實際可用命令選擇；外部來源依 ai-workflow/mcp-map.md，不預設平台已連線。
+
+## 政府標案配合
+
+政府案件依 [資安規劃師](security-planner.skill.md)共用 security-plan.json。依要求總表回填原始表單的副本，保留欄位映射、待補項目與實際責任；不代簽、不虛構通過。

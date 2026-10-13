@@ -27,3 +27,11 @@ decisions：[id、decision、reason、source]，保存 AI 依據或使用者授�
 ## 最小 active 範例
 
 參考 examples/README.md 的初始化與演練方式。真實任務不可複製範例通過結果當成證據。
+
+## 選用資安計畫
+
+新增可選 feature.security：`{ "government_project": "yes", "plan": "tasks/current/security-plan.json" }`。政府屬性為 no 時可填 plan=null；unknown 尚未確認。舊檔缺欄位仍能讀取，但新任務需依 intake 補足。全域規範／專案已有標案資訊不能以刪欄位規避。
+
+政府為是時 plan 必須存在且身分一致。draft 驗證基本結構；任一 Node 進入執行狀態或 feature ready/in_progress 時驗證 planning；feature done 驗證 delivery。即使 feature 是 draft，已執行的 Node 也不能繞過 planning。security-planner 可作 Node owner。
+
+控制項 node_ids 連到本 state 存在的 Node；JSON 主表保存要求與查核結論，Node 執行進度仍以 state 為準。[資料契約](../.agents/skills/security-planner/references/data-contract.md)。

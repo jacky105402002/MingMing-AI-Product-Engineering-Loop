@@ -17,3 +17,7 @@ planner 能確認問題、目標使用者、初步範圍與可驗證 AC，已有
 - 執行與外部操作範圍符合使用者授權。
 
 planner 檢查後把 feature.status 設 ready，Node 依條件設 ready。Fast-Track 可用精簡 spec，但上述適用條件不可跳過。Ready 是 AI 根據證據作出的判斷，不要求例行人工簽核。
+
+## 政府標案資安 Ready
+
+Design Ready 可在等級待確認時完成不依賴它的調查。Implementation Ready 前，政府屬性為是的任務必須有 security-plan.json；planning 檢查通過，來源／契約已覆核，等級與範圍確認，候選項目有適用性處置，適用措施及驗證已連到 Node。仍有重要缺口時只推進無依賴工作。
