@@ -59,7 +59,7 @@ Windows 下 recorder 使用 shell=false；需要 npm.cmd 等 shell 命令時明�
 目前 repository 未定義 LICENSE，本版不代替擁有者選擇開源授權，也不宣稱已授予第三方商業再散布權利。授權選擇列入追蹤，與工作流技術驗證分開處理。
 本版是 agent 可執行的規範與輔助檢查工具，並非常駐排程器、模型 API 編排服務或平台權限繞過工具。
 
-## v1.1.1 資安規劃擴充（2026-10-13 修訂）
+## v1.1.2 資安規劃擴充
 
 更新的 workflow-lib.mjs 會載入 .agents/skills/security-planner/scripts/security-lib.mjs，因此須一併導入整個 security-planner 目錄，保留其相對路徑。獨立使用時，可把該目錄完整安裝成個人 Skill，工具仍在產品專案根目錄執行。
 

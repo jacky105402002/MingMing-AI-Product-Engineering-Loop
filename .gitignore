@@ -14,3 +14,6 @@ desktop.ini
 
 # Workflow evidence logs are versioned artifacts.
 !tasks/**/reports/**/*.log
+
+# Security planner validation evidence must survive clean checkout.
+!tasks/validation/security-planner/**/*.log

@@ -153,6 +153,7 @@
         "docs/releases/v1.1.0.md",
         "docs/releases/v1.1.1-security-20261013.md",
         "docs/releases/v1.1.1.md",
+        "docs/releases/v1.1.2.md",
         "docs/workflow-improvement-tracker.md",
         "examples/README.md",
         "examples/minimal-state.json",
@@ -184,25 +185,25 @@
         "tests/security.test.mjs",
         "tests/workflow.test.mjs"
       ],
-      "revision": "r2",
+      "revision": "r3",
       "checks": [
         {
-          "id": "test-02",
+          "id": "test-03",
           "kind": "test",
           "result": "pass",
-          "evidence": "tasks/validation/security-planner/attempt-02/test.json"
+          "evidence": "tasks/validation/security-planner/attempt-03/test.json"
         },
         {
-          "id": "review-02",
+          "id": "review-03",
           "kind": "review",
           "result": "pass",
-          "evidence": "tasks/validation/security-planner/attempt-02/review.json"
+          "evidence": "tasks/validation/security-planner/attempt-03/review.json"
         },
         {
-          "id": "docs-02",
+          "id": "docs-03",
           "kind": "docs",
           "result": "pass",
-          "evidence": "tasks/validation/security-planner/attempt-02/docs.json"
+          "evidence": "tasks/validation/security-planner/attempt-03/docs.json"
         }
       ]
     }
@@ -220,6 +221,12 @@
       "decision": "維持工作流 1.1.1，另用日期標籤識別資安修訂",
       "reason": "可追溯既有發布且不覆蓋舊下載",
       "source": "使用者：OKOK那你在幫我推上去到github，AI工作流的版本為1.1.1"
+    },
+    {
+      "id": "D3",
+      "decision": "正式發布 v1.1.2，取代 D2",
+      "reason": "使用者更正版本要求",
+      "source": "使用者：那你改為上傳為1.1.2就好了"
     }
   ]
 }

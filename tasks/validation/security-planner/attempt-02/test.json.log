@@ -1,0 +1,381 @@
+["node","scripts/check.mjs"]
+PASS template structure; no active feature or product validation claimed.
+TAP version 13
+# PASS init; structure/evidence integrity only, not security certification.
+# PASS validate; structure/evidence integrity only, not security certification.
+# PASS render; structure/evidence integrity only, not security certification.
+# Subtest: bundled official source snapshots match recorded digests
+ok 1 - bundled official source snapshots match recorded digests
+  ---
+  duration_ms: 6.9572
+  type: 'test'
+  ...
+# Subtest: high creates complete unapproved draft
+ok 2 - high creates complete unapproved draft
+  ---
+  duration_ms: 30.0676
+  type: 'test'
+  ...
+# Subtest: medium creates complete unapproved draft
+ok 3 - medium creates complete unapproved draft
+  ---
+  duration_ms: 27.2681
+  type: 'test'
+  ...
+# Subtest: normal creates complete unapproved draft
+ok 4 - normal creates complete unapproved draft
+  ---
+  duration_ms: 36.8931
+  type: 'test'
+  ...
+# Subtest: unknown creates complete unapproved draft
+ok 5 - unknown creates complete unapproved draft
+  ---
+  duration_ms: 31.4527
+  type: 'test'
+  ...
+# Subtest: 高 creates complete unapproved draft
+ok 6 - 高 creates complete unapproved draft
+  ---
+  duration_ms: 30.9887
+  type: 'test'
+  ...
+# Subtest: 中 creates complete unapproved draft
+ok 7 - 中 creates complete unapproved draft
+  ---
+  duration_ms: 43.98
+  type: 'test'
+  ...
+# Subtest: 普 creates complete unapproved draft
+ok 8 - 普 creates complete unapproved draft
+  ---
+  duration_ms: 43.3841
+  type: 'test'
+  ...
+# Subtest: 尚未確認 creates complete unapproved draft
+ok 9 - 尚未確認 creates complete unapproved draft
+  ---
+  duration_ms: 40.6833
+  type: 'test'
+  ...
+# Subtest: level-specific requirements retain inherited medium/high measures
+ok 10 - level-specific requirements retain inherited medium/high measures
+  ---
+  duration_ms: 1.1882
+  type: 'test'
+  ...
+# Subtest: deleted controls or changed level cannot bypass coverage
+ok 11 - deleted controls or changed level cannot bypass coverage
+  ---
+  duration_ms: 37.7488
+  type: 'test'
+  ...
+# Subtest: planning succeeds only after source and applicability dispositions
+ok 12 - planning succeeds only after source and applicability dispositions
+  ---
+  duration_ms: 53.5998
+  type: 'test'
+  ...
+# Subtest: source review report mutation invalidates planning
+ok 13 - source review report mutation invalidates planning
+  ---
+  duration_ms: 34.6013
+  type: 'test'
+  ...
+# Subtest: conformant cannot be claimed in draft without real evidence and inputs
+ok 14 - conformant cannot be claimed in draft without real evidence and inputs
+  ---
+  duration_ms: 31.3705
+  type: 'test'
+  ...
+# Subtest: delivery verifies recorded hashes and rejects changed input
+ok 15 - delivery verifies recorded hashes and rejects changed input
+  ---
+  duration_ms: 1182.9754
+  type: 'test'
+  ...
+# Subtest: N/A requires rationale, conclusion, and supporting evidence
+ok 16 - N/A requires rationale, conclusion, and supporting evidence
+  ---
+  duration_ms: 51.0424
+  type: 'test'
+  ...
+# Subtest: qualifying custom system requires agency/independent evidence {"custom_development":true,"core_system":true,"contract_amount_twd":null}
+ok 17 - qualifying custom system requires agency/independent evidence {"custom_development":true,"core_system":true,"contract_amount_twd":null}
+  ---
+  duration_ms: 1376.5882
+  type: 'test'
+  ...
+# Subtest: qualifying custom system requires agency/independent evidence {"custom_development":true,"core_system":false,"contract_amount_twd":10000000}
+ok 18 - qualifying custom system requires agency/independent evidence {"custom_development":true,"core_system":false,"contract_amount_twd":10000000}
+  ---
+  duration_ms: 1289.1773
+  type: 'test'
+  ...
+# Subtest: planning rejects missing or unknown Node mappings
+ok 19 - planning rejects missing or unknown Node mappings
+  ---
+  duration_ms: 30.3805
+  type: 'test'
+  ...
+# Subtest: CSV draft replaces mapped prechecks and preserves other cells and original
+ok 20 - CSV draft replaces mapped prechecks and preserves other cells and original
+  ---
+  duration_ms: 42.8184
+  type: 'test'
+  ...
+# Subtest: CSV aggregates all mapped controls and rejects stale evidence
+ok 21 - CSV aggregates all mapped controls and rejects stale evidence
+  ---
+  duration_ms: 1407.5249
+  type: 'test'
+  ...
+# Subtest: CSV rejects unknown mappings, original mutation, duplicate rows and columns
+ok 22 - CSV rejects unknown mappings, original mutation, duplicate rows and columns
+  ---
+  duration_ms: 72.2127
+  type: 'test'
+  ...
+# Subtest: CSV quoted newlines and escaped quotes parse correctly; malformed CSV rejected
+ok 23 - CSV quoted newlines and escaped quotes parse correctly; malformed CSV rejected
+  ---
+  duration_ms: 0.473
+  type: 'test'
+  ...
+# Subtest: paths and overwrites rejected, symlink escape rejected
+ok 24 - paths and overwrites rejected, symlink escape rejected
+  ---
+  duration_ms: 50.7797
+  type: 'test'
+  ...
+# Subtest: CLI init/render and draft validation work; unknown flags and planning gate fail
+ok 25 - CLI init/render and draft validation work; unknown flags and planning gate fail
+  ---
+  duration_ms: 71.9832
+  type: 'test'
+  ...
+# Subtest: malformed plan reports errors instead of crashing
+ok 26 - malformed plan reports errors instead of crashing
+  ---
+  duration_ms: 24.9983
+  type: 'test'
+  ...
+# Subtest: MingMing executing nodes enforce planning even if feature says draft
+ok 27 - MingMing executing nodes enforce planning even if feature says draft
+  ---
+  duration_ms: 56.7413
+  type: 'test'
+  ...
+# Subtest: real passing command and review produce valid active evidence
+ok 28 - real passing command and review produce valid active evidence
+  ---
+  duration_ms: 428.6884
+  type: 'test'
+  ...
+# Subtest: template passes structure but never active validation
+ok 29 - template passes structure but never active validation
+  ---
+  duration_ms: 2.8264
+  type: 'test'
+  ...
+# Subtest: template cannot claim completed nodes
+ok 30 - template cannot claim completed nodes
+  ---
+  duration_ms: 303.5732
+  type: 'test'
+  ...
+# Subtest: actual nonzero command cannot be passed as success
+ok 31 - actual nonzero command cannot be passed as success
+  ---
+  duration_ms: 683.3798
+  type: 'test'
+  ...
+# Subtest: recorder refuses overwriting previous attempt
+ok 32 - recorder refuses overwriting previous attempt
+  ---
+  duration_ms: 306.7488
+  type: 'test'
+  ...
+# Subtest: wrong revision rejected
+ok 33 - wrong revision rejected
+  ---
+  duration_ms: 364.642
+  type: 'test'
+  ...
+# Subtest: wrong node rejected
+ok 34 - wrong node rejected
+  ---
+  duration_ms: 340.0407
+  type: 'test'
+  ...
+# Subtest: wrong kind rejected
+ok 35 - wrong kind rejected
+  ---
+  duration_ms: 337.4202
+  type: 'test'
+  ...
+# Subtest: failed exit rejected
+ok 36 - failed exit rejected
+  ---
+  duration_ms: 315.2166
+  type: 'test'
+  ...
+# Subtest: missing command rejected
+ok 37 - missing command rejected
+  ---
+  duration_ms: 306.7549
+  type: 'test'
+  ...
+# Subtest: missing source coverage rejected
+ok 38 - missing source coverage rejected
+  ---
+  duration_ms: 303.6148
+  type: 'test'
+  ...
+# Subtest: missing AC coverage rejected
+ok 39 - missing AC coverage rejected
+  ---
+  duration_ms: 313.0441
+  type: 'test'
+  ...
+# Subtest: missing artifacts rejected
+ok 40 - missing artifacts rejected
+  ---
+  duration_ms: 309.0992
+  type: 'test'
+  ...
+# Subtest: source modification invalidates evidence
+ok 41 - source modification invalidates evidence
+  ---
+  duration_ms: 321.4296
+  type: 'test'
+  ...
+# Subtest: feature requirement modification invalidates evidence
+ok 42 - feature requirement modification invalidates evidence
+  ---
+  duration_ms: 305.0357
+  type: 'test'
+  ...
+# Subtest: report modification invalidates evidence
+ok 43 - report modification invalidates evidence
+  ---
+  duration_ms: 366.9241
+  type: 'test'
+  ...
+# Subtest: missing QA gate rejected
+ok 44 - missing QA gate rejected
+  ---
+  duration_ms: 302.4221
+  type: 'test'
+  ...
+# Subtest: test/review N/A cannot bypass gate
+ok 45 - test/review N/A cannot bypass gate
+  ---
+  duration_ms: 306.7481
+  type: 'test'
+  ...
+# Subtest: N/A requires meaningful reason
+ok 46 - N/A requires meaningful reason
+  ---
+  duration_ms: 330.4544
+  type: 'test'
+  ...
+# Subtest: blocking question prevents affected node completion
+ok 47 - blocking question prevents affected node completion
+  ---
+  duration_ms: 306.5624
+  type: 'test'
+  ...
+# Subtest: resolved question requires actual answer and source
+ok 48 - resolved question requires actual answer and source
+  ---
+  duration_ms: 310.3716
+  type: 'test'
+  ...
+# Subtest: cycles and unfinished dependencies rejected
+ok 49 - cycles and unfinished dependencies rejected
+  ---
+  duration_ms: 315.2447
+  type: 'test'
+  ...
+# Subtest: dependency sources must be included transitively
+ok 50 - dependency sources must be included transitively
+  ---
+  duration_ms: 388.7617
+  type: 'test'
+  ...
+# Subtest: path traversal and Windows absolute paths rejected
+ok 51 - path traversal and Windows absolute paths rejected
+  ---
+  duration_ms: 250.0936
+  type: 'test'
+  ...
+# Subtest: malformed state yields errors without crashing
+ok 52 - malformed state yields errors without crashing
+  ---
+  duration_ms: 370.1142
+  type: 'test'
+  ...
+# Subtest: high risk cannot use fast-track
+ok 53 - high risk cannot use fast-track
+  ---
+  duration_ms: 329.3057
+  type: 'test'
+  ...
+# Subtest: unfinished design stage cannot pass execution
+ok 54 - unfinished design stage cannot pass execution
+  ---
+  duration_ms: 326.4583
+  type: 'test'
+  ...
+# Subtest: release cannot be verified without deployment and smoke evidence
+ok 55 - release cannot be verified without deployment and smoke evidence
+  ---
+  duration_ms: 410.5905
+  type: 'test'
+  ...
+# Subtest: recorder detects source mutation during test
+ok 56 - recorder detects source mutation during test
+  ---
+  duration_ms: 793.4475
+  type: 'test'
+  ...
+# Subtest: CLI requires active state and fails malformed JSON
+ok 57 - CLI requires active state and fails malformed JSON
+  ---
+  duration_ms: 613.5933
+  type: 'test'
+  ...
+# Subtest: draft feature cannot hide executing nodes with unfinished design
+ok 58 - draft feature cannot hide executing nodes with unfinished design
+  ---
+  duration_ms: 316.1548
+  type: 'test'
+  ...
+# Subtest: null acceptance criteria produces diagnostics
+ok 59 - null acceptance criteria produces diagnostics
+  ---
+  duration_ms: 319.4311
+  type: 'test'
+  ...
+# Subtest: documentation check finds missing relative targets
+ok 60 - documentation check finds missing relative targets
+  ---
+  duration_ms: 355.3749
+  type: 'test'
+  ...
+# Subtest: minimal example is a valid draft, not a completed feature
+ok 61 - minimal example is a valid draft, not a completed feature
+  ---
+  duration_ms: 1.7509
+  type: 'test'
+  ...
+1..61
+# tests 61
+# suites 0
+# pass 61
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 11819.7869
