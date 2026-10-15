@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "mode": "active",
+  "feature": {
+    "id": "security-execution-loop",
+    "route": "full-loop",
+    "risk": "medium",
+    "status": "done",
+    "spec": "tasks/validation/security-execution/spec.md",
+    "acceptance_criteria": [
+      {
+        "id": "AC-1",
+        "description": "逐款可執行驗證契約"
+      },
+      {
+        "id": "AC-2",
+        "description": "可追溯檢查執行與結果"
+      },
+      {
+        "id": "AC-3",
+        "description": "證據語意覆核及阻礙管理"
+      },
+      {
+        "id": "AC-4",
+        "description": "失敗修正至回填隔離試辦"
+      },
+      {
+        "id": "AC-5",
+        "description": "文件與本機接入"
+      }
+    ],
+    "stages": [
+      {
+        "id": "01",
+        "status": "complete",
+        "reason": "CLI 及資料契約維護，無 UI 或網路 API",
+        "artifact": "tasks/validation/security-execution/spec.md"
+      },
+      {
+        "id": "02",
+        "status": "complete",
+        "reason": "CLI 及資料契約維護，無 UI 或網路 API",
+        "artifact": "tasks/validation/security-execution/spec.md"
+      },
+      {
+        "id": "03",
+        "status": "complete",
+        "reason": "CLI 及資料契約維護，無 UI 或網路 API",
+        "artifact": "tasks/validation/security-execution/spec.md"
+      },
+      {
+        "id": "04",
+        "status": "complete",
+        "reason": "CLI 及資料契約維護，無 UI 或網路 API",
+        "artifact": "tasks/validation/security-execution/spec.md"
+      },
+      {
+        "id": "05",
+        "status": "not_applicable",
+        "reason": "CLI 及資料契約維護，無 UI 或網路 API",
+        "artifact": "tasks/validation/security-execution/spec.md"
+      },
+      {
+        "id": "06",
+        "status": "not_applicable",
+        "reason": "CLI 及資料契約維護，無 UI 或網路 API",
+        "artifact": "tasks/validation/security-execution/spec.md"
+      },
+      {
+        "id": "07",
+        "status": "complete",
+        "reason": "CLI 及資料契約維護，無 UI 或網路 API",
+        "artifact": "tasks/validation/security-execution/spec.md"
+      }
+    ],
+    "security": {
+      "government_project": "no",
+      "plan": null
+    },
+    "release": {
+      "status": "not_requested",
+      "record": null
+    }
+  },
+  "nodes": [
+    {
+      "id": "node-execution",
+      "goal": "補強資安代理執行與證據閉環",
+      "owner": "security-planner",
+      "status": "done",
+      "depends_on": [],
+      "ac_ids": [
+        "AC-1",
+        "AC-2",
+        "AC-3",
+        "AC-4",
+        "AC-5"
+      ],
+      "spec": "tasks/validation/security-execution/spec.md",
+      "allowed_files": [
+        ".agents/skills/",
+        "scripts/",
+        "tests/",
+        "skills/",
+        "docs/",
+        "ai-workflow/",
+        "README.md",
+        ".gitignore",
+        ".github/",
+        "examples/security-execution/"
+      ],
+      "evidence_files": [
+        ".agents/skills/mingming-workflow/SKILL.md",
+        ".agents/skills/security-planner/SKILL.md",
+        ".agents/skills/security-planner/assets/baseline.json",
+        ".agents/skills/security-planner/assets/clauses.json",
+        ".agents/skills/security-planner/assets/official/appendix-09.pdf",
+        ".agents/skills/security-planner/assets/official/appendix-10.pdf",
+        ".agents/skills/security-planner/assets/sources.json",
+        ".agents/skills/security-planner/references/data-contract.md",
+        ".agents/skills/security-planner/references/execution.md",
+        ".agents/skills/security-planner/references/forms.md",
+        ".agents/skills/security-planner/references/operations.md",
+        ".agents/skills/security-planner/references/source-coverage.md",
+        ".agents/skills/security-planner/references/sources.md",
+        ".agents/skills/security-planner/scripts/clause-catalog.mjs",
+        ".agents/skills/security-planner/scripts/execution-lib.mjs",
+        ".agents/skills/security-planner/scripts/security-lib.mjs",
+        ".agents/skills/security-planner/scripts/security-plan.mjs",
+        ".gitattributes",
+        ".github/workflows/validate.yml",
+        ".gitignore",
+        "AGENTS.md",
+        "README.md",
+        "VERSION",
+        "ai-workflow/README.md",
+        "ai-workflow/autonomy-policy.md",
+        "ai-workflow/clarification-policy.md",
+        "ai-workflow/context-policy.md",
+        "ai-workflow/definition-of-done.md",
+        "ai-workflow/definition-of-ready.md",
+        "ai-workflow/evidence-policy.md",
+        "ai-workflow/frontend-resource-map.md",
+        "ai-workflow/loop-map.md",
+        "ai-workflow/mcp-map.md",
+        "ai-workflow/model-routing-policy.md",
+        "ai-workflow/node-status.md",
+        "ai-workflow/node-template.md",
+        "ai-workflow/prompt-router.md",
+        "ai-workflow/release-policy.md",
+        "ai-workflow/review-checklist.md",
+        "ai-workflow/skill-map.md",
+        "ai-workflow/state-contract.md",
+        "ai-workflow/tool-map.md",
+        "ai-workflow/workflow-improvement-log.md",
+        "docs/README.md",
+        "docs/adoption.md",
+        "docs/architecture-decisions/adr-template.md",
+        "docs/changelog.md",
+        "docs/intake.md",
+        "docs/known-issues.md",
+        "docs/pilot-plan.md",
+        "docs/releases/v1.1.0-validation.md",
+        "docs/releases/v1.1.0.md",
+        "docs/releases/v1.1.1-security-20261013.md",
+        "docs/releases/v1.1.1.md",
+        "docs/releases/v1.1.2.md",
+        "docs/workflow-improvement-tracker.md",
+        "examples/README.md",
+        "examples/minimal-state.json",
+        "examples/security-execution/pilot.mjs",
+        "mingming-ai-product-engineering-loop.md",
+        "scripts/check.mjs",
+        "scripts/record-evidence.mjs",
+        "scripts/validate-workflow.mjs",
+        "scripts/workflow-lib.mjs",
+        "skills/backend-developer.skill.md",
+        "skills/code-reviewer.skill.md",
+        "skills/data-modeler.skill.md",
+        "skills/docs-maintainer.skill.md",
+        "skills/flow-designer.skill.md",
+        "skills/frontend-developer.skill.md",
+        "skills/product-planner.skill.md",
+        "skills/qa-tester.skill.md",
+        "skills/release-manager.skill.md",
+        "skills/security-planner.skill.md",
+        "skills/system-architect.skill.md",
+        "skills/uiux-designer.skill.md",
+        "tasks/README.md",
+        "tasks/archive/README.md",
+        "tasks/templates/completion-report.md",
+        "tasks/templates/fast-track.md",
+        "tasks/templates/release-record.md",
+        "tasks/templates/release.json",
+        "tasks/templates/review-report.md",
+        "tasks/templates/test-report.md",
+        "tests/security-clauses.test.mjs",
+        "tests/security-execution.test.mjs",
+        "tests/workflow.test.mjs"
+      ],
+      "revision": "r1",
+      "checks": [
+        {
+          "id": "test-01",
+          "kind": "test",
+          "result": "pass",
+          "evidence": "tasks/validation/security-execution/attempt-01/test.json"
+        },
+        {
+          "id": "review-01",
+          "kind": "review",
+          "result": "pass",
+          "evidence": "tasks/validation/security-execution/attempt-01/review.json"
+        },
+        {
+          "id": "docs-01",
+          "kind": "docs",
+          "result": "pass",
+          "evidence": "tasks/validation/security-execution/attempt-01/docs.json"
+        }
+      ]
+    }
+  ],
+  "questions": [],
+  "decisions": [
+    {
+      "id": "D1",
+      "decision": "新計畫預設啟用執行契約，舊 v2 保留並明確升級",
+      "reason": "保留既有計畫與證據；新工作需有可操作驗證條件",
+      "source": "使用者要求補強 AI 代理產出能力"
+    }
+  ]
+}

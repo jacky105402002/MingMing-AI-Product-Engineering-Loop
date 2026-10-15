@@ -35,3 +35,5 @@ decisions：[id、decision、reason、source]，保存 AI 依據或使用者授�
 政府為是時 plan 必須存在且身分一致。draft 驗證基本結構；任一 Node 進入執行狀態或 feature ready/in_progress 時驗證 planning；feature done 驗證 delivery。即使 feature 是 draft，已執行的 Node 也不能繞過 planning。security-planner 可作 Node owner。
 
 控制項 node_ids 連到本 state 存在的 Node；JSON 主表保存要求與查核結論，Node 執行進度仍以 state 為準。[資料契約](../.agents/skills/security-planner/references/data-contract.md)。
+
+逐款資安擴充採 security-plan schema v2（不改 MingMing state schema v1）。新驗證器對舊資安表明確要求遷移，對無 security 的既有任務維持相容。每個適用細項各自映射 Node，表單覆核與來源覆核皆須完成。

@@ -1,0 +1,9 @@
+{
+  "status": "ready",
+  "version": "1.1.2",
+  "target": "GitHub jacky105402002/MingMing-AI-Product-Engineering-Loop tag v1.1.2-r1",
+  "authorization_source": "使用者已選擇維持版本 1.1.2，使用新標籤 v1.1.2-r1 並保留原版",
+  "deployment_evidence": [],
+  "verification_evidence": [],
+  "notes": "本提交包含發布準備證據；外部發布與下載校驗回條另存，未完成前不標 verified。"
+}

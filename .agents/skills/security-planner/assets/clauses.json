@@ -1,0 +1,3389 @@
+{
+  "schema_version": 2,
+  "version": "2026-10-13-clauses-1",
+  "level_parents": {
+    "normal": [],
+    "medium": [
+      "normal"
+    ],
+    "high": [
+      "medium"
+    ]
+  },
+  "groups": [
+    {
+      "id": "BASE-01",
+      "title": "帳號管理",
+      "source_id": "APP10",
+      "locator": "PDF第1頁／帳號管理",
+      "inheritance": [
+        {
+          "at": "medium",
+          "from": "normal",
+          "clause": "中三"
+        },
+        {
+          "at": "high",
+          "from": "medium",
+          "clause": "高三"
+        }
+      ],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-02",
+      "title": "最小權限",
+      "source_id": "APP10",
+      "locator": "PDF第1頁／最小權限",
+      "inheritance": [],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-03",
+      "title": "遠端存取",
+      "source_id": "APP10",
+      "locator": "PDF第1頁／遠端存取",
+      "inheritance": [],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-04",
+      "title": "記錄事件",
+      "source_id": "APP10",
+      "locator": "PDF第1頁／記錄事件",
+      "inheritance": [
+        {
+          "at": "medium",
+          "from": "normal",
+          "clause": "中高共用二"
+        },
+        {
+          "at": "high",
+          "from": "medium",
+          "clause": "中高合併欄位"
+        }
+      ],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-05",
+      "title": "日誌紀錄內容",
+      "source_id": "APP10",
+      "locator": "PDF第2頁／日誌紀錄內容",
+      "inheritance": [],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-06",
+      "title": "日誌儲存容量",
+      "source_id": "APP10",
+      "locator": "PDF第2頁／日誌儲存容量",
+      "inheritance": [],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-07",
+      "title": "日誌處理失效之回應",
+      "source_id": "APP10",
+      "locator": "PDF第2頁／日誌處理失效之回應",
+      "inheritance": [
+        {
+          "at": "high",
+          "from": "shared",
+          "clause": "高二"
+        }
+      ],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-08",
+      "title": "時戳及校時",
+      "source_id": "APP10",
+      "locator": "PDF第2頁／時戳及校時",
+      "inheritance": [],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-09",
+      "title": "日誌資訊之保護",
+      "source_id": "APP10",
+      "locator": "PDF第2頁／日誌資訊之保護",
+      "inheritance": [
+        {
+          "at": "medium",
+          "from": "normal",
+          "clause": "中二"
+        },
+        {
+          "at": "high",
+          "from": "medium",
+          "clause": "高二"
+        }
+      ],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-10",
+      "title": "資料備份",
+      "source_id": "APP10",
+      "locator": "PDF第2頁／資料備份",
+      "inheritance": [
+        {
+          "at": "medium",
+          "from": "normal",
+          "clause": "中二"
+        },
+        {
+          "at": "high",
+          "from": "medium",
+          "clause": "高三"
+        }
+      ],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-11",
+      "title": "系統備援",
+      "source_id": "APP10",
+      "locator": "PDF第2頁／系統備援",
+      "inheritance": [
+        {
+          "at": "medium",
+          "from": "normal",
+          "clause": "中二"
+        },
+        {
+          "at": "high",
+          "from": "medium",
+          "clause": "高二"
+        }
+      ],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-12",
+      "title": "使用者之識別與鑑別",
+      "source_id": "APP10",
+      "locator": "PDF第2頁／使用者之識別與鑑別",
+      "inheritance": [
+        {
+          "at": "high",
+          "from": "shared",
+          "clause": "高二"
+        }
+      ],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-13",
+      "title": "身分驗證管理",
+      "source_id": "APP10",
+      "locator": "PDF第2–3頁／身分驗證管理",
+      "inheritance": [
+        {
+          "at": "medium",
+          "from": "normal",
+          "clause": "中高共用三"
+        },
+        {
+          "at": "high",
+          "from": "medium",
+          "clause": "中高合併欄位"
+        }
+      ],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-14",
+      "title": "鑑別資訊保護",
+      "source_id": "APP10",
+      "locator": "PDF第3頁／鑑別資訊保護",
+      "inheritance": [
+        {
+          "at": "medium",
+          "from": "normal",
+          "clause": "中高共用二"
+        },
+        {
+          "at": "high",
+          "from": "medium",
+          "clause": "中高合併欄位"
+        }
+      ],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-15",
+      "title": "系統發展生命週期需求階段",
+      "source_id": "APP10",
+      "locator": "PDF第3頁／系統發展生命週期需求階段",
+      "inheritance": [],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-16",
+      "title": "系統發展生命週期設計階段",
+      "source_id": "APP10",
+      "locator": "PDF第3頁／系統發展生命週期設計階段",
+      "inheritance": [
+        {
+          "at": "high",
+          "from": "medium",
+          "clause": "中高合併欄位"
+        }
+      ],
+      "no_requirement_levels": [
+        "normal"
+      ]
+    },
+    {
+      "id": "BASE-17",
+      "title": "系統發展生命週期開發階段",
+      "source_id": "APP10",
+      "locator": "PDF第3–4頁／系統發展生命週期開發階段",
+      "inheritance": [
+        {
+          "at": "high",
+          "from": "shared",
+          "clause": "高三"
+        }
+      ],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-18",
+      "title": "系統發展生命週期測試階段",
+      "source_id": "APP10",
+      "locator": "PDF第4頁／系統發展生命週期測試階段",
+      "inheritance": [
+        {
+          "at": "high",
+          "from": "shared",
+          "clause": "高二"
+        }
+      ],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-19",
+      "title": "系統發展生命週期部署與維運階段",
+      "source_id": "APP10",
+      "locator": "PDF第4頁／系統發展生命週期部署與維運階段",
+      "inheritance": [
+        {
+          "at": "medium",
+          "from": "normal",
+          "clause": "中高共用二"
+        },
+        {
+          "at": "high",
+          "from": "medium",
+          "clause": "中高合併欄位"
+        }
+      ],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-20",
+      "title": "系統發展生命週期委外階段",
+      "source_id": "APP10",
+      "locator": "PDF第4頁／系統發展生命週期委外階段",
+      "inheritance": [],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-21",
+      "title": "獲得程序",
+      "source_id": "APP10",
+      "locator": "PDF第4頁／獲得程序",
+      "inheritance": [
+        {
+          "at": "medium",
+          "from": "normal",
+          "clause": "中高共用二"
+        },
+        {
+          "at": "high",
+          "from": "medium",
+          "clause": "中高合併欄位"
+        }
+      ],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-22",
+      "title": "系統文件",
+      "source_id": "APP10",
+      "locator": "PDF第4頁／系統文件",
+      "inheritance": [],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-23",
+      "title": "傳輸之機密性與完整性",
+      "source_id": "APP10",
+      "locator": "PDF第4頁／傳輸之機密性與完整性",
+      "inheritance": [],
+      "no_requirement_levels": [
+        "normal",
+        "medium"
+      ]
+    },
+    {
+      "id": "BASE-24",
+      "title": "資料儲存之安全",
+      "source_id": "APP10",
+      "locator": "PDF第4頁／資料儲存之安全",
+      "inheritance": [],
+      "no_requirement_levels": [
+        "normal",
+        "medium"
+      ]
+    },
+    {
+      "id": "BASE-25",
+      "title": "漏洞修復",
+      "source_id": "APP10",
+      "locator": "PDF第5頁／漏洞修復",
+      "inheritance": [
+        {
+          "at": "medium",
+          "from": "normal",
+          "clause": "中高共用二"
+        },
+        {
+          "at": "high",
+          "from": "medium",
+          "clause": "中高合併欄位"
+        }
+      ],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-26",
+      "title": "資通系統監控",
+      "source_id": "APP10",
+      "locator": "PDF第5頁／資通系統監控",
+      "inheritance": [
+        {
+          "at": "medium",
+          "from": "normal",
+          "clause": "中二"
+        },
+        {
+          "at": "high",
+          "from": "medium",
+          "clause": "高二"
+        }
+      ],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "BASE-27",
+      "title": "軟體及資訊完整性",
+      "source_id": "APP10",
+      "locator": "PDF第5頁／軟體及資訊完整性",
+      "inheritance": [
+        {
+          "at": "medium",
+          "from": "normal",
+          "clause": "中三"
+        },
+        {
+          "at": "high",
+          "from": "medium",
+          "clause": "高二"
+        }
+      ],
+      "no_requirement_levels": []
+    },
+    {
+      "id": "OUT-01",
+      "title": "專業人力",
+      "source_id": "RULE7",
+      "locator": "第七條第一項第1款"
+    },
+    {
+      "id": "OUT-02",
+      "title": "複委託",
+      "source_id": "RULE7",
+      "locator": "第七條第一項第2款"
+    },
+    {
+      "id": "OUT-03",
+      "title": "機密人員",
+      "source_id": "RULE7",
+      "locator": "第七條第一項第3款"
+    },
+    {
+      "id": "OUT-04",
+      "title": "安全檢測與來源授權",
+      "source_id": "RULE7",
+      "locator": "第七條第一項第4款"
+    },
+    {
+      "id": "OUT-05",
+      "title": "事件通知",
+      "source_id": "RULE7",
+      "locator": "第七條第一項第5款"
+    },
+    {
+      "id": "OUT-06",
+      "title": "結案資料",
+      "source_id": "RULE7",
+      "locator": "第七條第一項第6款"
+    },
+    {
+      "id": "OUT-07",
+      "title": "其他措施",
+      "source_id": "RULE7",
+      "locator": "第七條第一項第7款"
+    },
+    {
+      "id": "OUT-08",
+      "title": "監督確認",
+      "source_id": "RULE7",
+      "locator": "第七條第一項第8款"
+    },
+    {
+      "id": "JCOM-01",
+      "title": "機房重要區域門禁與環境管理",
+      "source_id": "JOINT115",
+      "locator": "附件3／共通性檢核項目第1項"
+    },
+    {
+      "id": "JCOM-02",
+      "title": "軟體安裝管控及授權／免費軟體盤點",
+      "source_id": "JOINT115",
+      "locator": "附件3／共通性檢核項目第2項"
+    },
+    {
+      "id": "JCOM-03",
+      "title": "行動裝置與可攜媒體管理及查核",
+      "source_id": "JOINT115",
+      "locator": "附件3／共通性檢核項目第3項"
+    },
+    {
+      "id": "JCOM-04",
+      "title": "設備日誌留存至少六個月及校時",
+      "source_id": "JOINT115",
+      "locator": "附件3／共通性檢核項目第4項"
+    },
+    {
+      "id": "JCOM-05",
+      "title": "端點／伺服器惡意程式防護與更新",
+      "source_id": "JOINT115",
+      "locator": "附件3／共通性檢核項目第5項"
+    },
+    {
+      "id": "JCOM-06",
+      "title": "依原表條件檢視防毒、防火牆、郵件、入侵防禦、WAF及APT防護",
+      "source_id": "JOINT115",
+      "locator": "附件3／共通性檢核項目第6項"
+    },
+    {
+      "id": "JCOM-07",
+      "title": "防火牆規則審查、DNS限制及連線部署管理",
+      "source_id": "JOINT115",
+      "locator": "附件3／共通性檢核項目第7項"
+    },
+    {
+      "id": "JCOM-08",
+      "title": "依業務與資安需求區隔網域並管制存取",
+      "source_id": "JOINT115",
+      "locator": "附件3／共通性檢核項目第8項"
+    },
+    {
+      "id": "JCOM-09",
+      "title": "遠端資料存取必要性與保護",
+      "source_id": "JOINT115",
+      "locator": "附件3／共通性檢核項目第9項"
+    },
+    {
+      "id": "JCOM-10",
+      "title": "郵件過濾、異常處理及機敏傳送限制",
+      "source_id": "JOINT115",
+      "locator": "附件3／共通性檢核項目第10項"
+    },
+    {
+      "id": "JCON-01",
+      "title": "適當資安專責人力",
+      "source_id": "JOINT115",
+      "locator": "附件3／特定契約檢核項目第1項"
+    },
+    {
+      "id": "JCON-02",
+      "title": "重要組態與敏感資訊安全儲存、交換保護及監控紀錄",
+      "source_id": "JOINT115",
+      "locator": "附件3／特定契約檢核項目第2項"
+    },
+    {
+      "id": "JCON-03",
+      "title": "帳號盤點、密碼規範、優先導入MFA、最小權限、角色存取及管理帳號專用",
+      "source_id": "JOINT115",
+      "locator": "附件3／特定契約檢核項目第3項"
+    },
+    {
+      "id": "JCON-04",
+      "title": "檢測缺失修補與複測",
+      "source_id": "JOINT115",
+      "locator": "附件3／特定契約檢核項目第4項"
+    },
+    {
+      "id": "JCON-05",
+      "title": "客製化系統檢測證明及非自行開發來源授權",
+      "source_id": "JOINT115",
+      "locator": "附件3／特定契約檢核項目第5項"
+    },
+    {
+      "id": "JCON-06",
+      "title": "外部元件軟韌體弱點通告、更新評估與修復測試",
+      "source_id": "JOINT115",
+      "locator": "附件3／特定契約檢核項目第6項"
+    },
+    {
+      "id": "JCON-07",
+      "title": "安全開發生命週期與檢核機制",
+      "source_id": "JOINT115",
+      "locator": "附件3／特定契約檢核項目第7項"
+    },
+    {
+      "id": "JCON-08",
+      "title": "開發前設計機敏存取、登入、輸入輸出檢核並檢討",
+      "source_id": "JOINT115",
+      "locator": "附件3／特定契約檢核項目第8項"
+    },
+    {
+      "id": "JCON-09",
+      "title": "設計階段威脅與風險評估",
+      "source_id": "JOINT115",
+      "locator": "附件3／特定契約檢核項目第9項"
+    },
+    {
+      "id": "JCON-10",
+      "title": "開發安全控制、常見漏洞防護、高級源碼掃描及安全功能測試",
+      "source_id": "JOINT115",
+      "locator": "附件3／特定契約檢核項目第10項"
+    },
+    {
+      "id": "JCON-11",
+      "title": "版本與變更管理紀錄",
+      "source_id": "JOINT115",
+      "locator": "附件3／特定契約檢核項目第11項"
+    },
+    {
+      "id": "JCON-12",
+      "title": "弱點掃描及高級滲透測試",
+      "source_id": "JOINT115",
+      "locator": "附件3／特定契約檢核項目第12項"
+    },
+    {
+      "id": "JCON-13",
+      "title": "開發／測試／正式環境區隔與防護",
+      "source_id": "JOINT115",
+      "locator": "附件3／特定契約檢核項目第13項"
+    },
+    {
+      "id": "JCON-14",
+      "title": "事件通報應變程序",
+      "source_id": "JOINT115",
+      "locator": "附件3／特定契約檢核項目第14項"
+    },
+    {
+      "id": "JCON-15",
+      "title": "事件處理與改善紀錄",
+      "source_id": "JOINT115",
+      "locator": "附件3／特定契約檢核項目第15項"
+    },
+    {
+      "id": "JCON-16",
+      "title": "分包契約法律需求、人員權責、安全措施、程序及稽核權",
+      "source_id": "JOINT115",
+      "locator": "附件3／特定契約檢核項目第16項"
+    },
+    {
+      "id": "JCON-17",
+      "title": "分包資安稽核紀錄",
+      "source_id": "JOINT115",
+      "locator": "附件3／特定契約檢核項目第17項"
+    }
+  ],
+  "clauses": [
+    {
+      "id": "BASE-01-N01",
+      "parent_id": "BASE-01",
+      "title": "帳號管理",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／帳號管理／普一"
+        }
+      ],
+      "requirement": "建立帳號申請、建立、修改、啟用、停用及刪除程序。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-01-N02",
+      "parent_id": "BASE-01",
+      "title": "帳號管理",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／帳號管理／普二"
+        }
+      ],
+      "requirement": "刪除或禁用已逾期的臨時／緊急帳號。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-01-N03",
+      "parent_id": "BASE-01",
+      "title": "帳號管理",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／帳號管理／普三"
+        }
+      ],
+      "requirement": "禁用閒置帳號。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-01-N04",
+      "parent_id": "BASE-01",
+      "title": "帳號管理",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／帳號管理／普四"
+        }
+      ],
+      "requirement": "定期審核帳號申請、建立、修改、啟用、停用及刪除。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-01-M01",
+      "parent_id": "BASE-01",
+      "title": "帳號管理",
+      "origin": "medium",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／帳號管理／中一"
+        }
+      ],
+      "requirement": "由機關定義閒置時間、可使用期限與使用情況及條件。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-01-M02",
+      "parent_id": "BASE-01",
+      "title": "帳號管理",
+      "origin": "medium",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／帳號管理／中二"
+        }
+      ],
+      "requirement": "超過機關允許的閒置時間或使用期限時，自動登出。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-01-H01",
+      "parent_id": "BASE-01",
+      "title": "帳號管理",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／帳號管理／高一"
+        }
+      ],
+      "requirement": "依機關規定的情況與條件使用系統。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-01-H02",
+      "parent_id": "BASE-01",
+      "title": "帳號管理",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／帳號管理／高二"
+        }
+      ],
+      "requirement": "監控帳號異常使用，發現時回報管理者。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-02-S01",
+      "parent_id": "BASE-02",
+      "title": "最小權限",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／最小權限／共用未分款"
+        }
+      ],
+      "requirement": "依機關任務與業務需求，只給予使用者及代表其行為之程序完成任務所需權限。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-03-S01",
+      "parent_id": "BASE-03",
+      "title": "遠端存取",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／遠端存取／共用一"
+        }
+      ],
+      "requirement": "各類遠端存取先取得授權，並記錄使用限制、組態與連線需求。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-03-S02",
+      "parent_id": "BASE-03",
+      "title": "遠端存取",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／遠端存取／共用二"
+        }
+      ],
+      "requirement": "使用者權限檢查在伺服器端完成。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-03-S03",
+      "parent_id": "BASE-03",
+      "title": "遠端存取",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／遠端存取／共用三"
+        }
+      ],
+      "requirement": "監控遠端連入內部網段或系統後臺的連線。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-03-S04",
+      "parent_id": "BASE-03",
+      "title": "遠端存取",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／遠端存取／共用四"
+        }
+      ],
+      "requirement": "遠端存取採用加密機制。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-03-S05",
+      "parent_id": "BASE-03",
+      "title": "遠端存取",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／遠端存取／共用五"
+        }
+      ],
+      "requirement": "限制遠端存取來源為機關預先定義並管理的存取控制點。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-04-N01",
+      "parent_id": "BASE-04",
+      "title": "記錄事件",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／記錄事件／普一"
+        }
+      ],
+      "requirement": "訂定日誌記錄週期及留存政策，至少保留六個月。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-04-N02",
+      "parent_id": "BASE-04",
+      "title": "記錄事件",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／記錄事件／普二"
+        }
+      ],
+      "requirement": "決定應記錄的特定系統事件並具備記錄功能。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-04-N03",
+      "parent_id": "BASE-04",
+      "title": "記錄事件",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／記錄事件／普三"
+        }
+      ],
+      "requirement": "記錄系統管理者帳號執行的各項功能。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-04-M01",
+      "parent_id": "BASE-04",
+      "title": "記錄事件",
+      "origin": "medium",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第1頁／記錄事件／中高共用一"
+        }
+      ],
+      "requirement": "定期審查機關保留的系統日誌。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-05-S01",
+      "parent_id": "BASE-05",
+      "title": "日誌紀錄內容",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／日誌紀錄內容／共用未分款／拆項1"
+        }
+      ],
+      "requirement": "日誌包含事件類型、時間、位置與相關使用者身分。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-05-S02",
+      "parent_id": "BASE-05",
+      "title": "日誌紀錄內容",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／日誌紀錄內容／共用未分款／拆項2"
+        }
+      ],
+      "requirement": "採用單一日誌機制，維持輸出格式一致。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-05-S03",
+      "parent_id": "BASE-05",
+      "title": "日誌紀錄內容",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／日誌紀錄內容／共用未分款／拆項3"
+        }
+      ],
+      "requirement": "依資安政策及法規納入其他必要日誌資訊。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-06-S01",
+      "parent_id": "BASE-06",
+      "title": "日誌儲存容量",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／日誌儲存容量／共用未分款"
+        }
+      ],
+      "requirement": "依日誌保存需求配置足夠容量。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-07-S01",
+      "parent_id": "BASE-07",
+      "title": "日誌處理失效之回應",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／日誌處理失效之回應／普中共用未分款"
+        }
+      ],
+      "requirement": "日誌處理失效時採取適當行動。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-07-H01",
+      "parent_id": "BASE-07",
+      "title": "日誌處理失效之回應",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／日誌處理失效之回應／高一"
+        }
+      ],
+      "requirement": "對機關規定需即時通報的日誌處理失效事件，在規定時效內警告指定人員。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-08-S01",
+      "parent_id": "BASE-08",
+      "title": "時戳及校時",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／時戳及校時／共用一"
+        }
+      ],
+      "requirement": "使用內部時鐘產生日誌時戳，能對應 UTC 或 GMT。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-08-S02",
+      "parent_id": "BASE-08",
+      "title": "時戳及校時",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／時戳及校時／共用二"
+        }
+      ],
+      "requirement": "定期將內部時鐘與基準時間源同步。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-09-N01",
+      "parent_id": "BASE-09",
+      "title": "日誌資訊之保護",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／日誌資訊之保護／普未分款"
+        }
+      ],
+      "requirement": "日誌存取限於獲授權者。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-09-M01",
+      "parent_id": "BASE-09",
+      "title": "日誌資訊之保護",
+      "origin": "medium",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／日誌資訊之保護／中一"
+        }
+      ],
+      "requirement": "使用雜湊或其他適當機制確保日誌完整性。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-09-H01",
+      "parent_id": "BASE-09",
+      "title": "日誌資訊之保護",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／日誌資訊之保護／高一"
+        }
+      ],
+      "requirement": "定期將日誌備份到原系統之外的其他實體系統。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-10-N01",
+      "parent_id": "BASE-10",
+      "title": "資料備份",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／資料備份／普一"
+        }
+      ],
+      "requirement": "訂定可容忍資料損失的時間要求。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-10-N02",
+      "parent_id": "BASE-10",
+      "title": "資料備份",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／資料備份／普二"
+        }
+      ],
+      "requirement": "執行資料備份。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-10-M01",
+      "parent_id": "BASE-10",
+      "title": "資料備份",
+      "origin": "medium",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／資料備份／中一"
+        }
+      ],
+      "requirement": "定期測試備份，驗證媒體可靠性與資訊完整性。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-10-H01",
+      "parent_id": "BASE-10",
+      "title": "資料備份",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／資料備份／高一"
+        }
+      ],
+      "requirement": "將備份還原納入營運持續計畫演練。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-10-H02",
+      "parent_id": "BASE-10",
+      "title": "資料備份",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／資料備份／高二"
+        }
+      ],
+      "requirement": "建立異地備份。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-11-N01",
+      "parent_id": "BASE-11",
+      "title": "系統備援",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／系統備援／普未分款"
+        }
+      ],
+      "requirement": "訂定系統中斷後恢復服務的最大可容忍時間。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-11-M01",
+      "parent_id": "BASE-11",
+      "title": "系統備援",
+      "origin": "medium",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／系統備援／中一"
+        }
+      ],
+      "requirement": "定期測試中斷後，以備援設備或其他方式在最大可容忍時間內恢復服務。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-11-H01",
+      "parent_id": "BASE-11",
+      "title": "系統備援",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／系統備援／高一"
+        }
+      ],
+      "requirement": "將備援啟動納入營運持續計畫演練。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-12-S01",
+      "parent_id": "BASE-12",
+      "title": "使用者之識別與鑑別",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／使用者之識別與鑑別／普中共用未分款／拆項1"
+        }
+      ],
+      "requirement": "識別並鑑別系統使用者。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-12-S02",
+      "parent_id": "BASE-12",
+      "title": "使用者之識別與鑑別",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／使用者之識別與鑑別／普中共用未分款／拆項2"
+        }
+      ],
+      "requirement": "禁止使用者使用共用帳號。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-12-H01",
+      "parent_id": "BASE-12",
+      "title": "使用者之識別與鑑別",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2頁／使用者之識別與鑑別／高一"
+        }
+      ],
+      "requirement": "對系統存取採用多因子鑑別。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-13-N01",
+      "parent_id": "BASE-13",
+      "title": "身分驗證管理",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2–3頁／身分驗證管理／普一"
+        }
+      ],
+      "requirement": "使用預設密碼首次登入後，立即要求變更。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-13-N02",
+      "parent_id": "BASE-13",
+      "title": "身分驗證管理",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2–3頁／身分驗證管理／普二"
+        }
+      ],
+      "requirement": "身分驗證相關資訊不得以明文傳輸。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-13-N03",
+      "parent_id": "BASE-13",
+      "title": "身分驗證管理",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2–3頁／身分驗證管理／普三"
+        }
+      ],
+      "requirement": "登入驗證失敗五次後至少鎖定十五分鐘，或採機關自建的失敗驗證機制；記錄本案選擇。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-13-N04",
+      "parent_id": "BASE-13",
+      "title": "身分驗證管理",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2–3頁／身分驗證管理／普四（含普六條件）"
+        }
+      ],
+      "requirement": "使用密碼驗證時強制最低複雜度，依機關效期規定更換；外部使用者得依機關另訂規範，須保存依據。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-13-N05",
+      "parent_id": "BASE-13",
+      "title": "身分驗證管理",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2–3頁／身分驗證管理／普五（含普六條件）"
+        }
+      ],
+      "requirement": "變更密碼不得與前三次相同；外部使用者得依機關另訂規範，須保存依據。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-13-M01",
+      "parent_id": "BASE-13",
+      "title": "身分驗證管理",
+      "origin": "medium",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2–3頁／身分驗證管理／中高共用一"
+        }
+      ],
+      "requirement": "防範自動化程式嘗試登入或變更密碼。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-13-M02",
+      "parent_id": "BASE-13",
+      "title": "身分驗證管理",
+      "origin": "medium",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第2–3頁／身分驗證管理／中高共用二"
+        }
+      ],
+      "requirement": "密碼重設先重新確認身分，再發送一次性且有時效的符記。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-14-N01",
+      "parent_id": "BASE-14",
+      "title": "鑑別資訊保護",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第3頁／鑑別資訊保護／普未分款"
+        }
+      ],
+      "requirement": "遮蔽鑑別過程中的資訊。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-14-M01",
+      "parent_id": "BASE-14",
+      "title": "鑑別資訊保護",
+      "origin": "medium",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第3頁／鑑別資訊保護／中高共用一"
+        }
+      ],
+      "requirement": "使用密碼鑑別時，經雜湊或其他適當方式處理後儲存密碼。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-15-S01",
+      "parent_id": "BASE-15",
+      "title": "系統發展生命週期需求階段",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第3頁／系統發展生命週期需求階段／共用未分款"
+        }
+      ],
+      "requirement": "在需求階段確認機密性、可用性與完整性等安全需求。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-16-M01",
+      "parent_id": "BASE-16",
+      "title": "系統發展生命週期設計階段",
+      "origin": "medium",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第3頁／系統發展生命週期設計階段／中高共用一"
+        }
+      ],
+      "requirement": "依系統功能及要求辨識威脅，進行風險分析與評估。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-16-M02",
+      "parent_id": "BASE-16",
+      "title": "系統發展生命週期設計階段",
+      "origin": "medium",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第3頁／系統發展生命週期設計階段／中高共用二"
+        }
+      ],
+      "requirement": "將風險評估回饋需求檢核，提出安全需求修正。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-17-S01",
+      "parent_id": "BASE-17",
+      "title": "系統發展生命週期開發階段",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第3–4頁／系統發展生命週期開發階段／普中共用一"
+        }
+      ],
+      "requirement": "針對安全需求實作必要控制措施。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-17-S02",
+      "parent_id": "BASE-17",
+      "title": "系統發展生命週期開發階段",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第3–4頁／系統發展生命週期開發階段／普中共用二"
+        }
+      ],
+      "requirement": "防範常見軟體漏洞並落實所需控制。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-17-S03",
+      "parent_id": "BASE-17",
+      "title": "系統發展生命週期開發階段",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第3–4頁／系統發展生命週期開發階段／普中共用三"
+        }
+      ],
+      "requirement": "使用者錯誤頁僅顯示簡短訊息及代碼，不呈現詳細錯誤資訊。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-17-H01",
+      "parent_id": "BASE-17",
+      "title": "系統發展生命週期開發階段",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第3–4頁／系統發展生命週期開發階段／高一"
+        }
+      ],
+      "requirement": "執行源碼掃描安全檢測。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-17-H02",
+      "parent_id": "BASE-17",
+      "title": "系統發展生命週期開發階段",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第3–4頁／系統發展生命週期開發階段／高二"
+        }
+      ],
+      "requirement": "建立系統嚴重錯誤通知機制。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-18-S01",
+      "parent_id": "BASE-18",
+      "title": "系統發展生命週期測試階段",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第4頁／系統發展生命週期測試階段／普中共用未分款"
+        }
+      ],
+      "requirement": "執行弱點掃描安全檢測。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-18-H01",
+      "parent_id": "BASE-18",
+      "title": "系統發展生命週期測試階段",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第4頁／系統發展生命週期測試階段／高一"
+        }
+      ],
+      "requirement": "執行滲透測試安全檢測。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-19-N01",
+      "parent_id": "BASE-19",
+      "title": "系統發展生命週期部署與維運階段",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第4頁／系統發展生命週期部署與維運階段／普一"
+        }
+      ],
+      "requirement": "針對部署環境相關資安威脅進行更新及修補。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-19-N02",
+      "parent_id": "BASE-19",
+      "title": "系統發展生命週期部署與維運階段",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第4頁／系統發展生命週期部署與維運階段／普二"
+        }
+      ],
+      "requirement": "識別並關閉不必要服務及埠口。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-19-N03",
+      "parent_id": "BASE-19",
+      "title": "系統發展生命週期部署與維運階段",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第4頁／系統發展生命週期部署與維運階段／普三"
+        }
+      ],
+      "requirement": "系統不得使用預設密碼。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-19-N04",
+      "parent_id": "BASE-19",
+      "title": "系統發展生命週期部署與維運階段",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第4頁／系統發展生命週期部署與維運階段／普四"
+        }
+      ],
+      "requirement": "備份系統源碼。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-19-M01",
+      "parent_id": "BASE-19",
+      "title": "系統發展生命週期部署與維運階段",
+      "origin": "medium",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第4頁／系統發展生命週期部署與維運階段／中高共用一"
+        }
+      ],
+      "requirement": "維運階段執行版本控制與變更管理。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-20-S01",
+      "parent_id": "BASE-20",
+      "title": "系統發展生命週期委外階段",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第4頁／系統發展生命週期委外階段／共用未分款"
+        }
+      ],
+      "requirement": "系統開發委外時，依等級把生命週期各階段安全需求納入契約，涵蓋機密性、可用性、完整性。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-21-N01",
+      "parent_id": "BASE-21",
+      "title": "獲得程序",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第4頁／獲得程序／普未分款"
+        }
+      ],
+      "requirement": "識別使用的第三方軟體、服務、函式庫及其他元件。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-21-M01",
+      "parent_id": "BASE-21",
+      "title": "獲得程序",
+      "origin": "medium",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第4頁／獲得程序／中高共用一"
+        }
+      ],
+      "requirement": "區隔開發、測試及正式作業環境。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-22-S01",
+      "parent_id": "BASE-22",
+      "title": "系統文件",
+      "origin": "shared",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第4頁／系統文件／共用未分款"
+        }
+      ],
+      "requirement": "儲存並管理系統生命週期相關文件。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-23-H01",
+      "parent_id": "BASE-23",
+      "title": "傳輸之機密性與完整性",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第4頁／傳輸之機密性與完整性／高一"
+        }
+      ],
+      "requirement": "傳輸採加密以避免未授權揭露或偵測變更；有替代實體保護者依原款例外保存依據。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-23-H02",
+      "parent_id": "BASE-23",
+      "title": "傳輸之機密性與完整性",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第4頁／傳輸之機密性與完整性／高二"
+        }
+      ],
+      "requirement": "採公開、經國際機構驗證且未遭破解的演算法。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-23-H03",
+      "parent_id": "BASE-23",
+      "title": "傳輸之機密性與完整性",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第4頁／傳輸之機密性與完整性／高三"
+        }
+      ],
+      "requirement": "定期更換加密金鑰或憑證。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-23-H04",
+      "parent_id": "BASE-23",
+      "title": "傳輸之機密性與完整性",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第4頁／傳輸之機密性與完整性／高四"
+        }
+      ],
+      "requirement": "訂定伺服器金鑰保管規範並落實安全保護。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-24-H01",
+      "parent_id": "BASE-24",
+      "title": "資料儲存之安全",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第4頁／資料儲存之安全／高未分款"
+        }
+      ],
+      "requirement": "重要組態與其他需保護資訊，採加密或其他適當方式儲存。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-25-N01",
+      "parent_id": "BASE-25",
+      "title": "漏洞修復",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第5頁／漏洞修復／普未分款／拆項1"
+        }
+      ],
+      "requirement": "測試漏洞修復的有效性與潛在影響。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-25-N02",
+      "parent_id": "BASE-25",
+      "title": "漏洞修復",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第5頁／漏洞修復／普未分款／拆項2"
+        }
+      ],
+      "requirement": "定期更新漏洞修復。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-25-M01",
+      "parent_id": "BASE-25",
+      "title": "漏洞修復",
+      "origin": "medium",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第5頁／漏洞修復／中高共用一"
+        }
+      ],
+      "requirement": "定期確認相關漏洞修復狀態。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-26-N01",
+      "parent_id": "BASE-26",
+      "title": "資通系統監控",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第5頁／資通系統監控／普未分款"
+        }
+      ],
+      "requirement": "發現入侵跡象時通知機關指定人員。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-26-M01",
+      "parent_id": "BASE-26",
+      "title": "資通系統監控",
+      "origin": "medium",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第5頁／資通系統監控／中一"
+        }
+      ],
+      "requirement": "監控系統以偵測攻擊、未授權連線與未授權使用。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-26-H01",
+      "parent_id": "BASE-26",
+      "title": "資通系統監控",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第5頁／資通系統監控／高一"
+        }
+      ],
+      "requirement": "以自動化工具監控進出流量，分析異常或未授權活動。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-27-N01",
+      "parent_id": "BASE-27",
+      "title": "軟體及資訊完整性",
+      "origin": "normal",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第5頁／軟體及資訊完整性／普未分款"
+        }
+      ],
+      "requirement": "在伺服器端檢查使用者輸入合法性。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-27-M01",
+      "parent_id": "BASE-27",
+      "title": "軟體及資訊完整性",
+      "origin": "medium",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第5頁／軟體及資訊完整性／中一"
+        }
+      ],
+      "requirement": "以完整性驗證工具偵測指定軟體與資訊的未授權變更。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-27-M02",
+      "parent_id": "BASE-27",
+      "title": "軟體及資訊完整性",
+      "origin": "medium",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第5頁／軟體及資訊完整性／中二"
+        }
+      ],
+      "requirement": "發現完整性違反時，執行機關指定保護措施。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "BASE-27-H01",
+      "parent_id": "BASE-27",
+      "title": "軟體及資訊完整性",
+      "origin": "high",
+      "source_refs": [
+        {
+          "source_id": "APP10",
+          "locator": "PDF第5頁／軟體及資訊完整性／高一"
+        }
+      ],
+      "requirement": "定期檢查軟體與資訊完整性。",
+      "condition": "依本案系統範圍核對",
+      "basis": "法規基準"
+    },
+    {
+      "id": "OUT-01-C01",
+      "parent_id": "OUT-01",
+      "title": "專業人力",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第一項第1款／拆項1"
+        }
+      ],
+      "requirement": "確認資安專業人力數量足夠。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-01-C02",
+      "parent_id": "OUT-01",
+      "title": "專業人力",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第一項第1款／拆項2"
+        }
+      ],
+      "requirement": "確認人員具適當訓練、專業證照或類似業務經驗（依原款擇適當資格依據）。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-02-C01",
+      "parent_id": "OUT-02",
+      "title": "複委託",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第一項第2款／拆項1"
+        }
+      ],
+      "requirement": "確認允許複委託與否。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-02-C02",
+      "parent_id": "OUT-02",
+      "title": "複委託",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第一項第2款／拆項2"
+        }
+      ],
+      "requirement": "記錄允許複委託的範圍及對象。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-02-C03",
+      "parent_id": "OUT-02",
+      "title": "複委託",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第一項第2款／拆項3"
+        }
+      ],
+      "requirement": "確認複委託者應具備的安全維護措施。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-03-C01",
+      "parent_id": "OUT-03",
+      "title": "機密人員",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第一項第三款／適任性"
+        }
+      ],
+      "requirement": "涉及國家機密時，辦理相關人員適任性查核。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-03-C02",
+      "parent_id": "OUT-03",
+      "title": "機密人員",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第一項第三款／出境"
+        }
+      ],
+      "requirement": "涉及國家機密時，依法管制相關人員出境。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-03-C03",
+      "parent_id": "OUT-03",
+      "title": "機密人員",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第二項本文"
+        }
+      ],
+      "requirement": "適任性查核範圍考量機密等級、內容及可能接觸者。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-03-C04",
+      "parent_id": "OUT-03",
+      "title": "機密人員",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第二項第1款"
+        }
+      ],
+      "requirement": "必要範圍查核妨害電腦使用犯罪判決或未結通緝情形。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-03-C05",
+      "parent_id": "OUT-03",
+      "title": "機密人員",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第二項第2款"
+        }
+      ],
+      "requirement": "必要範圍查核洩密及原法所列內亂、外患犯罪判決或未結通緝情形。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-03-C06",
+      "parent_id": "OUT-03",
+      "title": "機密人員",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第二項第3款"
+        }
+      ],
+      "requirement": "必要範圍查核曾任公務員因違反安全保密受懲戒或記過以上處分。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-03-C07",
+      "parent_id": "OUT-03",
+      "title": "機密人員",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第二項第4款"
+        }
+      ],
+      "requirement": "必要範圍查核受外國、大陸、香港或澳門政府利誘脅迫而從事不利國安或重大利益情事。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-03-C08",
+      "parent_id": "OUT-03",
+      "title": "機密人員",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第二項第5款"
+        }
+      ],
+      "requirement": "確認其他與國家機密保護相關的具體必要查核項目。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-03-C09",
+      "parent_id": "OUT-03",
+      "title": "機密人員",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第三項／招標契約"
+        }
+      ],
+      "requirement": "將國家機密相關人員查核條件記載於公告、招標文件及契約。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-03-C10",
+      "parent_id": "OUT-03",
+      "title": "機密人員",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第三項／書面同意"
+        }
+      ],
+      "requirement": "辦理適任性查核前取得當事人書面同意。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-04-C01",
+      "parent_id": "OUT-04",
+      "title": "安全檢測與來源授權",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第一項第4款／拆項1"
+        }
+      ],
+      "requirement": "客製化開發由受託者提供系統安全性檢測證明。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-04-C02",
+      "parent_id": "OUT-04",
+      "title": "安全檢測與來源授權",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第一項第4款／拆項2"
+        }
+      ],
+      "requirement": "客製化且屬機關核心系統或委託金額達新臺幣一千萬元時，由機關自行或另委第三方安全檢測。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-04-C03",
+      "parent_id": "OUT-04",
+      "title": "安全檢測與來源授權",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第一項第4款／拆項3"
+        }
+      ],
+      "requirement": "使用非自行開發的系統或資源時，標示其內容及來源。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-04-C04",
+      "parent_id": "OUT-04",
+      "title": "安全檢測與來源授權",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第一項第4款／拆項4"
+        }
+      ],
+      "requirement": "使用非自行開發的系統或資源時，提供授權證明。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-05-C01",
+      "parent_id": "OUT-05",
+      "title": "事件通知",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第一項第5款／拆項1"
+        }
+      ],
+      "requirement": "違反相關法令或知悉資安事件時立即通知委託機關。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-05-C02",
+      "parent_id": "OUT-05",
+      "title": "事件通知",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第一項第5款／拆項2"
+        }
+      ],
+      "requirement": "事件或違規通知中交代採行的補救措施。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-06-C01",
+      "parent_id": "OUT-06",
+      "title": "結案資料",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第一項第6款／拆項1"
+        }
+      ],
+      "requirement": "委託終止或解除時，確認持有資料依契約返還、移交、刪除或銷毀；依本案方式留證。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-07-C01",
+      "parent_id": "OUT-07",
+      "title": "其他措施",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第一項第7款／拆項1"
+        }
+      ],
+      "requirement": "盤點並落實本案要求的其他資安維護措施；逐項增列 PROJECT 細項而非以本列代替所有未知要求。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-08-C01",
+      "parent_id": "OUT-08",
+      "title": "監督確認",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第一項第8款／拆項1"
+        }
+      ],
+      "requirement": "機關定期以稽核或適當方式確認受託業務執行情形。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "OUT-08-C02",
+      "parent_id": "OUT-08",
+      "title": "監督確認",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "RULE7",
+          "locator": "第七條／第一項第8款／拆項2"
+        }
+      ],
+      "requirement": "機關知悉可能影響受託業務的資安事件時，另行確認執行情形。",
+      "condition": "依委外範圍與原條件確認；機關責任不得冒稱已由廠商或 AI 完成",
+      "basis": "委外法規情境"
+    },
+    {
+      "id": "JCOM-01-C01",
+      "parent_id": "JCOM-01",
+      "title": "機房重要區域門禁與環境管理",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第1項／原列拆項1"
+        }
+      ],
+      "requirement": "機房與重要區域安全管制。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-01-C02",
+      "parent_id": "JCOM-01",
+      "title": "機房重要區域門禁與環境管理",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第1項／原列拆項2"
+        }
+      ],
+      "requirement": "人員進出管理。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-01-C03",
+      "parent_id": "JCOM-01",
+      "title": "機房重要區域門禁與環境管理",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第1項／原列拆項3"
+        }
+      ],
+      "requirement": "環境維護措施。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-02-C01",
+      "parent_id": "JCOM-02",
+      "title": "軟體安裝管控及授權／免費軟體盤點",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第2項／原列拆項1"
+        }
+      ],
+      "requirement": "訂定軟體安裝規則。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-02-C02",
+      "parent_id": "JCOM-02",
+      "title": "軟體安裝管控及授權／免費軟體盤點",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第2項／原列拆項2"
+        }
+      ],
+      "requirement": "定期檢查付費授權及免費軟體使用。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-03-C01",
+      "parent_id": "JCOM-03",
+      "title": "行動裝置與可攜媒體管理及查核",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第3項／原列拆項1"
+        }
+      ],
+      "requirement": "行動裝置及可攜媒體管理程序與執行。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-03-C02",
+      "parent_id": "JCOM-03",
+      "title": "行動裝置與可攜媒體管理及查核",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第3項／原列拆項2"
+        }
+      ],
+      "requirement": "定期審查、監控及稽核使用情形。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-04-C01",
+      "parent_id": "JCOM-04",
+      "title": "設備日誌留存至少六個月及校時",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第4項／原列拆項1"
+        }
+      ],
+      "requirement": "日誌留存政策及至少六個月紀錄。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-04-C02",
+      "parent_id": "JCOM-04",
+      "title": "設備日誌留存至少六個月及校時",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第4項／原列拆項2"
+        }
+      ],
+      "requirement": "時間同步且準確。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-05-C01",
+      "parent_id": "JCOM-05",
+      "title": "端點／伺服器惡意程式防護與更新",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第5項／原列拆項1"
+        }
+      ],
+      "requirement": "電腦與伺服器部署惡意程式防護。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-05-C02",
+      "parent_id": "JCOM-05",
+      "title": "端點／伺服器惡意程式防護與更新",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第5項／原列拆項2"
+        }
+      ],
+      "requirement": "定期掃描。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-05-C03",
+      "parent_id": "JCOM-05",
+      "title": "端點／伺服器惡意程式防護與更新",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第5項／原列拆項3"
+        }
+      ],
+      "requirement": "更新防護版本及病毒碼。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-06-C01",
+      "parent_id": "JCOM-06",
+      "title": "依原表條件檢視防毒、防火牆、郵件、入侵防禦、WAF及APT防護",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第6項／原列拆項1"
+        }
+      ],
+      "requirement": "防毒軟體。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-06-C02",
+      "parent_id": "JCOM-06",
+      "title": "依原表條件檢視防毒、防火牆、郵件、入侵防禦、WAF及APT防護",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第6項／原列拆項2"
+        }
+      ],
+      "requirement": "網路防火牆。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-06-C03",
+      "parent_id": "JCOM-06",
+      "title": "依原表條件檢視防毒、防火牆、郵件、入侵防禦、WAF及APT防護",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第6項／原列拆項3"
+        }
+      ],
+      "requirement": "郵件過濾。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-06-C04",
+      "parent_id": "JCOM-06",
+      "title": "依原表條件檢視防毒、防火牆、郵件、入侵防禦、WAF及APT防護",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第6項／原列拆項4"
+        }
+      ],
+      "requirement": "入侵偵測及防禦。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-06-C05",
+      "parent_id": "JCOM-06",
+      "title": "依原表條件檢視防毒、防火牆、郵件、入侵防禦、WAF及APT防護",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第6項／原列拆項5"
+        }
+      ],
+      "requirement": "對外服務之核心系統的應用程式防火牆。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-06-C06",
+      "parent_id": "JCOM-06",
+      "title": "依原表條件檢視防毒、防火牆、郵件、入侵防禦、WAF及APT防護",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第6項／原列拆項6"
+        }
+      ],
+      "requirement": "進階持續性威脅防禦。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-07-C01",
+      "parent_id": "JCOM-07",
+      "title": "防火牆規則審查、DNS限制及連線部署管理",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第7項／原列拆項1"
+        }
+      ],
+      "requirement": "正確設定並定期檢視防火牆規則。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-07-C02",
+      "parent_id": "JCOM-07",
+      "title": "防火牆規則審查、DNS限制及連線部署管理",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第7項／原列拆項2"
+        }
+      ],
+      "requirement": "DNS 查詢限定指定伺服器。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-07-C03",
+      "parent_id": "JCOM-07",
+      "title": "防火牆規則審查、DNS限制及連線部署管理",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第7項／原列拆項3"
+        }
+      ],
+      "requirement": "管理防火牆連線部署。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-08-C01",
+      "parent_id": "JCOM-08",
+      "title": "依業務與資安需求區隔網域並管制存取",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第8項／原列拆項1"
+        }
+      ],
+      "requirement": "架構符合業務及資安需求。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-08-C02",
+      "parent_id": "JCOM-08",
+      "title": "依業務與資安需求區隔網域並管制存取",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第8項／原列拆項2"
+        }
+      ],
+      "requirement": "依服務區隔邏輯網域。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-08-C03",
+      "parent_id": "JCOM-08",
+      "title": "依業務與資安需求區隔網域並管制存取",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第8項／原列拆項3"
+        }
+      ],
+      "requirement": "管制網域間資料存取。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-09-C01",
+      "parent_id": "JCOM-09",
+      "title": "遠端資料存取必要性與保護",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第9項／原列拆項1"
+        }
+      ],
+      "requirement": "評估避免遠端資料存取。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-09-C02",
+      "parent_id": "JCOM-09",
+      "title": "遠端資料存取必要性與保護",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第9項／原列拆項2"
+        }
+      ],
+      "requirement": "必要遠端存取設保護措施。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-10-C01",
+      "parent_id": "JCOM-10",
+      "title": "郵件過濾、異常處理及機敏傳送限制",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第10項／原列拆項1"
+        }
+      ],
+      "requirement": "郵件過濾、分析及使用管制。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-10-C02",
+      "parent_id": "JCOM-10",
+      "title": "郵件過濾、異常處理及機敏傳送限制",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第10項／原列拆項2"
+        }
+      ],
+      "requirement": "定期更新過濾規則。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-10-C03",
+      "parent_id": "JCOM-10",
+      "title": "郵件過濾、異常處理及機敏傳送限制",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第10項／原列拆項3"
+        }
+      ],
+      "requirement": "偵測處置異常行為。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCOM-10-C04",
+      "parent_id": "JCOM-10",
+      "title": "郵件過濾、異常處理及機敏傳送限制",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／共通性檢核項目第10項／原列拆項4"
+        }
+      ],
+      "requirement": "依敏感性設定傳送限制。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-01-C01",
+      "parent_id": "JCON-01",
+      "title": "適當資安專責人力",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第1項／原列拆項1"
+        }
+      ],
+      "requirement": "配置適當資安專責人員。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-02-C01",
+      "parent_id": "JCON-02",
+      "title": "重要組態與敏感資訊安全儲存、交換保護及監控紀錄",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第2項／原列拆項1"
+        }
+      ],
+      "requirement": "安全儲存重要組態與敏感資訊。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-02-C02",
+      "parent_id": "JCON-02",
+      "title": "重要組態與敏感資訊安全儲存、交換保護及監控紀錄",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第2項／原列拆項2"
+        }
+      ],
+      "requirement": "保護交換資料的完整性與機密性。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-02-C03",
+      "parent_id": "JCON-02",
+      "title": "重要組態與敏感資訊安全儲存、交換保護及監控紀錄",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第2項／原列拆項3"
+        }
+      ],
+      "requirement": "保留資料交換監控紀錄。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-03-C01",
+      "parent_id": "JCON-03",
+      "title": "帳號盤點、密碼規範、優先導入MFA、最小權限、角色存取及管理帳號專用",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第3項／原列拆項1"
+        }
+      ],
+      "requirement": "建立及定期盤點帳號。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-03-C02",
+      "parent_id": "JCON-03",
+      "title": "帳號盤點、密碼規範、優先導入MFA、最小權限、角色存取及管理帳號專用",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第3項／原列拆項2"
+        }
+      ],
+      "requirement": "首次預設密碼登入後變更。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-03-C03",
+      "parent_id": "JCON-03",
+      "title": "帳號盤點、密碼規範、優先導入MFA、最小權限、角色存取及管理帳號專用",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第3項／原列拆項3"
+        }
+      ],
+      "requirement": "密碼複雜度規範含原表舉例之洩漏密碼防範評估。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-03-C04",
+      "parent_id": "JCON-03",
+      "title": "帳號盤點、密碼規範、優先導入MFA、最小權限、角色存取及管理帳號專用",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第3項／原列拆項4"
+        }
+      ],
+      "requirement": "優先導入多因子驗證，記錄本案採用或未採用依據。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-03-C05",
+      "parent_id": "JCON-03",
+      "title": "帳號盤點、密碼規範、優先導入MFA、最小權限、角色存取及管理帳號專用",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第3項／原列拆項5"
+        }
+      ],
+      "requirement": "採最小權限與角色存取控制。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-03-C06",
+      "parent_id": "JCON-03",
+      "title": "帳號盤點、密碼規範、優先導入MFA、最小權限、角色存取及管理帳號專用",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第3項／原列拆項6"
+        }
+      ],
+      "requirement": "管理者帳號限管理用途。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-04-C01",
+      "parent_id": "JCON-04",
+      "title": "檢測缺失修補與複測",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第4項／原列拆項1"
+        }
+      ],
+      "requirement": "修補安全檢測缺失。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-04-C02",
+      "parent_id": "JCON-04",
+      "title": "檢測缺失修補與複測",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第4項／原列拆項2"
+        }
+      ],
+      "requirement": "修補後驗證改善。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-05-C01",
+      "parent_id": "JCON-05",
+      "title": "客製化系統檢測證明及非自行開發來源授權",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第5項／原列拆項1"
+        }
+      ],
+      "requirement": "客製化開發提供安全檢測證明。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-05-C02",
+      "parent_id": "JCON-05",
+      "title": "客製化系統檢測證明及非自行開發來源授權",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第5項／原列拆項2"
+        }
+      ],
+      "requirement": "非自行開發內容及來源標示。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-05-C03",
+      "parent_id": "JCON-05",
+      "title": "客製化系統檢測證明及非自行開發來源授權",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第5項／原列拆項3"
+        }
+      ],
+      "requirement": "非自行開發資源的授權證明。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-06-C01",
+      "parent_id": "JCON-06",
+      "title": "外部元件軟韌體弱點通告、更新評估與修復測試",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第6項／原列拆項1"
+        }
+      ],
+      "requirement": "關注外部元件、軟體與韌體漏洞通告。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-06-C02",
+      "parent_id": "JCON-06",
+      "title": "外部元件軟韌體弱點通告、更新評估與修復測試",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第6項／原列拆項2"
+        }
+      ],
+      "requirement": "定期評估更新。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-06-C03",
+      "parent_id": "JCON-06",
+      "title": "外部元件軟韌體弱點通告、更新評估與修復測試",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第6項／原列拆項3"
+        }
+      ],
+      "requirement": "測試修補有效性及影響。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-07-C01",
+      "parent_id": "JCON-07",
+      "title": "安全開發生命週期與檢核機制",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第7項／原列拆項1"
+        }
+      ],
+      "requirement": "開發生命週期納入資安要求。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-07-C02",
+      "parent_id": "JCON-07",
+      "title": "安全開發生命週期與檢核機制",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第7項／原列拆項2"
+        }
+      ],
+      "requirement": "建立安全開發檢核機制。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-08-C01",
+      "parent_id": "JCON-08",
+      "title": "開發前設計機敏存取、登入、輸入輸出檢核並檢討",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第8項／原列拆項1"
+        }
+      ],
+      "requirement": "開發前設計機敏資料存取要求。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-08-C02",
+      "parent_id": "JCON-08",
+      "title": "開發前設計機敏存取、登入、輸入輸出檢核並檢討",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第8項／原列拆項2"
+        }
+      ],
+      "requirement": "設計登入資訊檢核。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-08-C03",
+      "parent_id": "JCON-08",
+      "title": "開發前設計機敏存取、登入、輸入輸出檢核並檢討",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第8項／原列拆項3"
+        }
+      ],
+      "requirement": "設計輸入輸出檢查過濾。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-08-C04",
+      "parent_id": "JCON-08",
+      "title": "開發前設計機敏存取、登入、輸入輸出檢核並檢討",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第8項／原列拆項4"
+        }
+      ],
+      "requirement": "檢討執行情形。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-09-C01",
+      "parent_id": "JCON-09",
+      "title": "設計階段威脅與風險評估",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第9項／原列拆項1"
+        }
+      ],
+      "requirement": "辨識系統威脅。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-09-C02",
+      "parent_id": "JCON-09",
+      "title": "設計階段威脅與風險評估",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第9項／原列拆項2"
+        }
+      ],
+      "requirement": "風險分析及評估。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-10-C01",
+      "parent_id": "JCON-10",
+      "title": "開發安全控制、常見漏洞防護、高級源碼掃描及安全功能測試",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第10項／原列拆項1"
+        }
+      ],
+      "requirement": "落實安全需求控制。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-10-C02",
+      "parent_id": "JCON-10",
+      "title": "開發安全控制、常見漏洞防護、高級源碼掃描及安全功能測試",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第10項／原列拆項2"
+        }
+      ],
+      "requirement": "避免常見漏洞。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-10-C03",
+      "parent_id": "JCON-10",
+      "title": "開發安全控制、常見漏洞防護、高級源碼掃描及安全功能測試",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第10項／原列拆項3"
+        }
+      ],
+      "requirement": "高級執行源碼掃描。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-10-C04",
+      "parent_id": "JCON-10",
+      "title": "開發安全控制、常見漏洞防護、高級源碼掃描及安全功能測試",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第10項／原列拆項4"
+        }
+      ],
+      "requirement": "執行安全功能測試。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-10-C05",
+      "parent_id": "JCON-10",
+      "title": "開發安全控制、常見漏洞防護、高級源碼掃描及安全功能測試",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第10項／原列拆項5"
+        }
+      ],
+      "requirement": "檢討執行情形。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-11-C01",
+      "parent_id": "JCON-11",
+      "title": "版本與變更管理紀錄",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第11項／原列拆項1"
+        }
+      ],
+      "requirement": "版本管控。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-11-C02",
+      "parent_id": "JCON-11",
+      "title": "版本與變更管理紀錄",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第11項／原列拆項2"
+        }
+      ],
+      "requirement": "變更管理及紀錄。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-12-C01",
+      "parent_id": "JCON-12",
+      "title": "弱點掃描及高級滲透測試",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第12項／原列拆項1"
+        }
+      ],
+      "requirement": "弱點掃描。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-12-C02",
+      "parent_id": "JCON-12",
+      "title": "弱點掃描及高級滲透測試",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第12項／原列拆項2"
+        }
+      ],
+      "requirement": "高級執行滲透測試。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-13-C01",
+      "parent_id": "JCON-13",
+      "title": "開發／測試／正式環境區隔與防護",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第13項／原列拆項1"
+        }
+      ],
+      "requirement": "區隔開發、測試與正式環境。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-13-C02",
+      "parent_id": "JCON-13",
+      "title": "開發／測試／正式環境區隔與防護",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第13項／原列拆項2"
+        }
+      ],
+      "requirement": "各環境的適當安全保護。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-14-C01",
+      "parent_id": "JCON-14",
+      "title": "事件通報應變程序",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第14項／原列拆項1"
+        }
+      ],
+      "requirement": "事件通報應變程序。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-15-C01",
+      "parent_id": "JCON-15",
+      "title": "事件處理與改善紀錄",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第15項／原列拆項1"
+        }
+      ],
+      "requirement": "留存事件處理紀錄。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-15-C02",
+      "parent_id": "JCON-15",
+      "title": "事件處理與改善紀錄",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第15項／原列拆項2"
+        }
+      ],
+      "requirement": "記錄改善措施。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-16-C01",
+      "parent_id": "JCON-16",
+      "title": "分包契約法律需求、人員權責、安全措施、程序及稽核權",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第16項／原列拆項1"
+        }
+      ],
+      "requirement": "確認分包情形與對象。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-16-C02",
+      "parent_id": "JCON-16",
+      "title": "分包契約法律需求、人員權責、安全措施、程序及稽核權",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第16項／原列拆項2"
+        }
+      ],
+      "requirement": "分包契約的適用法律需求。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-16-C03",
+      "parent_id": "JCON-16",
+      "title": "分包契約法律需求、人員權責、安全措施、程序及稽核權",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第16項／原列拆項3"
+        }
+      ],
+      "requirement": "分包人員權責。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-16-C04",
+      "parent_id": "JCON-16",
+      "title": "分包契約法律需求、人員權責、安全措施、程序及稽核權",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第16項／原列拆項4"
+        }
+      ],
+      "requirement": "分包安全措施及程序。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-16-C05",
+      "parent_id": "JCON-16",
+      "title": "分包契約法律需求、人員權責、安全措施、程序及稽核權",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第16項／原列拆項5"
+        }
+      ],
+      "requirement": "分包資安稽核權。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-17-C01",
+      "parent_id": "JCON-17",
+      "title": "分包資安稽核紀錄",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第17項／原列拆項1"
+        }
+      ],
+      "requirement": "執行分包資安稽核。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    },
+    {
+      "id": "JCON-17-C02",
+      "parent_id": "JCON-17",
+      "title": "分包資安稽核紀錄",
+      "origin": "context",
+      "source_refs": [
+        {
+          "source_id": "JOINT115",
+          "locator": "附件3／特定契約檢核項目第17項／原列拆項2"
+        }
+      ],
+      "requirement": "保留分包稽核紀錄。",
+      "condition": "先確認本年度計畫／契約採納；各子項另判斷適用條件",
+      "basis": "年度稽核候選，須核對本案適用性"
+    }
+  ],
+  "note": "內部可驗證細項 ID，不冒稱官方條號；來源條款定位另存。高階納入低階及合併欄位，例外條件保留於 requirement。年度稽核須另判適用。"
+}

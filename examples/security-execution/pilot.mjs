@@ -1,0 +1,40 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {newPlan,safe,digest,writeNew,registerCSV} from '../../.agents/skills/security-planner/scripts/security-lib.mjs';
+import {runJob,executionBinding} from '../../.agents/skills/security-planner/scripts/execution-lib.mjs';
+const root=path.resolve(process.argv[2]||'outputs/security-execution-pilot');
+if(fs.existsSync(root))throw Error('Use a new empty output directory; pilot never overwrites an earlier run');
+fs.mkdirSync(root,{recursive:true});
+const put=(name,value)=>writeNew(root,name,typeof value==='string'?value:JSON.stringify(value,null,2)+'\n');
+const entry=name=>({path:name,sha256:digest(safe(root,name))});
+const p=newPlan('普');p.profile.system_scope='合成本機資料備份試辦，沒有實際機關契約或正式系統';p.profile.level_basis='示範普級，非機關核定';
+p.execution.target={environment:'local',identifier:'synthetic-backup-pilot',version:'pilot-1'};
+put('authorization.md','使用者於 2026-10-15 要求補強資安 Skill。此試辦僅建立及驗證本機合成資料備份，不連線、不掃描外部、不處理真實個資。允許修正此示範程式與設定後重試。');
+put('source.json',{items:[{id:1,label:'Synthetic record'}]});put('config.json',{enabled:false});
+put('backup.mjs',"import fs from 'node:fs';const c=JSON.parse(fs.readFileSync('config.json'));if(c.enabled)fs.copyFileSync('source.json',process.argv[2]);\n");
+put('check.mjs',`import fs from 'node:fs';import {spawnSync} from 'node:child_process';
+const prefix=process.argv[2];fs.mkdirSync(prefix,{recursive:true});
+const backup=prefix+'/backup.json',restored=prefix+'/restored.json';
+const r=spawnSync(process.execPath,['backup.mjs',backup],{encoding:'utf8',shell:false,windowsHide:true});
+const exists=fs.existsSync(backup);if(exists)fs.copyFileSync(backup,restored);
+const equal=exists&&fs.readFileSync(restored,'utf8')===fs.readFileSync('source.json','utf8');
+const report=prefix+'/observations.json';fs.writeFileSync(report,JSON.stringify({backup_exists:exists,restored_equals_source:equal,backup_exit:r.status,source_bytes:fs.statSync('source.json').size},null,2));
+console.log(JSON.stringify({schema_version:1,target:${JSON.stringify(p.execution.target)},checks:[
+{id:'backup-created',status:exists&&r.status===0?'pass':'fail',observed:'Backup file exists: '+exists+'; backup command exit: '+r.status,evidence_paths:[report,...(exists?[backup]:[])]},
+{id:'restore-equal',status:equal?'pass':'fail',observed:'Restored file equals current source: '+equal,evidence_paths:[report,...(equal?[restored]:[])]}
+]}));
+`);
+const j={id:'backup-check',kind:'command',control_ids:['BASE-10-N02'],owner:'qa-tester',implementation_paths:['backup.mjs','config.json'],steps:['執行合成資料備份','還原至隔離目錄並逐位元組比較來源'],expected_evidence:['備份產物','還原產物','存在性與一致性觀察'],checks:[{id:'backup-created',criterion:'備份命令成功且實際產生檔案'},{id:'restore-equal',criterion:'實際還原檔案與目前合成來源完全相同'}],command:[process.execPath,'check.mjs','attempt-01'],input_files:['backup.mjs','check.mjs','source.json','config.json'],timeout_ms:10000,receipt:null,review:{status:'pending'}};
+p.execution.jobs.push(j);
+p.execution.blockers.push({id:'agency-rpo',control_ids:['BASE-10-N01'],status:'open',blocks:'planning',question:'需實際機關確認可容忍資料損失時間及系統範圍；本示範無此資料',owner:'機關業務窗口'});
+const c=p.controls.find(c=>c.id==='BASE-10-N02');Object.assign(c,{applicability:'applicable',rationale:'僅示範本機合成資料備份的控制對照，不代表已確認真實標案適用性',owner:'backend-developer',node_ids:['demo-backup'],measure:'依示範設定產生資料備份；正式案需另確認範圍、排程及保存要求',verification:'執行 backup-check，檢查產物存在及還原內容一致'});
+const authorize=()=>j.authorization={basis:'依 authorization.md 的本機試辦與修正授權',artifact:entry('authorization.md'),binding:executionBinding(p,j)};
+authorize();const first=runJob(root,p,j.id,'attempt-01/receipt.json',{safe,digest,writeNew});if(first.passed)throw Error('Pilot failed to reproduce disabled-backup defect');
+put('diagnosis.md','第一次檢查：備份命令回傳 0，但因 config.enabled=false 未產生檔案，還原也無法進行。修正示範設定為 true 後重新執行，保留第一次失敗紀錄。');
+fs.writeFileSync(path.join(root,'config.json'),JSON.stringify({enabled:true},null,2)+'\n');
+j.command=[process.execPath,'check.mjs','attempt-02'];authorize();const second=runJob(root,p,j.id,'attempt-02/receipt.json',{safe,digest,writeNew});if(!second.passed)throw Error('Pilot repair failed');j.receipt=second.receipt;c.progress='implemented';
+put('original.csv','項次,要求,結果\n1,資料備份之執行與完整性,範例符合\n2,可容忍資料損失時間,\n');
+const withForm=registerCSV(root,p,{id:'PILOT',file:'original.csv',key:'項次',column:'結果'}),f=withForm.forms[0];
+f.rows[0].disposition='mapped';f.rows[0].required_ids=['BASE-10-N02'];f.mappings=[{field:'1',column:'結果',control_ids:['BASE-10-N02'],value_kind:'conclusion'}];
+put('plan-before-review.json',withForm);
+console.log(JSON.stringify({root,first_passed:first.passed,second_passed:second.passed,review:'pending; inspect actual observations before recording review',plan:'plan-before-review.json'},null,2));

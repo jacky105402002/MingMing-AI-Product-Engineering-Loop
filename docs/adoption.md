@@ -64,3 +64,11 @@ Windows 下 recorder 使用 shell=false；需要 npm.cmd 等 shell 命令時明�
 更新的 workflow-lib.mjs 會載入 .agents/skills/security-planner/scripts/security-lib.mjs，因此須一併導入整個 security-planner 目錄，保留其相對路徑。獨立使用時，可把該目錄完整安裝成個人 Skill，工具仍在產品專案根目錄執行。
 
 舊 state 沒有 feature.security 時保留相容性；這不是已確認非政府標案。新任務與舊案接續，先從既有紀錄確認政府屬性並補欄位。是則登錄 plan，否可記 plan=null；未知只做不依賴答案的調查。已存在的產品任務不由模板覆蓋。
+
+## v1.1.2-r1 逐款版升級
+
+新 security-planner 使用 schema v2，舊 v1 計畫不直接通過新版檢查。使用 migrate 到新檔、重新核對細項及表單後，再修改 feature.security.plan。原始 v1.1.2 標籤／下載包保留；本修訂改用 v1.1.2-r1 標籤，工作流版本仍為 1.1.2。
+
+## v1.1.2-r1 代理執行與證據覆核
+
+新計畫預設啟用 execution_required，既有 v2 計畫以 security-plan.mjs enable-execution 另存升級。導入須一併合併 security-planner/scripts/execution-lib.mjs，舊計畫不自動當成已完成代理執行檢查。完整命令契約見 [代理執行](../.agents/skills/security-planner/references/execution.md)。
