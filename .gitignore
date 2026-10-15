@@ -23,3 +23,5 @@ desktop.ini
 !tasks/validation/security-execution/**/*.log
 
 !tasks/validation/release-v1.1.2-r1/**/*.log
+
+!tasks/validation/release-v1.1.3/**/*.log

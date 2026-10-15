@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "mode": "active",
+  "feature": {
+    "id": "release-v1.1.3",
+    "route": "full-loop",
+    "risk": "medium",
+    "status": "done",
+    "spec": "tasks/validation/release-v1.1.3/spec.md",
+    "acceptance_criteria": [
+      {
+        "id": "AC-1",
+        "description": "最終來源驗證與升級說明一致"
+      },
+      {
+        "id": "AC-2",
+        "description": "正式版本與標籤統一為 1.1.3，作為主線最新版本；保留 v1.1.2 與 v1.1.2-r1"
+      },
+      {
+        "id": "AC-3",
+        "description": "發布與套件可追溯，遠端 CI 與安裝驗證另存"
+      }
+    ],
+    "stages": [
+      {
+        "id": "01",
+        "status": "complete",
+        "reason": "CLI 及資料契約維護，無 UI 或網路 API",
+        "artifact": "tasks/validation/release-v1.1.3/spec.md"
+      },
+      {
+        "id": "02",
+        "status": "complete",
+        "reason": "CLI 及資料契約維護，無 UI 或網路 API",
+        "artifact": "tasks/validation/release-v1.1.3/spec.md"
+      },
+      {
+        "id": "03",
+        "status": "complete",
+        "reason": "CLI 及資料契約維護，無 UI 或網路 API",
+        "artifact": "tasks/validation/release-v1.1.3/spec.md"
+      },
+      {
+        "id": "04",
+        "status": "complete",
+        "reason": "CLI 及資料契約維護，無 UI 或網路 API",
+        "artifact": "tasks/validation/release-v1.1.3/spec.md"
+      },
+      {
+        "id": "05",
+        "status": "not_applicable",
+        "reason": "CLI 及資料契約維護，無 UI 或網路 API",
+        "artifact": "tasks/validation/release-v1.1.3/spec.md"
+      },
+      {
+        "id": "06",
+        "status": "not_applicable",
+        "reason": "CLI 及資料契約維護，無 UI 或網路 API",
+        "artifact": "tasks/validation/release-v1.1.3/spec.md"
+      },
+      {
+        "id": "07",
+        "status": "complete",
+        "reason": "CLI 及資料契約維護，無 UI 或網路 API",
+        "artifact": "tasks/validation/release-v1.1.3/spec.md"
+      }
+    ],
+    "security": {
+      "government_project": "no",
+      "plan": null
+    },
+    "release": {
+      "status": "ready",
+      "record": "tasks/validation/release-v1.1.3/release-plan.json"
+    }
+  },
+  "nodes": [
+    {
+      "id": "node-release",
+      "goal": "驗證並發布正式 v1.1.3",
+      "owner": "release-manager",
+      "status": "done",
+      "depends_on": [],
+      "ac_ids": [
+        "AC-1",
+        "AC-2",
+        "AC-3"
+      ],
+      "spec": "tasks/validation/release-v1.1.3/spec.md",
+      "allowed_files": [
+        "VERSION",
+        "README.md",
+        "docs/",
+        ".github/workflows/validate.yml",
+        ".gitignore",
+        "tasks/validation/release-v1.1.3/"
+      ],
+      "evidence_files": [
+        ".agents/skills/mingming-workflow/SKILL.md",
+        ".agents/skills/security-planner/SKILL.md",
+        ".agents/skills/security-planner/assets/baseline.json",
+        ".agents/skills/security-planner/assets/clauses.json",
+        ".agents/skills/security-planner/assets/official/appendix-09.pdf",
+        ".agents/skills/security-planner/assets/official/appendix-10.pdf",
+        ".agents/skills/security-planner/assets/sources.json",
+        ".agents/skills/security-planner/references/data-contract.md",
+        ".agents/skills/security-planner/references/execution.md",
+        ".agents/skills/security-planner/references/forms.md",
+        ".agents/skills/security-planner/references/operations.md",
+        ".agents/skills/security-planner/references/source-coverage.md",
+        ".agents/skills/security-planner/references/sources.md",
+        ".agents/skills/security-planner/scripts/clause-catalog.mjs",
+        ".agents/skills/security-planner/scripts/execution-lib.mjs",
+        ".agents/skills/security-planner/scripts/security-lib.mjs",
+        ".agents/skills/security-planner/scripts/security-plan.mjs",
+        ".gitattributes",
+        ".github/workflows/validate.yml",
+        ".gitignore",
+        "AGENTS.md",
+        "README.md",
+        "VERSION",
+        "ai-workflow/README.md",
+        "ai-workflow/autonomy-policy.md",
+        "ai-workflow/clarification-policy.md",
+        "ai-workflow/context-policy.md",
+        "ai-workflow/definition-of-done.md",
+        "ai-workflow/definition-of-ready.md",
+        "ai-workflow/evidence-policy.md",
+        "ai-workflow/frontend-resource-map.md",
+        "ai-workflow/loop-map.md",
+        "ai-workflow/mcp-map.md",
+        "ai-workflow/model-routing-policy.md",
+        "ai-workflow/node-status.md",
+        "ai-workflow/node-template.md",
+        "ai-workflow/prompt-router.md",
+        "ai-workflow/release-policy.md",
+        "ai-workflow/review-checklist.md",
+        "ai-workflow/skill-map.md",
+        "ai-workflow/state-contract.md",
+        "ai-workflow/tool-map.md",
+        "ai-workflow/workflow-improvement-log.md",
+        "docs/README.md",
+        "docs/adoption.md",
+        "docs/architecture-decisions/adr-template.md",
+        "docs/changelog.md",
+        "docs/intake.md",
+        "docs/known-issues.md",
+        "docs/pilot-plan.md",
+        "docs/releases/v1.1.0-validation.md",
+        "docs/releases/v1.1.0.md",
+        "docs/releases/v1.1.1-security-20261013.md",
+        "docs/releases/v1.1.1.md",
+        "docs/releases/v1.1.2-r1.md",
+        "docs/releases/v1.1.2.md",
+        "docs/releases/v1.1.3.md",
+        "docs/workflow-improvement-tracker.md",
+        "examples/README.md",
+        "examples/minimal-state.json",
+        "examples/security-execution/pilot.mjs",
+        "mingming-ai-product-engineering-loop.md",
+        "scripts/check.mjs",
+        "scripts/record-evidence.mjs",
+        "scripts/validate-workflow.mjs",
+        "scripts/workflow-lib.mjs",
+        "skills/backend-developer.skill.md",
+        "skills/code-reviewer.skill.md",
+        "skills/data-modeler.skill.md",
+        "skills/docs-maintainer.skill.md",
+        "skills/flow-designer.skill.md",
+        "skills/frontend-developer.skill.md",
+        "skills/product-planner.skill.md",
+        "skills/qa-tester.skill.md",
+        "skills/release-manager.skill.md",
+        "skills/security-planner.skill.md",
+        "skills/system-architect.skill.md",
+        "skills/uiux-designer.skill.md",
+        "tasks/README.md",
+        "tasks/archive/README.md",
+        "tasks/templates/completion-report.md",
+        "tasks/templates/fast-track.md",
+        "tasks/templates/release-record.md",
+        "tasks/templates/release.json",
+        "tasks/templates/review-report.md",
+        "tasks/templates/test-report.md",
+        "tests/security-clauses.test.mjs",
+        "tests/security-execution.test.mjs",
+        "tests/workflow.test.mjs"
+      ],
+      "revision": "r1",
+      "checks": [
+        {
+          "id": "test-01",
+          "kind": "test",
+          "result": "pass",
+          "evidence": "tasks/validation/release-v1.1.3/attempt-01/test.json"
+        },
+        {
+          "id": "review-01",
+          "kind": "review",
+          "result": "pass",
+          "evidence": "tasks/validation/release-v1.1.3/attempt-01/review.json"
+        },
+        {
+          "id": "docs-01",
+          "kind": "docs",
+          "result": "pass",
+          "evidence": "tasks/validation/release-v1.1.3/attempt-01/docs.json"
+        }
+      ]
+    }
+  ],
+  "questions": [],
+  "decisions": [
+    {
+      "id": "D1",
+      "decision": "正式版本升為 1.1.3 並設為 main／Latest；保留舊版",
+      "reason": "使用者修改先前版本選擇；承接已完成 r1 功能，不擴充產品行為",
+      "source": "使用者：我覺得還是改為1.1.3版本好了，然後1.1.3會做為主線的新版本"
+    }
+  ]
+}

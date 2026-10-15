@@ -1,6 +1,6 @@
 # MingMing AI Product Engineering Loop
 
-明明工作室的 AI 主導開發工作流。**v1.1 系列主要版本：v1.1.2**，將需求、設計、實作、測試、審查、文件與發布串成可追蹤流程。
+明明工作室的 AI 主導開發工作流。**v1.1 系列主要版本：v1.1.3**，將需求、設計、實作、測試、審查、文件與發布串成可追蹤流程。
 
 **AI 在明確範圍內完成每個 Node 的完整 workflow；先查證資料，只有缺口、歧義或授權不足會影響結果時才詢問。** 人工不用介入例行的角色切換、測試重跑或節點交接。
 
@@ -27,7 +27,7 @@
 
 ## v1.1.0 的改變
 
-v1.1.2 已整合下列基礎能力與 [React 精選資源](ai-workflow/frontend-resource-map.md)：shadcn/ui、ReUI、Magic UI、React Bits，供六個相關角色按需選型與驗證。
+v1.1.3 已整合下列基礎能力與 [React 精選資源](ai-workflow/frontend-resource-map.md)：shadcn/ui、ReUI、Magic UI、React Bits，供六個相關角色按需選型與驗證。
 
 - 模型評估與進度通知不再是人工閘門；以重要不確定性與實際授權判斷是否詢問。
 - Fast-Track 與 Full-Loop 共用驗證底線，依風險選擇適用階段；不適用要記理由。
@@ -54,7 +54,7 @@ node scripts/validate-workflow.mjs --state tasks/current/state.json --require-ac
 
 ## 發布與歷史
 
-本次主要版本為 v1.1.2，最新修訂標籤為 `v1.1.2-r1`（v1.1 系列）。[取得最新正式版本](https://github.com/jacky105402002/MingMing-AI-Product-Engineering-Loop/releases/latest)，或閱讀 [本次 release notes](docs/releases/v1.1.2-r1.md)與 [changelog](docs/changelog.md)。既有 v1.1、v1.1.0、v1.1.1 tag 與歷史紀錄保留。
+本次主要版本為 **v1.1.3**，正式標籤為 `v1.1.3`，作為 main 主線與最新正式版本。[取得最新正式版本](https://github.com/jacky105402002/MingMing-AI-Product-Engineering-Loop/releases/latest)，或閱讀 [本次 release notes](docs/releases/v1.1.3.md)與 [changelog](docs/changelog.md)。既有 v1.1、v1.1.0、v1.1.1、v1.1.2、v1.1.2-r1 tag、下載檔與歷史紀錄保留。
 
 [原始方法論](mingming-ai-product-engineering-loop.md)作為歷史背景；現行操作以 AGENTS.md 與 ai-workflow/ 為準。
 
@@ -64,10 +64,10 @@ v1.1.2 的 2026-10-13 修訂加入 [資安規劃師](.agents/skills/security-pla
 
 原始 v1.1.2 的 62 項候選摘要包含 27 列防護基準、8 款委外要求及 27 項年度聯合稽核項目；逐項評估適用性，不代表每案皆必須適用。個案契約追加要求與匯入表單一起登錄，依證據回填副本。操作見 [資安規劃操作](.agents/skills/security-planner/references/operations.md)。
 
-## v1.1.2-r1：逐款資安追蹤
+## v1.1.3：逐款資安追蹤
 
-本修訂在 v1.1.2 基礎改善為 schema v2 的逐款要求與表單覆蓋檢查；工作流版本維持 1.1.2，以 v1.1.2-r1 區分內容。新工具以原表繼承關係展開普／中／高，舊計畫需保留原檔後遷移。細節見 [資料契約](.agents/skills/security-planner/references/data-contract.md)。
+v1.1.3 承接 v1.1.2-r1 的 schema v2 逐款要求與表單覆蓋檢查；工作流版本與正式標籤統一為 1.1.3，本次不改變 r1 的功能或資料契約。新工具以原表繼承關係展開普／中／高，舊計畫需保留原檔後遷移。細節見 [資料契約](.agents/skills/security-planner/references/data-contract.md)。
 
-### v1.1.2-r1：資安代理執行
+### v1.1.3：資安代理執行
 
-已加入逐款執行任務、檢查收據、逐項內容覆核與阻礙追蹤。參閱 [執行契約](.agents/skills/security-planner/references/execution.md)。可在新輸出目錄執行 `node examples/security-execution/pilot.mjs` 跑無網路合成備份試辦；該試辦保留機關資料缺口，不宣稱整案符合。本修訂使用 v1.1.2-r1 標籤與獨立下載包；原 v1.1.2 標籤及下載檔保留。
+已加入逐款執行任務、檢查收據、逐項內容覆核與阻礙追蹤。參閱 [執行契約](.agents/skills/security-planner/references/execution.md)。可在新輸出目錄執行 `node examples/security-execution/pilot.mjs` 跑無網路合成備份試辦；該試辦保留機關資料缺口，不宣稱整案符合。本版使用 v1.1.3 標籤與獨立下載包；原 v1.1.2 與 v1.1.2-r1 標籤及下載檔保留。
