@@ -32,3 +32,7 @@ Fast-Track 以 tasks/templates/fast-track.md 建立最小紀錄，仍登記 stat
 確認政府標案為是 → security-planner 盤點來源／等級／契約／匯入表單 → planner 建立 AC 與 Nodes → architect／developer 落實措施 → QA 產生證據 → reviewer 核對 → security-planner 更新清單 → docs 匯出表單副本。等級未知也啟動盤點，關鍵依賴確認前不定案。防護等級不直接等於 Fast-Track／Full-Loop 風險分類。
 
 新開發先確認政府屬性，再確認等級與政策採納範圍；不重問已記錄的答案。工作流選擇遵循使用者規範。詳見 [資安規劃師](../skills/security-planner.skill.md)。
+
+## 圖表分支
+
+在 flow-designer／system-architect 等適用設計節點，按 [圖表規範](diagram-policy.md)判斷 Draw.io、文字或 Mermaid；原角色持續完成內容、檢查與交接，不增加人工關卡。只啟用 MingMing 不自動選用 Ming-design loop。

@@ -26,3 +26,7 @@
 ## 政府標案資安分流
 
 新開發依 [intake](docs/intake.md)確認政府標案屬性及工作流選擇，沿用已回答的資訊。確認是政府標案時，讀 [security-planner](.agents/skills/security-planner/SKILL.md)，等級未知也先開始來源盤點；重要依賴未確認不能定案。資安要求、證據與表單對照放在產品 security-plan.json，並以 feature.security 接入 state。
+
+## 流程與架構圖
+
+適用流程或架構設計需要可編輯圖表時，按 [圖表規範](ai-workflow/diagram-policy.md)使用可用的 Draw.io；簡單說明可沿用文字／Mermaid。由原角色負責內容，主線維護同一份任務狀態；未安裝不自動安裝。

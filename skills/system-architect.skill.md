@@ -34,3 +34,7 @@ Node 證據按 ai-workflow/evidence-policy.md 保存在每個 Node／attempt 的
 ## 政府標案配合
 
 政府案件依 [資安規劃師](security-planner.skill.md)共用 security-plan.json。將控制項轉成架構、部署、權限與資料保護措施，逐項交代驗證方式及外部責任。
+
+## 流程與架構圖
+
+系統邊界、元件、部署與資料流需要視覺化時採 Draw.io；標明現況／規劃、連線方向與來源版本，引用 ADR／實際程式，不把常見架構當已實作。與資安規劃共用圖。 操作、交付與證據規則依 [共用圖表規範](../ai-workflow/diagram-policy.md)，只在本次有圖表需求時讀取。

@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "mode": "active",
+  "feature": {
+    "id": "release-v1.1.4",
+    "route": "full-loop",
+    "risk": "medium",
+    "status": "done",
+    "spec": "tasks/validation/release-v1.1.4/spec.md",
+    "acceptance_criteria": [
+      {
+        "id": "AC-1",
+        "description": "Draw.io 按需路由、角色責任、圖表來源與交付規範可操作，不改資料契約或強制安裝工具"
+      },
+      {
+        "id": "AC-2",
+        "description": "測試圖建立、增量修改、匯出、重新載入與目視檢查留有真實證據；人工／跨聊天實測未做須明示"
+      },
+      {
+        "id": "AC-3",
+        "description": "1.1.4 版本、完整來源驗證、雙平台 CI、發布 ZIP 與本機入口一致，舊版保留"
+      }
+    ],
+    "stages": [
+      {
+        "id": "01",
+        "status": "complete",
+        "reason": "工作流文件與繪圖交接整合，無產品 UI/API/schema 變更；圖表操作另外實測",
+        "artifact": "tasks/validation/release-v1.1.4/spec.md"
+      },
+      {
+        "id": "02",
+        "status": "complete",
+        "reason": "工作流文件與繪圖交接整合，無產品 UI/API/schema 變更；圖表操作另外實測",
+        "artifact": "tasks/validation/release-v1.1.4/spec.md"
+      },
+      {
+        "id": "03",
+        "status": "complete",
+        "reason": "工作流文件與繪圖交接整合，無產品 UI/API/schema 變更；圖表操作另外實測",
+        "artifact": "tasks/validation/release-v1.1.4/spec.md"
+      },
+      {
+        "id": "04",
+        "status": "complete",
+        "reason": "工作流文件與繪圖交接整合，無產品 UI/API/schema 變更；圖表操作另外實測",
+        "artifact": "tasks/validation/release-v1.1.4/spec.md"
+      },
+      {
+        "id": "05",
+        "status": "not_applicable",
+        "reason": "工作流文件與繪圖交接整合，無產品 UI/API/schema 變更；圖表操作另外實測",
+        "artifact": "tasks/validation/release-v1.1.4/spec.md"
+      },
+      {
+        "id": "06",
+        "status": "not_applicable",
+        "reason": "工作流文件與繪圖交接整合，無產品 UI/API/schema 變更；圖表操作另外實測",
+        "artifact": "tasks/validation/release-v1.1.4/spec.md"
+      },
+      {
+        "id": "07",
+        "status": "complete",
+        "reason": "工作流文件與繪圖交接整合，無產品 UI/API/schema 變更；圖表操作另外實測",
+        "artifact": "tasks/validation/release-v1.1.4/spec.md"
+      }
+    ],
+    "security": {
+      "government_project": "no",
+      "plan": null
+    },
+    "release": {
+      "status": "ready",
+      "record": "tasks/validation/release-v1.1.4/release-plan.json"
+    }
+  },
+  "nodes": [
+    {
+      "id": "node-release",
+      "goal": "整合 Draw.io 並驗證發布 v1.1.4",
+      "owner": "release-manager",
+      "status": "done",
+      "depends_on": [],
+      "ac_ids": [
+        "AC-1",
+        "AC-2",
+        "AC-3"
+      ],
+      "spec": "tasks/validation/release-v1.1.4/spec.md",
+      "allowed_files": [
+        "AGENTS.md",
+        "VERSION",
+        "README.md",
+        "ai-workflow/",
+        "skills/",
+        "docs/",
+        ".agents/skills/mingming-workflow/SKILL.md",
+        "tasks/templates/diagram-handoff.md",
+        "examples/diagrams/",
+        ".github/workflows/validate.yml",
+        ".gitignore",
+        "tasks/validation/release-v1.1.4/"
+      ],
+      "evidence_files": [
+        ".agents/skills/mingming-workflow/SKILL.md",
+        ".agents/skills/security-planner/SKILL.md",
+        ".agents/skills/security-planner/assets/baseline.json",
+        ".agents/skills/security-planner/assets/clauses.json",
+        ".agents/skills/security-planner/assets/official/appendix-09.pdf",
+        ".agents/skills/security-planner/assets/official/appendix-10.pdf",
+        ".agents/skills/security-planner/assets/sources.json",
+        ".agents/skills/security-planner/references/data-contract.md",
+        ".agents/skills/security-planner/references/execution.md",
+        ".agents/skills/security-planner/references/forms.md",
+        ".agents/skills/security-planner/references/operations.md",
+        ".agents/skills/security-planner/references/source-coverage.md",
+        ".agents/skills/security-planner/references/sources.md",
+        ".agents/skills/security-planner/scripts/clause-catalog.mjs",
+        ".agents/skills/security-planner/scripts/execution-lib.mjs",
+        ".agents/skills/security-planner/scripts/security-lib.mjs",
+        ".agents/skills/security-planner/scripts/security-plan.mjs",
+        ".gitattributes",
+        ".github/workflows/validate.yml",
+        ".gitignore",
+        "AGENTS.md",
+        "README.md",
+        "VERSION",
+        "ai-workflow/README.md",
+        "ai-workflow/autonomy-policy.md",
+        "ai-workflow/clarification-policy.md",
+        "ai-workflow/context-policy.md",
+        "ai-workflow/definition-of-done.md",
+        "ai-workflow/definition-of-ready.md",
+        "ai-workflow/diagram-policy.md",
+        "ai-workflow/evidence-policy.md",
+        "ai-workflow/frontend-resource-map.md",
+        "ai-workflow/loop-map.md",
+        "ai-workflow/mcp-map.md",
+        "ai-workflow/model-routing-policy.md",
+        "ai-workflow/node-status.md",
+        "ai-workflow/node-template.md",
+        "ai-workflow/prompt-router.md",
+        "ai-workflow/release-policy.md",
+        "ai-workflow/review-checklist.md",
+        "ai-workflow/skill-map.md",
+        "ai-workflow/state-contract.md",
+        "ai-workflow/tool-map.md",
+        "ai-workflow/workflow-improvement-log.md",
+        "docs/README.md",
+        "docs/adoption.md",
+        "docs/architecture-decisions/adr-template.md",
+        "docs/changelog.md",
+        "docs/drawio.md",
+        "docs/intake.md",
+        "docs/known-issues.md",
+        "docs/pilot-plan.md",
+        "docs/releases/v1.1.0-validation.md",
+        "docs/releases/v1.1.0.md",
+        "docs/releases/v1.1.1-security-20261013.md",
+        "docs/releases/v1.1.1.md",
+        "docs/releases/v1.1.2-r1.md",
+        "docs/releases/v1.1.2.md",
+        "docs/releases/v1.1.3.md",
+        "docs/releases/v1.1.4.md",
+        "docs/workflow-improvement-tracker.md",
+        "examples/README.md",
+        "examples/diagrams/README.md",
+        "examples/diagrams/architecture.png",
+        "examples/diagrams/flow.png",
+        "examples/diagrams/workflow.drawio",
+        "examples/minimal-state.json",
+        "examples/security-execution/pilot.mjs",
+        "mingming-ai-product-engineering-loop.md",
+        "scripts/check.mjs",
+        "scripts/record-evidence.mjs",
+        "scripts/validate-workflow.mjs",
+        "scripts/workflow-lib.mjs",
+        "skills/backend-developer.skill.md",
+        "skills/code-reviewer.skill.md",
+        "skills/data-modeler.skill.md",
+        "skills/docs-maintainer.skill.md",
+        "skills/flow-designer.skill.md",
+        "skills/frontend-developer.skill.md",
+        "skills/product-planner.skill.md",
+        "skills/qa-tester.skill.md",
+        "skills/release-manager.skill.md",
+        "skills/security-planner.skill.md",
+        "skills/system-architect.skill.md",
+        "skills/uiux-designer.skill.md",
+        "tasks/README.md",
+        "tasks/archive/README.md",
+        "tasks/templates/completion-report.md",
+        "tasks/templates/diagram-handoff.md",
+        "tasks/templates/fast-track.md",
+        "tasks/templates/release-record.md",
+        "tasks/templates/release.json",
+        "tasks/templates/review-report.md",
+        "tasks/templates/test-report.md",
+        "tasks/validation/release-v1.1.4/diagram-check.json",
+        "tasks/validation/release-v1.1.4/diagram-snapshots.json",
+        "tests/security-clauses.test.mjs",
+        "tests/security-execution.test.mjs",
+        "tests/workflow.test.mjs"
+      ],
+      "revision": "r1",
+      "checks": [
+        {
+          "id": "test-01",
+          "kind": "test",
+          "result": "pass",
+          "evidence": "tasks/validation/release-v1.1.4/attempt-01/test.json"
+        },
+        {
+          "id": "review-01",
+          "kind": "review",
+          "result": "pass",
+          "evidence": "tasks/validation/release-v1.1.4/attempt-01/review.json"
+        },
+        {
+          "id": "docs-01",
+          "kind": "docs",
+          "result": "pass",
+          "evidence": "tasks/validation/release-v1.1.4/attempt-01/docs.json"
+        }
+      ]
+    }
+  ],
+  "questions": [],
+  "decisions": [
+    {
+      "id": "D1",
+      "decision": "沿用 MingMing 維護任務；不是政府標案，不新增 UIUX 設計任務",
+      "source": "既有工作流維護上下文與使用者本次要求",
+      "reason": "整合 Draw.io 到流程及架構角色，版本 1.1.4；不另啟用 Ming-design loop"
+    },
+    {
+      "id": "D2",
+      "decision": "維持既有 state/security schema 與 12 角色；Draw.io 為可選工具",
+      "source": "使用者接受上一輪整合建議",
+      "reason": "用共用規範、交接文件與既有 evidence_files 整合，工具故障只阻塞依賴產物"
+    }
+  ]
+}

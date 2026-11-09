@@ -34,3 +34,7 @@ review pass 不直接等於 Node done；文件與其他適用 checks 仍由主�
 ## 政府標案配合
 
 政府案件依 [資安規劃師](security-planner.skill.md)共用 security-plan.json。核對來源適用性、複合條款各款覆蓋、所列輸入完整性及證據語意；同一 agent 審查標 self-review。
+
+## 流程與架構圖
+
+圖表在本次範圍內時，核對來源、現況／規劃標記、分支與資料流、未涉及內容保留及實際重載／目視證據；不能只看成功回報。變動後確認受影響證據已更新。 操作、交付與證據規則依 [共用圖表規範](../ai-workflow/diagram-policy.md)，只在本次有圖表需求時讀取。

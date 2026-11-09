@@ -30,3 +30,7 @@ Node 證據按 ai-workflow/evidence-policy.md 保存在每個 Node／attempt 的
 不要把某個工具自動當成權威來源；不要在設計階段偷偷改產品範圍。
 需要擴充工程檔案時由主線先更新 Node；已授權範圍內可自主調整，涉及未定產品結果或額外授權才詢問。
 工具依 ai-workflow/tool-map.md 的實際可用命令選擇；外部來源依 ai-workflow/mcp-map.md，不預設平台已連線。
+
+## 流程與架構圖
+
+Draw.io 可呈現使用者流程及頁面導覽。已選 Ming-design loop 時引用其流程／畫面 ID 及交接；不因工具可用自動啟用該工作流，也不以流程圖替代精緻 UI 或互動規格。 操作、交付與證據規則依 [共用圖表規範](../ai-workflow/diagram-policy.md)，只在本次有圖表需求時讀取。

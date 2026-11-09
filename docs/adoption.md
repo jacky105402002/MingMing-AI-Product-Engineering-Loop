@@ -74,3 +74,9 @@ Windows 下 recorder 使用 shell=false；需要 npm.cmd 等 shell 命令時明�
 新計畫預設啟用 execution_required，既有 v2 計畫以 security-plan.mjs enable-execution 另存升級。導入須一併合併 security-planner/scripts/execution-lib.mjs，舊計畫不自動當成已完成代理執行檢查。完整命令契約見 [代理執行](../.agents/skills/security-planner/references/execution.md)。
 
 已使用 v1.1.2-r1 的專案：v1.1.3 沒有新的功能或資料 schema 遷移，只同步工作流版本與發布來源。既有產品不自動升級；明確採用新版時先比較及保留客製修改、原任務與證據，不重設既有資安計畫。新專案以 v1.1.3 的固定標籤或下載包導入。
+
+## v1.1.4 圖表整合
+
+新增 diagram-policy、Draw.io 操作指南與 diagram-handoff 模板，相關角色依需要接入。由 v1.1.3 升級只需比較合併工作流文件及角色入口；state／security-plan schema 不變，不重設既有任務或資安計畫。圖表依既有 evidence_files 綁定。Draw.io 與 drawio-local 是環境選配，ZIP 不含工具安裝與個人設定；工具不可用時依產物是否必要決定替代或阻塞。既有產品不自動升級。
+
+見 [圖表規範](../ai-workflow/diagram-policy.md)與 [操作指南](drawio.md)。

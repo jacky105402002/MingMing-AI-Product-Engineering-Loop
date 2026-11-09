@@ -25,3 +25,7 @@ feature.status=done 只表示開發完成。feature.release.status 分別為 not
 ## 政府標案資安 Done
 
 政府案件 feature done 前須通過 security-plan 的 delivery 檢查，並實際覆核證據語意及表單。未實作、未驗證、過期證據、必要外部檢測或簽核未完成時不得宣告資安驗收通過。純規劃交付只報 planning 完成；不得把產品開發任務標 done 來表示規劃結束。
+
+## 適用圖表 Done
+
+已約定的圖表交付按 [圖表規範](diagram-policy.md)保存主檔、各頁預覽、真實重載／目視檢查與來源對照，相關檔案納入證據。圖／需求／實作變更後重新核對受影響內容；圖面完成不等於產品或資安驗收完成。

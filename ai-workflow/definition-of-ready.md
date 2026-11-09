@@ -21,3 +21,7 @@ planner 檢查後把 feature.status 設 ready，Node 依條件設 ready。Fast-T
 ## 政府標案資安 Ready
 
 Design Ready 可在等級待確認時完成不依賴它的調查。Implementation Ready 前，政府屬性為是的任務必須有 security-plan.json；planning 檢查通過，來源／契約已覆核，等級與範圍確認，候選項目有適用性處置，適用措施及驗證已連到 Node。仍有重要缺口時只推進無依賴工作。
+
+## 適用圖表 Ready
+
+若設計依賴流程／架構圖，依 [圖表規範](diagram-policy.md)核對來源、範圍及重要未知，並交付約定的可編輯圖與可讀預覽；圖表 ready 不替代 API、資料與其他 Implementation Ready 條件。未要求繪圖的任務不因此新增圖表門檻。

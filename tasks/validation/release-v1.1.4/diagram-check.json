@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-09",
+  "tool": "Next AI Draw.io MCP 0.4.11",
+  "environment_check": "passed: config, entrypoint, Node 22.15.0, bundled assets, directory access, handshake, 16 tools",
+  "scenario": "isolated synthetic flow and architecture, not a product",
+  "pages": [
+    "flow",
+    "architecture"
+  ],
+  "cells_before": 25,
+  "cells_after": 25,
+  "changed_cell": [
+    "flow",
+    "6"
+  ],
+  "other_cells_preserved": true,
+  "new_session_reload_cells_equal": true,
+  "png_visual_review": "self-review: both exported pages readable, no clipped labels or overlapping shapes/edges crossing unrelated nodes observed",
+  "manual_user_edit_test": "not_run",
+  "cross_chat_test": "not_run",
+  "real_product_test": "not_run",
+  "comparison_note": "Initial regex grouping was unsuitable for self-closing XML; final comparison used ElementTree attribute/geometry trees. No diagram change was needed.",
+  "files": [
+    {
+      "path": "examples/diagrams/architecture.png",
+      "size": 135426,
+      "sha256": "15b3cdd2f1b1852013ba02a98b533a328ce5c0336346eee90bc64cd7a4806a95"
+    },
+    {
+      "path": "examples/diagrams/flow.png",
+      "size": 142706,
+      "sha256": "8e4f29c61e6d1890eac31bb003e6e2bd51d227f36537301ea82f694711c787bd"
+    },
+    {
+      "path": "examples/diagrams/workflow.drawio",
+      "size": 6299,
+      "sha256": "bb9da6ff1978c7ce7e5508a1085f76ff086e2cdb8d0d0afe62b6ae4dada84065"
+    }
+  ]
+}

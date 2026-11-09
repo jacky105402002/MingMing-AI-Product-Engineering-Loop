@@ -34,3 +34,7 @@ Node 證據按 ai-workflow/evidence-policy.md 保存在每個 Node／attempt 的
 ## 政府標案配合
 
 政府案件依 [資安規劃師](security-planner.skill.md)共用 security-plan.json。依控制項及契約執行適用驗證，記錄實際目標、環境、結果與證據；需機關或獨立第三方檢測者不可由單測取代。
+
+## 流程與架構圖
+
+已約定交付圖表時驗證主檔存在、可重新載入、相關頁面預覽與內容；未執行的真人／跨聊天測試如實記錄。圖表操作測試不替代產品測試。 操作、交付與證據規則依 [共用圖表規範](../ai-workflow/diagram-policy.md)，只在本次有圖表需求時讀取。

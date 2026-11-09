@@ -5,6 +5,8 @@
 - [改善追蹤](workflow-improvement-tracker.md)：WF-001 至 WF-024 的實作狀態與限制。
 - [試跑計畫](pilot-plan.md)：尚需真實產品驗證的項目。
 - [版本紀錄](changelog.md)、[已知限制](known-issues.md)。
-- [v1.1 系列主要版本 v1.1.1](releases/v1.1.1.md)；[v1.1.0 歷史說明](releases/v1.1.0.md)。
+- [v1.1 系列主要版本 v1.1.4](releases/v1.1.4.md)；[v1.1.0 歷史說明](releases/v1.1.0.md)。
+
+- [Draw.io 接入與操作](drawio.md)：流程／架構圖的可選工具、操作及交接。
 
 產品相關 product／architecture／api／database／uiux 等檔案由導入專案按需求建立。沒有 API 或 DB 的工作不用製造空規格。

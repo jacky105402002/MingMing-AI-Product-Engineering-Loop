@@ -26,3 +26,7 @@ files 必須涵蓋 feature spec、Node 的 spec、evidence_files，以及所有�
 
 改變程式、spec、契約或相關依賴後，重開受影響 Node，給新 revision／attempt，重跑受影響驗證。先前 attempt 保留，state 只指向最新有效證據。
 validator 可辨識已列入檔案的 hash 不符，但不能自行發現漏列的相依或判定證據語意真偽；review 必須核對實際 diff、AC、執行範圍與品質。
+
+## 圖表證據
+
+有圖表交付時，將主檔、交付頁面預覽及交接文件列入相關 evidence_files；規則見 [圖表規範](diagram-policy.md)。只引用 session URL 無法固定內容。變更須保留新 revision 的實際檢查，雜湊比對不能取代語意審查。本版不新增 state 欄位或自動同步器。

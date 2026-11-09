@@ -26,3 +26,7 @@ Node 證據按 ai-workflow/evidence-policy.md 保存在每個 Node／attempt 的
 不要把自行假設的產品規則當成需求。
 需要擴充工程檔案時由主線先更新 Node；已授權範圍內可自主調整，涉及未定產品結果或額外授權才詢問。
 工具依 ai-workflow/tool-map.md 的實際可用命令選擇；外部來源依 ai-workflow/mcp-map.md，不預設平台已連線。
+
+## 流程與架構圖
+
+多角色／多分支／需可編輯交接時採 Draw.io，先列正常與例外流程、條件及恢復，再按 AC 對照繪圖。簡單流程可用文字或 Mermaid。 操作、交付與證據規則依 [共用圖表規範](../ai-workflow/diagram-policy.md)，只在本次有圖表需求時讀取。
